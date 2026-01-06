@@ -319,9 +319,9 @@ class Website(Home):
 
         return request.make_response(content, [('Content-Type', mimetype)])
 
-    # if not icon provided in DOM, browser tries to access /favicon.ico, eg when
+    # if not icon provided in DOM, browser tries to access /homepage.png, eg when
     # opening an order pdf
-    @http.route(['/favicon.ico'], type='http', auth='public', website=True, multilang=False, sitemap=False, readonly=True)
+    @http.route(['/homepage.png'], type='http', auth='public', website=True, multilang=False, sitemap=False, readonly=True)
     def favicon(self, **kw):
         website = request.website
         response = request.redirect(website.image_url(website, 'favicon'), code=301)

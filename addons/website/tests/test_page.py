@@ -310,11 +310,11 @@ class WithContext(HttpCase):
     def test_opengraph_image_with_absolute_url(self):
         base_url = self.base_url()
         with MockRequest(self.env, website=self.env['website'].browse(1)):
-            self.page.website_meta_og_img = 'http://wrong.example.com/favicon.ico'
+            self.page.website_meta_og_img = 'http://wrong.example.com/homepage.png'
             r = self.url_open(self.page.url)
             self.assertEqual(r.status_code, 200)
-            self.assertIn(f'"og:image" content="{base_url}/favicon.ico"', r.text)
-            self.assertIn(f'"twitter:image" content="{base_url}/favicon.ico"', r.text)
+            self.assertIn(f'"og:image" content="{base_url}/homepage.png"', r.text)
+            self.assertIn(f'"twitter:image" content="{base_url}/homepage.png"', r.text)
 
             self.page.website_meta_og_img = '/logo'
             r = self.url_open(self.page.url)

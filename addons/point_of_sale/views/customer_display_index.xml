@@ -10,7 +10,7 @@
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
-                <link rel="icon" href="/point_of_sale/static/src/img/favicon.ico" type="image/x-icon"/>
+                <link rel="icon" href="/point_of_sale/static/src/img/homepage.png" type="image/x-icon"/>
                 <script type="text/javascript">
                     var odoo =
                     <t t-out="json.dumps({

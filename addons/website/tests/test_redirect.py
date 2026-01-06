@@ -22,7 +22,7 @@ class TestWebsiteRedirect(TransactionCase):
                 'name': 'Test Website Redirect',
                 'redirect_type': '308',
                 'url_from': '/website/info',
-                'url_to': '/favicon.ico',
+                'url_to': '/homepage.png',
             })
         self.assertIn('existing page', str(error.exception))
 
@@ -31,7 +31,7 @@ class TestWebsiteRedirect(TransactionCase):
                 'name': 'Test Website Redirect',
                 'redirect_type': '308',
                 'url_from': '/website/info',
-                'url_to': '/favicon.ico/',  # trailing slash on purpose
+                'url_to': '/homepage.png/',  # trailing slash on purpose
             })
         self.assertIn('existing page', str(error.exception))
 

@@ -202,7 +202,7 @@ class Website(models.Model):
     robots_txt = fields.Html('Robots.txt', translate=False, groups='website.group_website_designer', sanitize=False)
 
     def _default_favicon(self):
-        with tools.file_open('web/static/img/favicon.ico', 'rb') as f:
+        with tools.file_open('web/static/img/homepage.png', 'rb') as f:
             return base64.b64encode(f.read())
 
     favicon = fields.Binary(string="Website Favicon", help="This field holds the image used to display a favicon on the website.", default=_default_favicon)
