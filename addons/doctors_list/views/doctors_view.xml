@@ -6,16 +6,18 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="gender"/>
-                        <field name="first_name"/>
-                        <field name="last_name"/>
-                        <field name="birthday"/>
-                        <field name="age"/>
-                    </group>
-                    <group>
-                        <field name="mobile"/>
-                        <field name="account"/>
-                        <field name="speciality"/>
+                        <group>
+                            <field name="gender"/>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="birthday"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="mobile"/>
+                            <field name="account"/>
+                            <field name="speciality"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
