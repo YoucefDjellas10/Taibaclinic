@@ -1,0 +1,78 @@
+<odoo>
+    <record id="patients_form" model="ir.ui.view">
+        <field name="name">patients.form</field>
+        <field name="model">patients</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="stage"
+                           widget="statusbar"
+                           statusbar_visible="new,contacted,qualified,in_treatment,closed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="gender"/>
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="birthday"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="stage"/>
+                            <field name="email"/>
+                            <field name="mobile"/>
+                            <field name="country"/>
+                            <field name="city"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Contact">
+                            <header>
+
+                            </header>
+                            <field name="contact_ids" readonly="1"/>
+                        </page>
+                        <page string="Appointments">
+                            <header>
+
+                            </header>
+                            <field name="appointment_ids" readonly="1"/>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="patients_list" model="ir.ui.view">
+        <field name="name">patients.list</field>
+        <field name="model">patients</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="email"/>
+                <field name="mobile"/>
+                <field name="city"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="patient_list_action" model="ir.actions.act_window">
+        <field name="name">Patient list</field>
+        <field name="res_model">patients</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="patient_list_main"
+              name="Patients"
+              sequence="100"/>
+    <menuitem id="patient_list_sub"
+              name="Patients"
+              parent="patient_list_main"
+              action="patient_list_action"
+              sequence="0"/>
+
+
+</odoo>

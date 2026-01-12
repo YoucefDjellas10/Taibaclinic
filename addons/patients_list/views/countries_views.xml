@@ -1,0 +1,36 @@
+<odoo>
+    <record id="country_records_form" model="ir.ui.view">
+        <field name="name">country.records.form</field>
+        <field name="model">country.records</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="country_records_list" model="ir.ui.view">
+        <field name="name">country.records.list</field>
+        <field name="model">country.records</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="country_records_action" model="ir.actions.act_window">
+        <field name="name">Countries list</field>
+        <field name="res_model">country.records</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="country_records_sub"
+              name="Countries"
+              parent="patient_list_main"
+              action="country_records_action"
+              sequence="90"/>
+
+
+</odoo>

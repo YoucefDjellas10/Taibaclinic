@@ -1,0 +1,59 @@
+<odoo>
+    <record id="appointment_record_form" model="ir.ui.view">
+        <field name="name">appointment.record.form</field>
+        <field name="model">appointment.record</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="status" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="patient"/>
+                            <field name="date"/>
+                        </group>
+                        <group>
+                            <field name="reason"/>
+                            <field name="status"/>
+                            <field name="note"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="appointment_record_list" model="ir.ui.view">
+        <field name="name">appointment.record.list</field>
+        <field name="model">appointment.record</field>
+        <field name="arch" type="xml">
+            <list default_order="date desc">
+                <field name="name"/>
+                <field name="patient"/>
+                <field name="date"/>
+                <field name="reason" widget="badge"/>
+                <field name="status" widget="badge"
+                       decoration-info="status == 'in_progress'"
+                       decoration-danger="status == 'cancelled'"
+                       decoration-warning="status == 'confirmed'"
+                       decoration-success="status == 'completed'"/>
+                <field name="note"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="appointment_record_action" model="ir.actions.act_window">
+        <field name="name">Appointments list</field>
+        <field name="res_model">appointment.record</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="appointment_record_sub"
+              name="Appointment List"
+              parent="patient_list_main"
+              action="appointment_record_action"
+              sequence="1"/>
+
+
+</odoo>

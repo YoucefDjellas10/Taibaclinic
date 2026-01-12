@@ -1,0 +1,9 @@
+<odoo>
+    <record id="group_ceo" model="res.groups">
+        <field name="name">CEO</field>
+    </record>
+    <record id="group_admin" model="res.groups">
+        <field name="name">ADMIN</field>
+    </record>
+
+</odoo>
