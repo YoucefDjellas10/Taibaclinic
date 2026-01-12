@@ -32,11 +32,11 @@
         <field name="view_mode">list,form</field>
     </record>
 
-<!--    <menuitem id="contact_record_sub"-->
-<!--              name="Contact list"-->
-<!--              parent="patient_list_main"-->
-<!--              action="contact_record_action"-->
-<!--              sequence="110"/>-->
+    <menuitem id="contact_record_sub"
+              name="Contact list"
+              parent="patient_list_main"
+              action="contact_record_action"
+              sequence="110"/>
 
 
 </odoo>

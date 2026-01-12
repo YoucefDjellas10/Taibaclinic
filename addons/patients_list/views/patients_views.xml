@@ -68,11 +68,11 @@
     <menuitem id="patient_list_main"
               name="Patients"
               sequence="100"/>
-<!--    <menuitem id="patient_list_sub"-->
-<!--              name="Patients"-->
-<!--              parent="patient_list_main"-->
-<!--              action="patient_list_action"-->
-<!--              sequence="0"/>-->
+    <menuitem id="patient_list_sub"
+              name="Patients"
+              parent="patient_list_main"
+              action="patient_list_action"
+              sequence="0"/>
 
 
 </odoo>
