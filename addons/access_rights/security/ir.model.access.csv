@@ -4,3 +4,6 @@ access_patients_admin,Access patients for admin,patients_list.model_patients,acc
 access_cities_admin,Access cities records for admin,patients_list.model_cities_records,access_rights.group_admin,1,1,1,1
 access_appointment_record_admin,Access appointment record for admin,patients_list.model_appointment_record,access_rights.group_admin,1,1,1,1
 access_contact_record_admin,Access contact record for admin,patients_list.model_contact_record,access_rights.group_admin,1,1,1,1
+
+access_doctors_admin,Access doctors for admin,doctors_list.model_doctors,access_rights.group_admin,1,1,1,1
+access_doctor_speciality_admin,Access doctor speciality for admin,doctors_list.model_doctor_speciality,access_rights.group_admin,1,1,1,1
