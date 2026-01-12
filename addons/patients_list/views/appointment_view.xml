@@ -49,11 +49,11 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="appointment_record_sub"
-              name="Appointment List"
-              parent="patient_list_main"
-              action="appointment_record_action"
-              sequence="1"/>
+<!--    <menuitem id="appointment_record_sub"-->
+<!--              name="Appointment List"-->
+<!--              parent="patient_list_main"-->
+<!--              action="appointment_record_action"-->
+<!--              sequence="1"/>-->
 
 
 </odoo>
