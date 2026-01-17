@@ -3,3 +3,8 @@ from . import country
 from . import cities
 from . import appointment
 from . import contact
+from . import quotations
+from . import medical_history
+from . import quotation_treatments
+from . import treatments
+from . import teeth

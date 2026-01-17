@@ -1,0 +1,42 @@
+<odoo>
+    <record id="treatments_form" model="ir.ui.view">
+        <field name="name">treatments.form</field>
+        <field name="model">treatments</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="price" />
+                        <field name="currency" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="qtreatments_list" model="ir.ui.view">
+        <field name="name">treatments.list</field>
+        <field name="model">treatments</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="price"/>
+                <field name="currency" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="treatments_list_action" model="ir.actions.act_window">
+        <field name="name">Treatments list</field>
+        <field name="res_model">treatments</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="treatments_list_sub"
+              name="Treatments"
+              parent="patient_list_main"
+              action="treatments_list_action"
+              sequence="70"/>
+
+
+</odoo>

@@ -6,7 +6,7 @@ class ContactRecord(models.Model):
     _description = 'list of contacts with patients'
 
     name = fields.Char(string='ID', readonly=True)
-    patient = fields.Many2one('patients', string='Patient',required=True)
+    patient = fields.Many2one('patients', string='Patient', required=True)
     type = fields.Selection([
         ('call', 'Call'),
         ('sms', 'SMS'),
@@ -25,5 +25,5 @@ class ContactRecord(models.Model):
     @api.model
     def create(self, vals):
         record = super().create(vals)
-        record.name = f"App-{record.id}"
+        record.name = f"Contact-{record.id}"
         return record
