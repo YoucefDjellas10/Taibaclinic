@@ -34,6 +34,7 @@ class Patients(models.Model):
     appointment_ids = fields.One2many('appointment.record', 'patient', string='Appointments')
     contact_ids = fields.One2many('contact.record', 'patient', string='Contacts')
     medical_histiory = fields.Many2many('medical.history', string='Medical history')
+    quotation_ids = fields.One2many('quotations', 'patient', string='Quotations')
 
     @api.depends('birthday')
     def _compute_age(self):

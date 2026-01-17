@@ -40,6 +40,12 @@
                             </header>
                             <field name="appointment_ids" readonly="1"/>
                         </page>
+                        <page string="Quotations">
+                            <header>
+
+                            </header>
+                            <field name="quotation_ids" readonly="1"/>
+                        </page>
                     </notebook>
 
                 </sheet>
