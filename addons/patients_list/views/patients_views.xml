@@ -44,7 +44,29 @@
                             <header>
 
                             </header>
-                            <field name="quotation_ids" readonly="1"/>
+                            <field name="quotation_ids" readonly="1">
+                                <list>
+                                    <field name="stage"/>
+                                    <field name="quotation_date"/>
+                                    <field name="net_total"/>
+                                    <field name="currency" optional="hide"/>
+                                    <field name="description"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Deals">
+                            <header>
+
+                            </header>
+                            <field name="deal_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="create_date"/>
+                                    <field name="deal_date"/>
+                                    <field name="net_total"/>
+                                    <field name="currency" optional="hide"/>
+                                </list>
+                            </field>
                         </page>
                     </notebook>
 
@@ -74,7 +96,7 @@
 
     <menuitem id="patient_list_main"
               name="Patients"
-              sequence="100"/>
+              sequence="10"/>
     <menuitem id="patient_list_sub"
               name="Patients"
               parent="patient_list_main"

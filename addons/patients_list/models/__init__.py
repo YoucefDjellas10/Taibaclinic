@@ -8,3 +8,5 @@ from . import medical_history
 from . import quotation_treatments
 from . import treatments
 from . import teeth
+from . import treatment_plan
+from . import treatment_plan_lines

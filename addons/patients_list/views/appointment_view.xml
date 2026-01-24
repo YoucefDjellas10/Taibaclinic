@@ -51,7 +51,7 @@
 
     <menuitem id="appointment_record_sub"
               name="Appointment List"
-              parent="patient_list_main"
+              parent="treatment_plan_list_main"
               action="appointment_record_action"
               sequence="1"/>
 

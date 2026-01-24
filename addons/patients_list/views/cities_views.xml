@@ -31,7 +31,7 @@
 
     <menuitem id="cities_records_sub"
               name="Cities"
-              parent="patient_list_main"
+              parent="configuration_list_main"
               action="cities_records_action"
               sequence="100"/>
 

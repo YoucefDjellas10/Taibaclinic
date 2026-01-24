@@ -1,0 +1,50 @@
+<odoo>
+    <record id="treatment_plan_lines_form" model="ir.ui.view">
+        <field name="name">treatment.plan.lines.form</field>
+        <field name="model">treatment.plan.lines</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="plan"/>
+                        <field name="teeth" widget="many2many_tags"/>
+                        <field name="treatment"/>
+                        <field name="quantity"/>
+                        <field name="currency"/>
+                        <field name="price"/>
+                        <field name="total"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="treatment_plan_lines_list" model="ir.ui.view">
+        <field name="name">treatment.plan.lines.list</field>
+        <field name="model">treatment.plan.lines</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="plan"/>
+                <field name="teeth" widget="many2many_tags"/>
+                <field name="treatment"/>
+                <field name="quantity"/>
+                <field name="currency"/>
+                <field name="price"/>
+                <field name="total"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="treatment_plan_lines_list_action" model="ir.actions.act_window">
+        <field name="name">Treatment plan lines</field>
+        <field name="res_model">treatment.plan.lines</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="treatment_plan_lines_list_sub"
+              name="Treatment plan lines"
+              parent="treatment_plan_list_main"
+              action="treatment_plan_lines_list_action"
+              sequence="500"/>
+</odoo>

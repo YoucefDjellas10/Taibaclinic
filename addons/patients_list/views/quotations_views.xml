@@ -18,6 +18,7 @@
                         <group>
                             <field name="quotation_date"/>
                             <field name="expiration_date"/>
+                            <field name="description"/>
                         </group>
                     </group>
                     <notebook>
@@ -26,12 +27,30 @@
                                 <list editable="bottom">
                                     <field name="treatment"/>
                                     <field name="teeth" widget="many2many_tags"/>
-                                    <field name="quantity" />
+                                    <field name="quantity"/>
                                     <field name="currency" optional="hide"/>
                                     <field name="price"/>
                                     <field name="total"/>
                                 </list>
                             </field>
+                            <sheet>
+                                <group>
+                                    <group>
+                                    </group>
+                                    <group>
+                                        <group>
+
+                                        </group>
+                                        <group>
+                                            <field name="gross_total"/>
+                                            <field name="discount"/>
+                                            <field name="net_total"/>
+                                            <field name="currency" invisible="1"/>
+                                        </group>
+
+                                    </group>
+                                </group>
+                            </sheet>
                         </page>
                     </notebook>
                 </sheet>
@@ -58,9 +77,13 @@
         <field name="view_mode">list,form</field>
     </record>
 
+    <menuitem id="quotations_list_main"
+              name="Quotations"
+              sequence="50"/>
+
     <menuitem id="quotations_list_sub"
               name="Quotations"
-              parent="patient_list_main"
+              parent="quotations_list_main"
               action="quotations_list_action"
               sequence="50"/>
 

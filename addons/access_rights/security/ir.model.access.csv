@@ -9,6 +9,8 @@ access_quotations_admin,Access quotations for admin,patients_list.model_quotatio
 access_quotations_treatment_admin,Access quotations treatment for admin,patients_list.model_quotations_treatment,access_rights.group_admin,1,1,1,1
 access_treatments_admin,Access treatments for admin,patients_list.model_treatments,access_rights.group_admin,1,1,1,1
 access_teeth_admin,Access teeth for admin,patients_list.model_teeth,access_rights.group_admin,1,1,1,1
+access_treatment_plan_admin,Access treatment plan for admin,patients_list.model_treatment_plan,access_rights.group_admin,1,1,1,1
+access_treatment_plan_lines_admin,Access treatment plan lines for admin,patients_list.model_treatment_plan_lines,access_rights.group_admin,1,1,1,1
 
 access_doctors_admin,Access doctors for admin,doctors_list.model_doctors,access_rights.group_admin,1,1,1,1
 access_doctor_speciality_admin,Access doctor speciality for admin,doctors_list.model_doctor_speciality,access_rights.group_admin,1,1,1,1

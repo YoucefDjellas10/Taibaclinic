@@ -1,6 +1,6 @@
 {
-    'name': 'Patients list',
-    'description': "Patients list",
+    'name': 'HMS',
+    'description': "Dental clinic Managment",
     'depends': ['base'],
     'data': [
         'views/countries_views.xml',
@@ -13,6 +13,8 @@
         'views/treatments_views.xml',
         'views/quotation_treatment_viwes.xml',
         'views/teeth_views.xml',
+        'views/treatment_plan_views.xml',
+        'views/trealment_plan_lines_views.xml',
 ],
     'license': 'LGPL-3',
 }

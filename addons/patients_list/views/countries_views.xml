@@ -28,7 +28,7 @@
 
     <menuitem id="country_records_sub"
               name="Countries"
-              parent="patient_list_main"
+              parent="configuration_list_main"
               action="country_records_action"
               sequence="90"/>
 

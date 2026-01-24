@@ -42,7 +42,7 @@
 
     <menuitem id="quotations_treatment_list_sub"
               name="Quotations treatment"
-              parent="patient_list_main"
+              parent="quotations_list_main"
               action="quotations_treatment_list_action"
               sequence="70"/>
 
