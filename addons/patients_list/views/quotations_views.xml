@@ -81,11 +81,11 @@
               name="Quotations"
               sequence="50"/>
 
-    <menuitem id="quotations_list_sub"
-              name="Quotations"
-              parent="quotations_list_main"
-              action="quotations_list_action"
-              sequence="50"/>
+<!--    <menuitem id="quotations_list_sub"-->
+<!--              name="Quotations"-->
+<!--              parent="quotations_list_main"-->
+<!--              action="quotations_list_action"-->
+<!--              sequence="50"/>-->
 
 
 </odoo>

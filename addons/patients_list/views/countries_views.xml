@@ -26,11 +26,11 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="country_records_sub"
-              name="Countries"
-              parent="configuration_list_main"
-              action="country_records_action"
-              sequence="90"/>
+<!--    <menuitem id="country_records_sub"-->
+<!--              name="Countries"-->
+<!--              parent="configuration_list_main"-->
+<!--              action="country_records_action"-->
+<!--              sequence="90"/>-->
 
 
 </odoo>

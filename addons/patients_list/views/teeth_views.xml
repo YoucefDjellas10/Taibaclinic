@@ -30,9 +30,9 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="teeth_list_sub"
-              name="Teeth"
-              parent="configuration_list_main"
-              action="teeth_list_action"
-              sequence="250"/>
+<!--    <menuitem id="teeth_list_sub"-->
+<!--              name="Teeth"-->
+<!--              parent="configuration_list_main"-->
+<!--              action="teeth_list_action"-->
+<!--              sequence="250"/>-->
 </odoo>

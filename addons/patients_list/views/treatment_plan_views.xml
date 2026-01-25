@@ -77,9 +77,9 @@
     <menuitem id="treatment_plan_list_main"
               name="Deals"
               sequence="50"/>
-    <menuitem id="treatment_plan_list_sub"
-              name="Treatment plan"
-              parent="treatment_plan_list_main"
-              action="treatment_plan_list_action"
-              sequence="10"/>
+<!--    <menuitem id="treatment_plan_list_sub"-->
+<!--              name="Treatment plan"-->
+<!--              parent="treatment_plan_list_main"-->
+<!--              action="treatment_plan_list_action"-->
+<!--              sequence="10"/>-->
 </odoo>

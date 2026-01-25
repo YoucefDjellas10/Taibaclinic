@@ -40,5 +40,4 @@
               parent="configuration_list_main"
               action="treatments_list_action"
               sequence="70"/>
-
 </odoo>

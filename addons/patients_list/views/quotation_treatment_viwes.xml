@@ -40,11 +40,11 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="quotations_treatment_list_sub"
-              name="Quotations treatment"
-              parent="quotations_list_main"
-              action="quotations_treatment_list_action"
-              sequence="70"/>
+<!--    <menuitem id="quotations_treatment_list_sub"-->
+<!--              name="Quotations treatment"-->
+<!--              parent="quotations_list_main"-->
+<!--              action="quotations_treatment_list_action"-->
+<!--              sequence="70"/>-->
 
 
 </odoo>
