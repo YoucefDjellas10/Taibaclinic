@@ -40,3 +40,4 @@ class Quotations(models.Model):
         record = super().create(vals)
         record.name = f"Quota-{record.id}"
         return record
+

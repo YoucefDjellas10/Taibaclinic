@@ -1,0 +1,45 @@
+<odoo>
+    <record id="patient_payment_form" model="ir.ui.view">
+        <field name="name">patient.payment.form</field>
+        <field name="model">patient.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="patient"/>
+                        <field name="appointment"/>
+                        <field name="currency" invisible="1"/>
+                        <field name="amount"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="patient_payment_list" model="ir.ui.view">
+        <field name="name">patient.payment.list</field>
+        <field name="model">patient.payment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="appointment"/>
+                <field name="create_uid"/>
+                <field name="create_date"/>
+                <field name="currency" optional="hide"/>
+                <field name="amount"/>
+                <field name="note"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="patient_payment_list_action" model="ir.actions.act_window">
+        <field name="name">Patient payment</field>
+        <field name="res_model">patient.payment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="patient_payment_list_sub_menu"
+              name="Payment"
+              action="patient_payment_list_action"
+              sequence="250"/>
+</odoo>

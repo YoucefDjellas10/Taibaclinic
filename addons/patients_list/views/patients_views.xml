@@ -8,10 +8,45 @@
                     <field name="stage"
                            widget="statusbar"
                            statusbar_visible="new,contacted,qualified,in_treatment,closed"/>
+                    <button name="action_add_contact"
+                            string="Add Contact"
+                            invisible="1"
+                            type="object"
+                            icon="fa-address-book"
+                            class="btn-contact"/>
+
+                    <button name="action_add_attachments"
+                            string="Add Attachment"
+                            invisible="1"
+                            type="object"
+                            icon="fa-paperclip"
+                            class="btn-attachment"/>
+
+                    <button name="action_add_quotations"
+                            string="Add Quotation"
+                            invisible="1"
+                            type="object"
+                            icon="fa-file-text-o"
+                            class="btn-quotation"/>
+
+                    <button name="action_add_appointments"
+                            string="Add Appointment"
+                            invisible="1"
+                            type="object"
+                            icon="fa-calendar"
+                            class="btn-appointment"/>
+
+                    <button name="action_add_deals"
+                            string="Add Deal"
+                            invisible="1"
+                            type="object"
+                            icon="fa-calculator"
+                            class="btn-deal"/>
                 </header>
                 <sheet>
                     <group>
                         <group>
+                            <field name="patient_type"/>
                             <field name="gender"/>
                             <field name="first_name"/>
                             <field name="last_name"/>
@@ -30,19 +65,41 @@
                     <notebook>
                         <page string="Contact">
                             <header>
-
+                                <button name="action_add_contact"
+                                        string="Add Contact"
+                                        type="object"
+                                        icon="fa-address-book"
+                                        class="btn-contact"/>
                             </header>
                             <field name="contact_ids" readonly="1"/>
                         </page>
+                        <page string="Attachments">
+                            <header>
+                                <button name="action_add_attachments"
+                                        string="Add Attachment"
+                                        type="object"
+                                        icon="fa-paperclip"
+                                        class="btn-attachment"/>
+                            </header>
+                            <field name="attachment_ids" readonly="1"/>
+                        </page>
                         <page string="Appointments">
                             <header>
-
+                                <button name="action_add_appointments"
+                                        string="Add Appointment"
+                                        type="object"
+                                        icon="fa-calendar"
+                                        class="btn-appointment"/>
                             </header>
                             <field name="appointment_ids" readonly="1"/>
                         </page>
-                        <page string="Quotations">
+                        <page string="Quotations" invisible="patient_type == 'door'">
                             <header>
-
+                                <button name="action_add_quotations"
+                                        string="Add Quotation"
+                                        type="object"
+                                        icon="fa-file-text-o"
+                                        class="btn-quotation"/>
                             </header>
                             <field name="quotation_ids" readonly="1">
                                 <list>
@@ -54,9 +111,13 @@
                                 </list>
                             </field>
                         </page>
-                        <page string="Deals">
+                        <page string="Deals" invisible="patient_type == 'door'">
                             <header>
-
+                                <button name="action_add_deals"
+                                        string="Add Deal"
+                                        type="object"
+                                        icon="fa-calculator"
+                                        class="btn-deal"/>
                             </header>
                             <field name="deal_ids" readonly="1">
                                 <list>
@@ -67,6 +128,16 @@
                                     <field name="currency" optional="hide"/>
                                 </list>
                             </field>
+                        </page>
+                        <page string="Payments">
+                            <header>
+                                <button name="action_add_payment"
+                                        string="Add Payment"
+                                        type="object"
+                                        icon="fa-money"
+                                        class="btn-payment"/>
+                            </header>
+                            <field name="payment_ids"/>
                         </page>
                     </notebook>
 
@@ -79,6 +150,7 @@
         <field name="model">patients</field>
         <field name="arch" type="xml">
             <list>
+                <field name="patient_type"/>
                 <field name="name"/>
                 <field name="age"/>
                 <field name="email"/>

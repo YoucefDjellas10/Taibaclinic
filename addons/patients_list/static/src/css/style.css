@@ -1,0 +1,33 @@
+/* CONTACT - Bleu foncé */
+.btn-contact {
+    background-color: #0B3C5D !important;
+    color: white !important;
+}
+
+/* ATTACHMENT - Gris */
+.btn-attachment {
+    background-color: #495057 !important;
+    color: white !important;
+}
+
+/* APPOINTMENT - Bleu clair */
+.btn-appointment {
+    background-color: #5bc0de !important;
+    color: white !important;
+}
+
+/* QUOTATION - Orange */
+.btn-quotation {
+    background-color: #fd7e14 !important;
+    color: white !important;
+}
+
+/* DEAL - Vert */
+.btn-deal {
+    background-color: #28a745 !important;
+    color: white !important;
+}
+.btn-payment {
+    background-color: #03820A !important;
+    color: white !important;
+}

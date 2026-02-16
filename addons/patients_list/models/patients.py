@@ -7,6 +7,9 @@ class Patients(models.Model):
     _description = 'Patients list'
 
     name = fields.Char(string='Full name', compute='_compute_full_name', store=True)
+    patient_type = fields.Selection([('door', 'Door'),
+                                     ('lead', 'Lead'),
+                                     ('company', 'Compaby')], string='Patient Type')
     stage = fields.Selection([('new', 'New Lead'),
                               ('contacted', 'Contacted'),
                               ('qualified', 'Qualified'),
@@ -36,6 +39,8 @@ class Patients(models.Model):
     medical_histiory = fields.Many2many('medical.history', string='Medical history')
     quotation_ids = fields.One2many('quotations', 'patient', string='Quotations')
     deal_ids = fields.One2many('treatment.plan', 'patient', string='Deals')
+    attachment_ids = fields.One2many('patient.attachments', 'patient', string='attachments')
+    payment_ids = fields.One2many('patient.payment', 'patient', string='Payments')
 
     @api.depends('birthday')
     def _compute_age(self):
@@ -60,3 +65,84 @@ class Patients(models.Model):
                 parts.append(rec.last_name)
 
             rec.name = " ".join(parts)
+
+    def action_add_contact(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Contact',
+            'res_model': 'contact.record',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient': self.id,
+            }
+        }
+
+    def action_add_attachments(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Attachment',
+            'res_model': 'patient.attachments',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient': self.id,
+            }
+        }
+
+    def action_add_quotations(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Quotation',
+            'res_model': 'quotations',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient': self.id,
+            }
+        }
+
+    def action_add_appointments(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Appointment',
+            'res_model': 'appointment.record',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient': self.id,
+            }
+        }
+
+    def action_add_deals(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Deal',
+            'res_model': 'treatment.plan',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient': self.id,
+            }
+        }
+
+    def action_add_payment(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Payment',
+            'res_model': 'patient.payment',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient': self.id,
+            }
+        }
+
+
+

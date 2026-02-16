@@ -7,6 +7,7 @@ class TreatmentPlan(models.Model):
 
     name = fields.Char(string='ID', readonly=True)
     plan = fields.Many2one('treatment.plan', string='Deal')
+    appointment = fields.Many2one('appointment.record', string='Deal')
     treatment = fields.Many2one('treatments', string='Treatment')
     quantity = fields.Integer(string='Qte', default="1")
     currency = fields.Many2one('res.currency',

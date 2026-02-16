@@ -10,3 +10,5 @@ from . import treatments
 from . import teeth
 from . import treatment_plan
 from . import treatment_plan_lines
+from . import patient_attachments
+from . import patient_payment

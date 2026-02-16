@@ -15,6 +15,13 @@
         'views/teeth_views.xml',
         'views/treatment_plan_views.xml',
         'views/trealment_plan_lines_views.xml',
+        'views/patient_attachments_views.xml',
+        'views/payment_patient_views.xml',
 ],
+'assets': {
+    'web.assets_backend': [
+        'patients_list/static/src/css/style.css',
+    ],
+},
     'license': 'LGPL-3',
 }

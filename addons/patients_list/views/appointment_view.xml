@@ -17,9 +17,47 @@
                         <group>
                             <field name="reason"/>
                             <field name="status"/>
+                            <field name="doctor"/>
                             <field name="note"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page string="Treatments">
+                            <field name="lines_ids">
+                                <list editable="bottom">
+                                    <field name="treatment"/>
+                                    <field name="teeth" widget="many2many_tags"/>
+                                    <field name="quantity"/>
+                                    <field name="currency" optional="hide"/>
+                                    <field name="price"/>
+                                    <field name="total"/>
+                                </list>
+                            </field>
+                            <group>
+                                <group>
+                                </group>
+                                <group>
+                                    <group>
+                                    </group>
+                                    <group>
+                                        <field name="gross_total"/>
+                                        <field name="discount"/>
+                                        <field name="net_total"/>
+                                    </group>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Payments">
+                            <header>
+                                <button name="action_add_payment"
+                                        string="Add Payment"
+                                        type="object"
+                                        icon="fa-money"
+                                        class="btn-payment"/>
+                            </header>
+                            <field name="payment_ids"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -29,8 +67,8 @@
         <field name="model">appointment.record</field>
         <field name="arch" type="xml">
             <list default_order="date desc">
-                <field name="name"/>
-                <field name="patient"/>
+                <field name="create_uid"/>
+                <field name="doctor"/>
                 <field name="date"/>
                 <field name="reason" widget="badge"/>
                 <field name="status" widget="badge"

@@ -1,0 +1,31 @@
+from odoo import fields, models, api
+
+
+class AppointmentRecord(models.Model):
+    _name = 'patient.payment'
+    _description = 'Payments for patients'
+
+    name = fields.Char(string='ID', readonly=True)
+    patient = fields.Many2one('patients', string='Patient')
+    appointment = fields.Many2one('appointment.record', string='Appointment')
+    currency = fields.Many2one('res.currency',
+                               string='Currency',
+                               default=lambda self: self.env.ref('base.DZD'))
+    amount = fields.Monetary(currency_field='currency',  string='Amount')
+    note = fields.Text(string='Note')
+
+    @api.model
+    def create(self, vals_list):
+        if not isinstance(vals_list, list):
+            vals_list = [vals_list]
+        for vals in vals_list:
+            # Si appointment existe et patient n'existe pas
+            if vals.get('appointment') and not vals.get('patient'):
+                appointment = self.env['appointment.record'].browse(vals['appointment'])
+                if appointment.patient:
+                    vals['patient'] = appointment.patient.id
+
+        records = super().create(vals_list)
+        for record in records:
+            record.name = f"Pay-{record.id}"
+        return records
