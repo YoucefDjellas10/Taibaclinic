@@ -1,0 +1,62 @@
+<odoo>
+    <record id="pricing_list_form" model="ir.ui.view">
+        <field name="name">pricing.list.form</field>
+        <field name="model">pricing.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="treatment"/>
+                        <field name="currency"/>
+                        <field name="min_price"/>
+                        <field name="default_price"/>
+                        <field name="category"/>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="pricing_list_list" model="ir.ui.view">
+        <field name="name">pricing.list.list</field>
+        <field name="model">pricing.list</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="treatment"/>
+                <field name="currency"/>
+                <field name="min_price"/>
+                <field name="default_price"/>
+                <field name="category"/>
+                <field name="note"/>
+            </list>
+        </field>
+    </record>
+    <record id="pricing_list_search" model="ir.ui.view">
+        <field name="name">pricing.list</field>
+        <field name="model">pricing.list</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="category" icon="fa-cogs"/>
+                    <field name="treatment" icon="fa-sun"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="pricing_list_action" model="ir.actions.act_window">
+        <field name="name">Pricing list</field>
+        <field name="res_model">pricing.list</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="finance_menu"
+              name="Finance"
+              sequence="100"/>
+    <menuitem id="pricing_list_sub"
+              name="Pricing list"
+              parent="finance_menu"
+              action="pricing_list_action"
+              sequence="0"/>
+</odoo>

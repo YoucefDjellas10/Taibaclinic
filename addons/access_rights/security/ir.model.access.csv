@@ -16,12 +16,17 @@ access_patient_attachments_admin,Access patient attachments for admin,patients_l
 access_patient_payment_admin,Access patient payment for admin,patients_list.model_patient_payment,access_rights.group_admin,1,1,1,1
 access_doctors_admin,Access doctors for admin,doctors_list.model_doctors,access_rights.group_admin,1,1,1,1
 access_doctor_speciality_admin,Access doctor speciality for admin,doctors_list.model_doctor_speciality,access_rights.group_admin,1,1,1,1
+access_medical_medicine_admin,Access medical.medicine for admin,patients_list.model_medical_medicine,access_rights.group_admin,1,1,1,1
+access_patient_prescription_admin,Access doctors for admin,patients_list.model_patient_prescription,access_rights.group_admin,1,1,1,1
+access_prescription_line_admin,Access prescription.line for admin,patients_list.model_prescription_line,access_rights.group_admin,1,1,1,1
+access_price_category_admin,Access price.category for admin,finance_manage.model_price_category,access_rights.group_admin,1,1,1,1
+access_pricing_list_admin,Access pricing_list for admin,finance_manage.model_pricing_list,access_rights.group_admin,1,1,1,1
 
-access_countries_reception,Access countries for reception,patients_list.model_country_records,access_rights.group_salesperson,1,0,0,0
+access_countries_reception,Access countries for reception,patients_list.model_country_records,access_rights.group_reception,1,0,0,0
 access_patients_reception,Access patients for reception,patients_list.model_patients,access_rights.group_reception,1,1,1,0
 access_cities_reception,Access cities records for reception,patients_list.model_cities_records,access_rights.group_reception,1,0,0,0
 access_appointment_record_reception,Access appointment record for reception,patients_list.model_appointment_record,access_rights.group_reception,1,1,1,0
-access_contact_record_reception,Access contact record for reception,patients_list.model_contact_record,access_rights.group_reception,0,0,0,0
+access_contact_record_reception,Access contact record for reception,patients_list.model_contact_record,access_rights.group_reception,1,0,0,0
 access_medical_history_reception,Access medical history for reception,patients_list.model_medical_history,access_rights.group_reception,1,0,0,0
 access_quotations_reception,Access quotations for reception,patients_list.model_quotations,access_rights.group_reception,1,0,0,0
 access_quotations_treatment_reception,Access quotations treatment for reception,patients_list.model_quotations_treatment,access_rights.group_reception,1,0,0,0
@@ -33,3 +38,4 @@ access_patient_attachments_reception,Access patient attachments for reception,pa
 access_patient_payment_reception,Access patient payment for reception,patients_list.model_patient_payment,access_rights.group_reception,1,0,1,0
 access_doctors_reception,Access doctors for reception,doctors_list.model_doctors,access_rights.group_reception,1,0,0,0
 access_doctor_speciality_reception,Access doctor speciality for reception,doctors_list.model_doctor_speciality,access_rights.group_reception,1,0,0,0
+

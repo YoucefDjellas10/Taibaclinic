@@ -1,0 +1,121 @@
+# Translation of patients_list to Arabic
+msgid ""
+msgstr ""
+"Project-Id-Version: odoo (patients_list)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-01 00:00+0000\n"
+"PO-Revision-Date: 2026-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: patients_list
+msgid "Patient Search"
+msgstr "البحث عن مريض"
+
+#. module: patients_list
+msgid "Search by first name, last name or full name"
+msgstr "البحث بالاسم الأول أو اللقب أو الاسم الكامل"
+
+#. module: patients_list
+msgid "Enter patient first name, last name or full name..."
+msgstr "أدخل الاسم الأول أو اللقب أو الاسم الكامل للمريض..."
+
+#. module: patients_list
+msgid "Search"
+msgstr "بحث"
+
+#. module: patients_list
+msgid "Searching..."
+msgstr "جارٍ البحث..."
+
+#. module: patients_list
+msgid "New"
+msgstr "جديد"
+
+#. module: patients_list
+msgid "No results found"
+msgstr "لم يتم العثور على نتائج"
+
+#. module: patients_list
+msgid "No patient matches"
+msgstr "لا يوجد مريض يطابق"
+
+#. module: patients_list
+msgid "Check the spelling or try another term."
+msgstr "تحقق من الإملاء أو جرب مصطلحاً آخر."
+
+#. module: patients_list
+msgid "Use the search bar above to find a patient."
+msgstr "استخدم شريط البحث أعلاه للعثور على مريض."
+
+#. module: patients_list
+msgid "result(s) for"
+msgstr "نتيجة (نتائج) لـ"
+
+#. module: patients_list
+msgid "years"
+msgstr "سنة"
+
+#. module: patients_list
+msgid "Taiba Dental Clinic"
+msgstr "عيادة طيبة لطب الأسنان"
+
+#. module: patients_list
+msgid "New Lead"
+msgstr "عميل جديد"
+
+#. module: patients_list
+msgid "Contacted"
+msgstr "تم التواصل"
+
+#. module: patients_list
+msgid "Qualified"
+msgstr "مؤهل"
+
+#. module: patients_list
+msgid "Consult Booked"
+msgstr "تم حجز استشارة"
+
+#. module: patients_list
+msgid "Consult Done"
+msgstr "تمت الاستشارة"
+
+#. module: patients_list
+msgid "Plan Sent"
+msgstr "تم إرسال الخطة"
+
+#. module: patients_list
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#. module: patients_list
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: patients_list
+msgid "Deposit Paid"
+msgstr "تم دفع العربون"
+
+#. module: patients_list
+msgid "Scheduled"
+msgstr "مجدول"
+
+#. module: patients_list
+msgid "In Treatment"
+msgstr "تحت العلاج"
+
+#. module: patients_list
+msgid "Completed"
+msgstr "مكتمل"
+
+#. module: patients_list
+msgid "Follow-up"
+msgstr "متابعة"
+
+#. module: patients_list
+msgid "Closed"
+msgstr "مغلق"

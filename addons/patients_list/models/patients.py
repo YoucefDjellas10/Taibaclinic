@@ -41,6 +41,31 @@ class Patients(models.Model):
     deal_ids = fields.One2many('treatment.plan', 'patient', string='Deals')
     attachment_ids = fields.One2many('patient.attachments', 'patient', string='attachments')
     payment_ids = fields.One2many('patient.payment', 'patient', string='Payments')
+    note = fields.Text(string='Note')
+    payment_total = fields.Monetary(currency_field="currency", string='Total Payments', compute='_compute_payment_total', store=True)
+    deal_total = fields.Monetary(currency_field="currency", string='Total Deals', compute='_compute_deal_total', store=True)
+    currency = fields.Many2one('res.currency',
+                               string='Currency',
+                               default=lambda self: self.env.ref('base.DZD'))
+    balance = fields.Monetary(currency_field="currency", string='Balance', compute='_compute_balance', store=True)
+
+    @api.depends('deal_total', 'payment_total')
+    def _compute_balance(self):
+        for rec in self:
+            rec.balance = rec.deal_total - rec.payment_total
+
+    @api.depends('deal_ids.net_total')
+    def _compute_deal_total(self):
+        for rec in self:
+            rec.deal_total = sum(rec.deal_ids.mapped('net_total'))
+
+    @api.depends('payment_ids.amount')
+    def _compute_payment_total(self):
+        for rec in self:
+            total = 0.0
+            for payment in rec.payment_ids:
+                total += payment.amount or 0.0
+            rec.payment_total = total
 
     @api.depends('birthday')
     def _compute_age(self):

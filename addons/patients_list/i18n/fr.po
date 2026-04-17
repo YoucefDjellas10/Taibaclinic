@@ -1,0 +1,111 @@
+# Translation of patients_list to French
+msgid ""
+msgstr ""
+"Project-Id-Version: odoo (patients_list)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-01 00:00+0000\n"
+"PO-Revision-Date: 2026-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. module: patients_list
+msgid "Patient Search"
+msgstr "Recherche Patient"
+
+#. module: patients_list
+msgid "Search by first name, last name or full name"
+msgstr "Rechercher par prénom, nom ou nom complet"
+
+#. module: patients_list
+msgid "Enter patient first name, last name or full name..."
+msgstr "Entrez le prénom, nom ou nom complet du patient..."
+
+#. module: patients_list
+msgid "Search"
+msgstr "Rechercher"
+
+#. module: patients_list
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+#. module: patients_list
+msgid "New"
+msgstr "Nouveau"
+
+#. module: patients_list
+msgid "No results found"
+msgstr "Aucun résultat trouvé"
+
+#. module: patients_list
+msgid "No patient matches"
+msgstr "Aucun patient ne correspond à"
+
+#. module: patients_list
+msgid "Check the spelling or try another term."
+msgstr "Vérifiez l'orthographe ou essayez un autre terme."
+
+#. module: patients_list
+msgid "Use the search bar above to find a patient."
+msgstr "Utilisez la barre de recherche ci-dessus pour trouver un patient."
+
+#. module: patients_list
+msgid "result(s) for"
+msgstr "résultat(s) pour"
+
+#. module: patients_list
+msgid "years"
+msgstr "ans"
+
+#. module: patients_list
+msgid "Taiba Dental Clinic"
+msgstr "Taiba Dental Clinic"
+
+#. module: patients_list
+msgid "New Lead"
+msgstr "Nouveau Lead"
+
+#. module: patients_list
+msgid "Contacted"
+msgstr "Contacté"
+
+#. module: patients_list
+msgid "Qualified"
+msgstr "Qualifié"
+
+#. module: patients_list
+msgid "Consult Booked"
+msgstr "Consultation Réservée"
+
+#. module: patients_list
+msgid "Consult Done"
+msgstr "Consultation Effectuée"
+
+#. module: patients_list
+msgid "Plan Sent"
+msgstr "Plan Envoyé"
+
+#. module: patients_list
+msgid "Pending"
+msgstr "En attente"
+
+#. module: patients_list
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: patients_list
+msgid "Deposit Paid"
+msgstr "Acompte Payé"
+
+#. module: patients_list
+msgid "Scheduled"
+msgstr "Planifié"
+
+#. module: patients_list
+msgid "In Treatment"
+msgstr "En Traitement"
+
+#.

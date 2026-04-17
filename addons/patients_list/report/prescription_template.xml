@@ -1,0 +1,60 @@
+<odoo>
+
+    <template id="prescription_report_template">
+        <t t-call="web.external_layout">
+
+            <!-- IMPORTANT -->
+            <t t-foreach="docs" t-as="o">
+
+                <div class="page">
+
+                    <h2 style="text-align:center;">Taiba Dental Clinic</h2>
+
+                    <p>
+                        <strong>Patient:</strong>
+                        <span t-esc="o.patient_id.name"/>
+                    </p>
+
+                    <p>
+                        <strong>Date:</strong>
+                        <span t-esc="o.date"/>
+                    </p>
+
+                    <p>
+                        <strong>Doctor:</strong>
+                        <span t-esc="o.doctor_name"/>
+                    </p>
+
+                    <br/>
+
+                    <table border="1" style="width:100%;">
+                        <tr>
+                            <th>Medicine</th>
+                            <th>Dosage</th>
+                            <th>Frequency</th>
+                            <th>Duration</th>
+                        </tr>
+
+                        <tr t-foreach="o.line_ids" t-as="l">
+                            <td><span t-esc="l.medication_id.name"/></td>
+                            <td><span t-esc="l.dosage"/></td>
+                            <td><span t-esc="l.frequency"/></td>
+                            <td><span t-esc="l.duration"/></td>
+                        </tr>
+
+                    </table>
+
+                    <br/><br/>
+
+                    <div style="text-align:right;">
+                        Doctor Signature
+                    </div>
+
+                </div>
+
+            </t>
+
+        </t>
+    </template>
+
+</odoo>

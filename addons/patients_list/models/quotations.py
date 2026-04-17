@@ -35,9 +35,10 @@ class Quotations(models.Model):
             record.gross_total = gross
             record.net_total = gross - (record.discount or 0.0)
 
-    @api.model
-    def create(self, vals):
-        record = super().create(vals)
-        record.name = f"Quota-{record.id}"
-        return record
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super().create(vals_list)
+        for record in records:
+            record.name = f"Quota-{record.id}"
+        return records
 

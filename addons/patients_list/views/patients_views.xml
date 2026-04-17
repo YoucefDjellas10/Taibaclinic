@@ -5,43 +5,6 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="stage"
-                           widget="statusbar"
-                           statusbar_visible="new,contacted,qualified,in_treatment,closed"/>
-                    <button name="action_add_contact"
-                            string="Add Contact"
-                            invisible="1"
-                            type="object"
-                            icon="fa-address-book"
-                            class="btn-contact"/>
-
-                    <button name="action_add_attachments"
-                            string="Add Attachment"
-                            invisible="1"
-                            type="object"
-                            icon="fa-paperclip"
-                            class="btn-attachment"/>
-
-                    <button name="action_add_quotations"
-                            string="Add Quotation"
-                            invisible="1"
-                            type="object"
-                            icon="fa-file-text-o"
-                            class="btn-quotation"/>
-
-                    <button name="action_add_appointments"
-                            string="Add Appointment"
-                            invisible="1"
-                            type="object"
-                            icon="fa-calendar"
-                            class="btn-appointment"/>
-
-                    <button name="action_add_deals"
-                            string="Add Deal"
-                            invisible="1"
-                            type="object"
-                            icon="fa-calculator"
-                            class="btn-deal"/>
                 </header>
                 <sheet>
                     <group>
@@ -52,8 +15,10 @@
                             <field name="last_name"/>
                             <field name="birthday"/>
                             <field name="age"/>
+                            <field name="note"/>
                         </group>
                         <group>
+                            <field name="balance" readonly="1"/>
                             <field name="stage"/>
                             <field name="medical_histiory" widget="many2many_tags"/>
                             <field name="email"/>
@@ -111,7 +76,7 @@
                                 </list>
                             </field>
                         </page>
-                        <page string="Deals" invisible="patient_type == 'door'">
+                        <page string="Deals">
                             <header>
                                 <button name="action_add_deals"
                                         string="Add Deal"
@@ -128,6 +93,19 @@
                                     <field name="currency" optional="hide"/>
                                 </list>
                             </field>
+                            <group>
+                                <group>
+
+                                </group>
+                                <group>
+                                    <group>
+
+                                    </group>
+                                    <group>
+                                        <field name="deal_total" readonly="1"/>
+                                    </group>
+                                </group>
+                            </group>
                         </page>
                         <page string="Payments">
                             <header>
@@ -138,6 +116,15 @@
                                         class="btn-payment"/>
                             </header>
                             <field name="payment_ids"/>
+                            <group>
+                                <group>
+
+                                </group>
+                                <group>
+                                    <field name="payment_total" readonly="1"/>
+                                    <field name="currency" invisible="1"/>
+                                </group>
+                            </group>
                         </page>
                     </notebook>
 

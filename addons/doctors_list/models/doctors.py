@@ -15,6 +15,7 @@ class Doctors(models.Model):
     birthday = fields.Date(string='Birthday', required=True)
     age = fields.Integer(string='Age', compute='_compute_age', store=True)
     mobile = fields.Char(string='Mobile', required=True)
+    nd_mobile = fields.Char(string='2nd Mobile')
 
     @api.depends('birthday')
     def _compute_age(self):

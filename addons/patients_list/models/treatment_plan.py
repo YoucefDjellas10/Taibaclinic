@@ -6,13 +6,16 @@ class TreatmentPlan(models.Model):
     _description = 'plan of patients treatments'
 
     name = fields.Char(string='ID', readonly=True)
-    patient = fields.Many2one('patients', string='Patient')
-
+    status = fields.Selection([('pending', 'Pending'),
+                               ('refused', 'Refused'),
+                               ('accepted', 'Accepted')], string='Status', default='pending', required=True)
+    patient = fields.Many2one('patients', string='Patient', required=True)
+    appointment = fields.Many2one('appointment.record', string='Appointment')
     description = fields.Text(string='Description')
     age = fields.Integer(string='Age', related='patient.age')
     gender = fields.Selection(string='Gender', related='patient.gender')
     medical_histiory = fields.Many2many(string='Medical history', related='patient.medical_histiory')
-    deal_date = fields.Datetime(string='First')
+    deal_date = fields.Datetime(string='First', default=fields.Datetime.now)
     currency = fields.Many2one('res.currency',
                                string='Currency',
                                default=lambda self: self.env.ref('base.DZD'))
@@ -28,8 +31,9 @@ class TreatmentPlan(models.Model):
             record.gross_total = gross
             record.net_total = gross - (record.discount or 0.0)
 
-    @api.model
-    def create(self, vals):
-        record = super().create(vals)
-        record.name = f"Deal-{record.id}"
-        return record
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super().create(vals_list)
+        for record in records:
+            record.name = f"Deal-{record.id}"
+        return records

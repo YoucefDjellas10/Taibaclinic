@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="patients_list.TodayAppointmentsPage" owl="1">
+
+        <!--
+            Layout :
+              .tap_layout          → flex-column, height: 100vh (ou 100%)
+                .tap_hero          → fixe en haut (hauteur naturelle)
+                .tap_scroll_area   → flex: 1, overflow-y: auto  ← scroll ici
+                .tap_footer        → fixe en bas, toujours visible
+        -->
+        <div class="o_today_appointments_page tap_layout">
+
+            <!-- ═══ HERO (haut fixe) ════════════════════════════════════════ -->
+            <div class="tap_hero">
+                <div class="tap_hero_inner">
+
+                    <!-- Title -->
+                    <div class="tap_title_block">
+                        <span class="tap_icon">
+                            <i class="fa fa-calendar-check-o"/>
+                        </span>
+                        <div class="tap_title_text">
+                            <p class="tap_clinic_name">Taiba Dental Clinic</p>
+                            <h1 class="tap_title">
+                                <t t-esc="dateTitle"/>
+                            </h1>
+                            <p class="tap_subtitle">
+                                <i class="fa fa-calendar"/>
+                                <t t-esc="dateSubtitle"/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Counters -->
+                    <div class="tap_counters">
+                        <div class="tap_counter_card">
+                            <span class="tap_counter_value"><t t-esc="state.appointments.length"/></span>
+                            <span class="tap_counter_label">Total</span>
+                        </div>
+                        <div class="tap_counter_card tap_counter_pending">
+                            <span class="tap_counter_value"><t t-esc="countUpcoming"/></span>
+                            <span class="tap_counter_label">Upcoming</span>
+                        </div>
+                        <div class="tap_counter_card tap_counter_active">
+                            <span class="tap_counter_value"><t t-esc="countActive"/></span>
+                            <span class="tap_counter_label">In Treatment</span>
+                        </div>
+                        <div class="tap_counter_card tap_counter_done">
+                            <span class="tap_counter_value"><t t-esc="countDone"/></span>
+                            <span class="tap_counter_label">Completed</span>
+                        </div>
+                    </div>
+
+                    <!-- Filter pills + refresh + new -->
+                    <div class="tap_actions_bar">
+                        <div class="tap_filter_pills">
+                            <t t-foreach="filterOptions" t-as="opt" t-key="opt.key">
+                                <button
+                                    t-attf-class="tap_filter_pill {{ state.filter === opt.key ? 'active' : '' }}"
+                                    t-on-click="() => this.setFilter(opt.key)"
+                                >
+                                    <t t-esc="opt.label"/>
+                                </button>
+                            </t>
+                        </div>
+                        <div class="tap_btn_group">
+                            <button class="tap_refresh_btn" t-on-click="refreshAppointments" title="Refresh">
+                                <i t-attf-class="fa fa-refresh {{ state.loading ? 'fa-spin' : '' }}"/>
+                            </button>
+                            <button class="psp_new_btn" t-on-click="openNewAppointment">
+                                <i class="fa fa-plus"/>
+                                <span>New Appointment</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ═══ SCROLLABLE RESULTS (milieu) ════════════════════════════ -->
+            <div class="tap_scroll_area">
+                <div class="tap_results_area">
+
+                    <!-- Loading -->
+                    <t t-if="state.loading">
+                        <div class="tap_loading">
+                            <div class="tap_loading_spinner">
+                                <i class="fa fa-spinner fa-spin fa-3x"/>
+                            </div>
+                            <p>Loading appointments...</p>
+                        </div>
+                    </t>
+
+                    <!-- Empty -->
+                    <t t-elif="!state.loading and filteredAppointments.length === 0">
+                        <div class="tap_no_results">
+                            <div class="tap_no_results_icon">
+                                <i class="fa fa-calendar-times-o"/>
+                            </div>
+                            <h3>No Appointments</h3>
+                            <p>No appointments scheduled for <strong><t t-esc="dateSubtitle"/></strong>.</p>
+                            <button class="psp_new_btn" t-on-click="openNewAppointment">
+                                <i class="fa fa-plus"/> New Appointment
+                            </button>
+                        </div>
+                    </t>
+
+                    <!-- Cards -->
+                    <t t-else="">
+                        <div class="tap_results_header">
+                            <span class="tap_results_count">
+                                <i class="fa fa-check-circle"/>
+                                <t t-esc="filteredAppointments.length"/> appointments
+                            </span>
+                        </div>
+
+                        <div class="tap_results_grid">
+                            <t t-foreach="filteredAppointments" t-as="apt" t-key="apt.id">
+                                <div
+                                    t-attf-class="tap_appointment_card
+                                        {{ apt.status === 'in_progress' ? 'tap_card_active'    : '' }}
+                                        {{ apt.status === 'completed'   ? 'tap_card_done'      : '' }}
+                                        {{ apt.status === 'cancelled'   ? 'tap_card_cancelled' : '' }}"
+                                    t-on-click="() => this.openAppointment(apt.id)"
+                                >
+                                    <!-- Time -->
+                                    <div class="tap_time_col">
+                                        <span class="tap_time"><t t-esc="formatTime(apt.date)"/></span>
+                                        <t t-if="isUpcoming(apt.date) and apt.status !== 'cancelled'">
+                                            <span class="tap_time_badge upcoming">Soon</span>
+                                        </t>
+                                        <t t-elif="apt.status === 'in_progress'">
+                                            <span class="tap_time_badge active">Now</span>
+                                        </t>
+                                    </div>
+
+                                    <!-- Avatar -->
+                                    <div class="tap_card_avatar">
+                                        <span class="tap_avatar_initials">
+                                            <t t-esc="getInitials(apt.patientInfo.name or apt.patient[1])"/>
+                                        </span>
+                                    </div>
+
+                                    <!-- Body -->
+                                    <div class="tap_card_body">
+                                        <div class="tap_card_top">
+                                            <h3 class="tap_patient_name">
+                                                <t t-esc="apt.patientInfo.name or apt.patient[1]"/>
+                                            </h3>
+                                            <span t-attf-class="psp_stage_badge {{ getStatusBadgeClass(apt.status) }}">
+                                                <t t-esc="getStatusLabel(apt.status)"/>
+                                            </span>
+                                        </div>
+                                        <div class="tap_card_details">
+                                            <span class="tap_detail_item tap_reason_item">
+                                                <i class="fa fa-stethoscope"/>
+                                                <t t-esc="getReasonLabel(apt.reason)"/>
+                                            </span>
+                                            <t t-if="apt.doctor">
+                                                <span class="tap_detail_item">
+                                                    <i class="fa fa-user-md"/>
+                                                    <t t-esc="apt.doctor[1]"/>
+                                                </span>
+                                            </t>
+                                            <t t-if="apt.patientInfo.age">
+                                                <span class="tap_detail_item">
+                                                    <i class="fa fa-birthday-cake"/>
+                                                    <t t-esc="apt.patientInfo.age"/> years
+                                                </span>
+                                            </t>
+                                            <t t-if="apt.patientInfo.mobile">
+                                                <span class="tap_detail_item">
+                                                    <i class="fa fa-phone"/>
+                                                    <t t-esc="apt.patientInfo.mobile"/>
+                                                </span>
+                                            </t>
+                                        </div>
+                                        <t t-if="apt.note">
+                                            <div class="tap_note">
+                                                <i class="fa fa-sticky-note-o"/>
+                                                <span><t t-esc="apt.note"/></span>
+                                            </div>
+                                        </t>
+                                    </div>
+
+                                    <!-- Right -->
+                                    <div class="tap_card_right">
+                                        <button
+                                            class="tap_patient_btn"
+                                            t-on-click.stop="() => this.openPatient(apt.patient[0])"
+                                            title="Open patient file"
+                                        >
+                                            <i class="fa fa-user"/>
+                                        </button>
+                                        <div class="psp_card_arrow">
+                                            <i class="fa fa-chevron-right"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </t>
+
+                </div>
+            </div>
+
+            <!-- ═══ FOOTER FIXE (bas) ════════════════════════════════════════ -->
+            <div class="tap_footer">
+                <div class="tap_footer_inner">
+
+                    <button class="tap_nav_btn" t-on-click="goToPrevDay" title="Previous day">
+                        <i class="fa fa-chevron-left"/>
+                        <span>Previous</span>
+                    </button>
+
+                    <t t-if="!isToday">
+                        <button class="tap_today_btn" t-on-click="goToToday">
+                            <i class="fa fa-dot-circle-o"/>
+                            <span>Today</span>
+                        </button>
+                    </t>
+                    <t t-else="">
+                        <div class="tap_today_placeholder"/>
+                    </t>
+
+                    <button class="tap_nav_btn" t-on-click="goToNextDay" title="Next day">
+                        <span>Next</span>
+                        <i class="fa fa-chevron-right"/>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </t>
+</templates>

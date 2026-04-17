@@ -1,0 +1,430 @@
+/* ===================================================
+   Taiba Dental Clinic - Today's Appointments Page
+   Extends: patient_search_page.scss
+   =================================================== */
+
+/* ===================================================
+   LAYOUT — hero fixe / scroll milieu / footer fixe
+   =================================================== */
+.o_action_manager,
+.o_action {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.o_today_appointments_page.tap_layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: #eef2f7;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ===================================================
+   HERO  (-25% sur tout : padding, tailles, espacements)
+   =================================================== */
+.tap_hero {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #0d6e8a 0%, #0a4f6b 60%, #073d54 100%);
+    /* était 28px 40px 36px → -25% ≈ 21px 30px 27px */
+    padding: 21px 30px 27px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+}
+
+.tap_hero::before {
+    content: '';
+    position: absolute;
+    top: -45px; right: -45px;   /* était -60px */
+    width: 150px; height: 150px; /* était 200px */
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+}
+.tap_hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: 10%;   /* était -40px */
+    width: 105px; height: 105px; /* était 140px */
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+
+.tap_hero_inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---- Title block ---- */
+.tap_title_block {
+    display: flex;
+    align-items: center;
+    gap: 12px;           /* était 16px */
+    margin-bottom: 12px; /* était 16px */
+}
+
+.tap_icon {
+    width: 38px; height: 38px;  /* était 50px */
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 11px;         /* était 14px */
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; color: #fff; /* était 22px */
+    flex-shrink: 0;
+}
+
+.tap_title_text { flex: 1; }
+
+.tap_clinic_name {
+    font-size: 9px;  /* était 10px */
+    font-weight: 700;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 2px; /* était 3px */
+}
+
+.tap_title {
+    margin: 0;
+    font-size: 17px; font-weight: 700; /* était 22px */
+    color: #fff; letter-spacing: -0.3px;
+}
+
+.tap_subtitle {
+    margin: 2px 0 0; /* était 3px */
+    font-size: 11px; /* était 12px */
+    color: rgba(255,255,255,0.65);
+}
+.tap_subtitle .fa { margin-right: 4px; color: rgba(255,255,255,0.4); }
+
+/* ---- Counters ---- */
+.tap_counters {
+    display: flex;
+    gap: 8px;            /* était 10px */
+    margin-bottom: 12px; /* était 16px */
+    flex-wrap: wrap;
+}
+
+.tap_counter_card {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;      /* était 10px */
+    padding: 7px 12px;       /* était 10px 16px */
+    text-align: center;
+    min-width: 54px;         /* était 72px */
+}
+
+.tap_counter_value {
+    display: block;
+    font-size: 17px; font-weight: 700; /* était 22px */
+    color: #fff; line-height: 1;
+}
+
+.tap_counter_label {
+    display: block;
+    font-size: 9px; font-weight: 600; /* était 10px */
+    letter-spacing: 0.5px; text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 2px; /* était 3px */
+}
+
+.tap_counter_pending .tap_counter_value { color: #f9d670; }
+.tap_counter_active  .tap_counter_value { color: #7ae0c2; }
+.tap_counter_done    .tap_counter_value { color: #80e29a; }
+
+/* ---- Actions bar ---- */
+.tap_actions_bar {
+    display: flex;
+    gap: 8px;  /* était 10px */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tap_filter_pills {
+    display: flex;
+    gap: 4px;  /* était 5px */
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.tap_filter_pill {
+    height: 26px; padding: 0 11px;  /* était 32px / 14px */
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    color: rgba(255,255,255,0.7);
+    font-size: 11px; font-weight: 500; /* était 12px */
+    cursor: pointer; font-family: inherit;
+    white-space: nowrap;
+    transition: all 0.18s;
+}
+.tap_filter_pill:hover { background: rgba(255,255,255,0.18); color: #fff; }
+.tap_filter_pill.active {
+    background: rgba(255,255,255,0.95);
+    color: #0a4f6b; border-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+.tap_btn_group { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+
+.tap_refresh_btn {
+    width: 28px; height: 28px;  /* était 36px */
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 7px;          /* était 9px */
+    color: rgba(255,255,255,0.8);
+    font-size: 12px; cursor: pointer; /* était 14px */
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+.tap_refresh_btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+
+/* ===================================================
+   SCROLL AREA
+   =================================================== */
+.tap_scroll_area {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 12px;
+}
+
+.tap_scroll_area::-webkit-scrollbar { width: 5px; }
+.tap_scroll_area::-webkit-scrollbar-track { background: transparent; }
+.tap_scroll_area::-webkit-scrollbar-thumb {
+    background: rgba(13,110,138,0.25);
+    border-radius: 4px;
+}
+.tap_scroll_area::-webkit-scrollbar-thumb:hover {
+    background: rgba(13,110,138,0.45);
+}
+
+.tap_results_area {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+/* ---- Loading ---- */
+.tap_loading {
+    text-align: center; padding: 60px 20px;
+    background: #fff; border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07); color: #6b7a90;
+}
+.tap_loading_spinner { color: #0d6e8a; margin-bottom: 16px; }
+
+/* ---- Empty ---- */
+.tap_no_results {
+    text-align: center; padding: 60px 20px;
+    background: #fff; border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.tap_no_results_icon { font-size: 52px; color: #c8d6e0; }
+.tap_no_results h3 { font-size: 20px; font-weight: 700; color: #1e2d3d; margin: 0; }
+.tap_no_results p  { color: #6b7a90; margin: 0; font-size: 15px; }
+
+/* ---- Results header ---- */
+.tap_results_header { padding: 4px 0 12px; }
+.tap_results_count {
+    font-size: 13px; color: #5a7080;
+    display: flex; align-items: center; gap: 7px;
+}
+.tap_results_count .fa-check-circle { color: #28a745; }
+
+/* ---- Grid ---- */
+.tap_results_grid { display: flex; flex-direction: column; gap: 10px; }
+
+/* ===================================================
+   APPOINTMENT CARD
+   =================================================== */
+.tap_appointment_card {
+    background: #fff;
+    border: 1px solid #dce8f0;
+    border-left: 4px solid #0d6e8a;
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex; align-items: center; gap: 14px;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.tap_appointment_card:hover {
+    border-color: #0d6e8a;
+    box-shadow: 0 4px 18px rgba(13,110,138,0.12);
+    transform: translateY(-2px);
+}
+
+.tap_card_active    { border-left-color: #fd7e14; background: #fffcf9; }
+.tap_card_done      { border-left-color: #28a745; background: #f8fff9; opacity: 0.88; }
+.tap_card_cancelled { border-left-color: #adb5bd; background: #f9f9f9; opacity: 0.7; }
+
+.tap_time_col {
+    display: flex; flex-direction: column; align-items: center;
+    min-width: 58px; flex-shrink: 0; gap: 4px;
+}
+.tap_time { font-size: 17px; font-weight: 700; color: #0d6e8a; line-height: 1; }
+.tap_card_cancelled .tap_time { color: #adb5bd; }
+
+.tap_time_badge {
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    padding: 2px 6px; border-radius: 10px;
+}
+.tap_time_badge.upcoming { background: #fff3cd; color: #856404; }
+.tap_time_badge.active {
+    background: #fde8d8; color: #b05a00;
+    animation: tap-pulse 1.6s ease-in-out infinite;
+}
+@keyframes tap-pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.55; }
+}
+
+.tap_card_avatar {
+    width: 42px; height: 42px;
+    background: linear-gradient(135deg, #0d6e8a, #073d54);
+    border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+.tap_card_active    .tap_card_avatar { background: linear-gradient(135deg, #fd7e14, #c55a00); }
+.tap_card_done      .tap_card_avatar { background: linear-gradient(135deg, #28a745, #1a6e2e); }
+.tap_card_cancelled .tap_card_avatar { background: linear-gradient(135deg, #adb5bd, #6c757d); }
+
+.tap_avatar_initials { color: #fff; font-weight: 700; font-size: 13px; }
+
+.tap_card_body { flex: 1; min-width: 0; }
+.tap_card_top  { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-bottom: 5px; }
+.tap_patient_name { font-size: 14px; font-weight: 700; color: #0d2233; margin: 0; }
+
+.tap_card_details { display: flex; flex-wrap: wrap; gap: 10px; }
+.tap_detail_item {
+    display: flex; align-items: center;
+    gap: 4px; font-size: 12px; color: #6b7a90;
+}
+.tap_detail_item .fa { font-size: 10px; color: #0d6e8a; }
+.tap_reason_item { color: #2d4a60; font-weight: 600; }
+
+.tap_note {
+    display: flex; align-items: flex-start; gap: 5px;
+    margin-top: 7px; padding: 4px 9px;
+    background: #f5f8fa;
+    border-left: 3px solid #c8d6e0;
+    border-radius: 6px;
+    font-size: 11px; color: #6b7a90;
+}
+.tap_note .fa { font-size: 10px; color: #a0adb8; margin-top: 1px; flex-shrink: 0; }
+.tap_note span { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.tap_card_right {
+    display: flex; flex-direction: column; align-items: center; gap: 7px; flex-shrink: 0;
+}
+.tap_patient_btn {
+    width: 28px; height: 28px;
+    background: #eef2f7; border: 1px solid #dce8f0;
+    border-radius: 7px; color: #0d6e8a; font-size: 12px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.tap_patient_btn:hover { background: #0d6e8a; color: #fff; border-color: #0d6e8a; }
+
+/* ===================================================
+   FOOTER FIXE
+   =================================================== */
+.tap_footer {
+    flex-shrink: 0;
+    background: #fff;
+    border-top: 1px solid #dce8f0;
+    box-shadow: 0 -3px 14px rgba(0,0,0,0.07);
+    z-index: 10;
+}
+
+.tap_footer_inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.tap_nav_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px; padding: 0 16px;
+    background: #eef2f7;
+    border: 1px solid #dce8f0;
+    border-radius: 8px;
+    color: #0d6e8a;
+    font-size: 12px; font-weight: 600;
+    cursor: pointer; font-family: inherit;
+    transition: background 0.18s, border-color 0.18s, transform 0.1s;
+    white-space: nowrap;
+}
+.tap_nav_btn:hover {
+    background: #0d6e8a;
+    border-color: #0d6e8a;
+    color: #fff;
+}
+.tap_nav_btn:active { transform: scale(0.97); }
+.tap_nav_btn .fa { font-size: 11px; }
+
+.tap_today_btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px; padding: 0 18px;
+    background: #0d6e8a;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 12px; font-weight: 700;
+    cursor: pointer; font-family: inherit;
+    box-shadow: 0 2px 8px rgba(13,110,138,0.35);
+    transition: background 0.18s, transform 0.1s, box-shadow 0.18s;
+}
+.tap_today_btn:hover {
+    background: #0a5570;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13,110,138,0.4);
+}
+.tap_today_btn:active { transform: translateY(0); }
+
+.tap_today_placeholder {
+    height: 32px;
+    width: 90px;
+    visibility: hidden;
+}
+
+/* ===================================================
+   RESPONSIVE
+   =================================================== */
+@media (max-width: 640px) {
+    .tap_hero         { padding: 15px 16px 20px; }
+    .tap_results_area { padding: 14px 16px; }
+    .tap_footer_inner { padding: 8px 16px; }
+
+    .tap_nav_btn span  { display: none; }
+    .tap_nav_btn       { padding: 0 12px; }
+    .tap_today_placeholder { width: 56px; }
+
+    .tap_counters  { gap: 6px; }
+    .tap_counter_card  { padding: 6px 10px; min-width: 50px; }
+    .tap_counter_value { font-size: 15px; }
+
+    .tap_actions_bar  { flex-direction: column; align-items: flex-start; }
+    .tap_filter_pills { width: 100%; }
+
+    .tap_appointment_card { gap: 10px; padding: 11px 12px; }
+    .tap_time     { font-size: 14px; }
+    .tap_time_col { min-width: 46px; }
+}

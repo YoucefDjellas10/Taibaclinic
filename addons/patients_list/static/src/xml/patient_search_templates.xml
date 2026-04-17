@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="patients_list.PatientSearchPage" owl="1">
+        <div class="o_patient_search_page">
+
+            <div class="psp_hero">
+                <div class="psp_hero_inner">
+
+                    <div class="psp_title_block">
+                        <span class="psp_icon">
+                            <i class="fa fa-user-md"/>
+                        </span>
+                        <div>
+                            <p class="psp_clinic_name"><t t-esc="labels.clinicName"/></p>
+                            <h1 class="psp_title"><t t-esc="labels.title"/></h1>
+                            <p class="psp_subtitle"><t t-esc="labels.subtitle"/></p>
+                        </div>
+                    </div>
+
+                    <div class="psp_search_container">
+                        <div class="psp_search_box">
+                            <span class="psp_search_icon">
+                                <i class="fa fa-search"/>
+                            </span>
+                            <input
+                                t-ref="searchInput"
+                                type="text"
+                                class="psp_search_input"
+                                t-att-placeholder="labels.placeholder"
+                                t-att-value="state.query"
+                                t-on-input="onInputChange"
+                                t-on-keydown="onKeyDown"
+                            />
+                            <t t-if="state.query">
+                                <button class="psp_clear_btn" t-on-click="onClear">
+                                    <i class="fa fa-times"/>
+                                </button>
+                            </t>
+                        </div>
+
+                        <button
+                            class="psp_search_btn"
+                            t-on-click="onSearch"
+                            t-att-disabled="state.loading or !state.query.trim()"
+                        >
+                            <t t-if="state.loading">
+                                <i class="fa fa-spinner fa-spin"/>
+                                <span><t t-esc="labels.searching"/></span>
+                            </t>
+                            <t t-else="">
+                                <i class="fa fa-search"/>
+                                <span><t t-esc="labels.search"/></span>
+                            </t>
+                        </button>
+
+                        <button class="psp_new_btn" t-on-click="openNewPatient">
+                            <i class="fa fa-plus"/>
+                            <span><t t-esc="labels.newBtn"/></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="psp_results_area">
+
+                <t t-if="state.loading">
+                    <div class="psp_loading">
+                        <div class="psp_loading_spinner">
+                            <i class="fa fa-spinner fa-spin fa-3x"/>
+                        </div>
+                        <p><t t-esc="labels.loadingText"/></p>
+                    </div>
+                </t>
+
+                <t t-elif="state.searched and state.results.length === 0">
+                    <div class="psp_no_results">
+                        <div class="psp_no_results_icon">
+                            <i class="fa fa-user-times"/>
+                        </div>
+                        <h3><t t-esc="labels.noResultTitle"/></h3>
+                        <p><t t-esc="labels.noResultMsg"/> <strong>"<t t-esc="state.query"/>"</strong>.</p>
+                        <p class="psp_hint"><t t-esc="labels.noResultHint"/></p>
+                    </div>
+                </t>
+
+                <t t-elif="state.searched and state.results.length > 0">
+                    <div class="psp_results_header">
+                        <span class="psp_results_count">
+                            <i class="fa fa-check-circle"/>
+                            <t t-esc="state.results.length"/>
+                            <t t-esc="labels.resultFor"/>
+                            "<strong><t t-esc="state.query"/></strong>"
+                        </span>
+                    </div>
+                    <div class="psp_results_grid">
+                        <t t-foreach="state.results" t-as="patient" t-key="patient.id">
+                            <div class="psp_patient_card" t-on-click="() => this.openPatient(patient.id)">
+                                <div class="psp_card_avatar">
+                                    <span class="psp_avatar_initials">
+                                        <t t-esc="getInitials(patient.name)"/>
+                                    </span>
+                                </div>
+                                <div class="psp_card_body">
+                                    <div class="psp_card_top">
+                                        <h3 class="psp_patient_name"><t t-esc="patient.name"/></h3>
+                                        <span t-attf-class="psp_stage_badge {{ getStageBadgeClass(patient.stage) }}">
+                                            <t t-esc="getStageLabel(patient.stage)"/>
+                                        </span>
+                                    </div>
+                                    <div class="psp_card_details">
+                                        <t t-if="patient.age">
+                                            <span class="psp_detail_item">
+                                                <i class="fa fa-birthday-cake"/>
+                                                <t t-esc="patient.age"/>
+                                                <t t-esc="labels.years"/>
+                                            </span>
+                                        </t>
+                                        <t t-if="patient.mobile">
+                                            <span class="psp_detail_item">
+                                                <i class="fa fa-phone"/>
+                                                <t t-esc="patient.mobile"/>
+                                            </span>
+                                        </t>
+                                        <t t-if="patient.email">
+                                            <span class="psp_detail_item">
+                                                <i class="fa fa-envelope"/>
+                                                <t t-esc="patient.email"/>
+                                            </span>
+                                        </t>
+                                    </div>
+
+                                    <!-- Prochain RDV -->
+                                    <t t-if="patient.next_appointment">
+                                        <div class="psp_next_appointment">
+                                            <i class="fa fa-calendar-check-o"/>
+                                            <span class="psp_apt_date">
+                                                <t t-esc="formatDate(patient.next_appointment.date)"/>
+                                            </span>
+                                            <span class="psp_apt_separator">—</span>
+                                            <span class="psp_apt_reason">
+                                                <t t-esc="getReasonLabel(patient.next_appointment.reason)"/>
+                                            </span>
+                                        </div>
+                                    </t>
+
+                                </div>
+                                <div class="psp_card_arrow">
+                                    <i class="fa fa-chevron-right"/>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+
+                <t t-else="">
+                    <div class="psp_initial_state">
+                        <div class="psp_initial_icon">
+                            <i class="fa fa-users"/>
+                        </div>
+                        <p><t t-esc="labels.initialMsg"/></p>
+                    </div>
+                </t>
+
+            </div>
+        </div>
+    </t>
+</templates>

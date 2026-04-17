@@ -4,10 +4,14 @@
         <field name="model">treatment.plan</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <field name="status" widget="statusbar"/>
+                </header>
                 <sheet>
                     <group>
                         <group>
-                            <field name="patient"/>
+                            <field name="patient" invisible="patient"/>
+                            <field name="appointment" readonly="1" invisible="not appointment"/>
                             <field name="age"/>
                             <field name="gender"/>
                             <field name="medical_histiory" widget="many2many_tags"/>

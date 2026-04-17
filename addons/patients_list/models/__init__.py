@@ -12,3 +12,6 @@ from . import treatment_plan
 from . import treatment_plan_lines
 from . import patient_attachments
 from . import patient_payment
+from . import prescription
+from . import prescription_line
+from . import medicine

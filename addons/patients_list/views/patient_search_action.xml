@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_patient_search" model="ir.actions.client">
+        <field name="name">Recherche Patient</field>
+        <field name="tag">patients_list.patient_search_action</field>
+    </record>
+
+    <menuitem
+        id="menu_patient_search"
+        name="Recherche Patient"
+        action="action_patient_search"
+        sequence="10"
+    />
+
+</odoo>

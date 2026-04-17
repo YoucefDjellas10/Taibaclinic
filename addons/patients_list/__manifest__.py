@@ -1,7 +1,7 @@
 {
     'name': 'HMS',
     'description': "Dental clinic Managment",
-    'depends': ['base'],
+    'depends': ['base', 'web'],
     'data': [
         'views/countries_views.xml',
         'views/patients_views.xml',
@@ -17,11 +17,22 @@
         'views/trealment_plan_lines_views.xml',
         'views/patient_attachments_views.xml',
         'views/payment_patient_views.xml',
-],
-'assets': {
-    'web.assets_backend': [
-        'patients_list/static/src/css/style.css',
+        'views/patient_search_action.xml',
+        'data/sequence.xml',
+        'report/prescription_report.xml',
+        'report/prescription_template.xml',
+        'views/prescription_views.xml',
+        'views/medicine_views.xml',
     ],
-},
+    'assets': {
+        'web.assets_backend': [
+            'patients_list/static/src/js/patient_search.js',
+            'patients_list/static/src/xml/patient_search_templates.xml',
+            'patients_list/static/src/scss/patient_search.scss',
+            'patients_list/static/src/js/today_appointments.js',
+            'patients_list/static/src/xml/today_appointments.xml',
+            'patients_list/static/src/scss/today_appointments.scss',
+        ],
+    },
     'license': 'LGPL-3',
 }

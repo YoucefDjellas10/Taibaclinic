@@ -10,3 +10,4 @@ class Treatments(models.Model):
                                string='Currency',
                                default=lambda self: self.env.ref('base.DZD'))
     price = fields.Monetary(string='Price', currency_field='currency')
+

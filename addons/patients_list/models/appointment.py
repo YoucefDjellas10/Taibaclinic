@@ -53,6 +53,7 @@ class AppointmentRecord(models.Model):
     patient_type = fields.Selection(string='Patient Type', related="patient.patient_type")
     doctor = fields.Many2one('doctors', string="Doctor")
     payment_ids = fields.One2many('patient.payment', 'appointment', string='Payments')
+    deal_ids = fields.One2many('treatment.plan', 'appointment', string="Deals")
 
     def action_add_payment(self):
         self.ensure_one()
@@ -60,6 +61,20 @@ class AppointmentRecord(models.Model):
             'type': 'ir.actions.act_window',
             'name': 'Add Payment',
             'res_model': 'patient.payment',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_appointment': self.id,
+                'default_patient': self.patient.id,
+            }
+        }
+
+    def action_add_deals(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Deal',
+            'res_model': 'treatment.plan',
             'view_mode': 'form',
             'target': 'new',
             'context': {
