@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Menu racine -->
+    <menuitem id="menu_marketing_root"
+              name="Marketing"
+              sequence="100"
+              web_icon="marketing_module,static/description/icon.png"/>
+
+    <!-- Campagnes -->
+    <menuitem id="menu_marketing_campaigns"
+              name="Campagnes"
+              parent="menu_marketing_root"
+              sequence="10"/>
+
+    <menuitem id="menu_marketing_campaign_list"
+              name="Toutes les campagnes"
+              parent="menu_marketing_campaigns"
+              action="action_marketing_campaign"
+              sequence="10"/>
+
+    <menuitem id="menu_marketing_ads"
+              name="Publicités (Ads)"
+              parent="menu_marketing_campaigns"
+              action="action_ad_record"
+              sequence="20"/>
+
+    <menuitem id="menu_marketing_deposits"
+              name="Dépôts Budgets"
+              parent="menu_marketing_campaigns"
+              action="action_campaign_deposit"
+              sequence="30"/>
+
+    <!-- Configuration -->
+    <menuitem id="menu_marketing_config"
+              name="Configuration"
+              parent="menu_marketing_root"
+              sequence="90"/>
+
+    <menuitem id="menu_marketing_lead_source"
+              name="Sources de Leads"
+              parent="menu_marketing_config"
+              action="action_lead_source"
+              sequence="10"/>
+
+</odoo>

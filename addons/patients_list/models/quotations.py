@@ -14,6 +14,7 @@ class Quotations(models.Model):
     patient = fields.Many2one('patients', string='Patient')
     quotation_treatment_ids = fields.One2many('quotations.treatment', 'quotation',
                                               string='Treatments')
+
     description = fields.Text(string='Description')
     age = fields.Integer(string='Age', related='patient.age')
     gender = fields.Selection(string='Gender', related='patient.gender')

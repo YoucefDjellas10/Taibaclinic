@@ -42,9 +42,9 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="treatment_plan_lines_list_sub"
-              name="Treatment plan lines"
-              parent="treatment_plan_list_main"
-              action="treatment_plan_lines_list_action"
-              sequence="500"/>
+<!--    <menuitem id="treatment_plan_lines_list_sub"-->
+<!--              name="Treatment plan lines"-->
+<!--              parent="treatment_plan_list_main"-->
+<!--              action="treatment_plan_lines_list_action"-->
+<!--              sequence="500"/>-->
 </odoo>

@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_send_order_wizard_form" model="ir.ui.view">
+        <field name="name">send.order.wizard.form</field>
+        <field name="model">send.order.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Receive Order">
+                <group>
+                    <field name="expected_date"/>
+                </group>
+
+                <footer>
+                    <button name="confirme_action"
+                            string="Confirm"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

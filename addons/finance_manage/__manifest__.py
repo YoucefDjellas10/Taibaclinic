@@ -1,10 +1,19 @@
 {
     'name': 'Finance',
     'description': "Finance Management",
-    'depends': ['base', 'patients_list'],
+    'depends': ['base', 'mail', 'patients_list'],
     'data': [
         "views/price_category_views.xml",
         "views/pricing_list_views.xml",
+        "views/expense_type_record_views.xml",
+        "views/expense_record_views.xml",
+        "views/purchase_order_views.xml",
+        "views/supplier_record_views.xml",
+        "views/product_record_views.xml",
+        "views/product_category_record_views.xml",
+        "views/appointment_inherit.xml",
+        "wizards/refuse_reason_wizard.xml",
+        "wizards/purchase_receive_wizard.xml",
     ],
     'license': 'LGPL-3',
 }

@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_not_interested_wizard_form" model="ir.ui.view">
+        <field name="name">not.interested.wizard.form</field>
+        <field name="model">not.interested.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cancel Appointment">
+                <sheet>
+                    <group>
+                        <field name="patient_id" invisible="1" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="not_interested_reason"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                            name="action_confirm_action"
+                            string="Confirm"
+                            type="object"
+                            class="btn-danger"
+                    />
+                    <button
+                            string="Discard"
+                            class="btn-secondary"
+                            special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

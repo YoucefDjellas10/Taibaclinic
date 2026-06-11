@@ -9,22 +9,21 @@ class Patients(models.Model):
     name = fields.Char(string='Full name', compute='_compute_full_name', store=True)
     patient_type = fields.Selection([('door', 'Door'),
                                      ('lead', 'Lead'),
-                                     ('company', 'Compaby')], string='Patient Type')
+                                     ('company', 'Company')], string='Patient Type')
     stage = fields.Selection([('new', 'New Lead'),
                               ('contacted', 'Contacted'),
+                              ('not_interested', 'Not interested'),
                               ('qualified', 'Qualified'),
-                              ('consult_booked', 'Consultation Booked'),
-                              ('consult_done', 'Consultation Done'),
-                              ('plan_sent', 'Treatment Plan Sent'),
-                              ('pending', 'Decision Pending'),
-                              ('approved', 'Approved'),
-                              ('deposit', 'Deposit Paid'),
-                              ('scheduled', 'Treatment Scheduled'),
-                              ('in_treatment', 'In Treatment'),
-                              ('completed', 'Treatment Completed'),
-                              ('followup', 'Follow-up'),
-                              ('closed', 'Closed'),
+                              ('waiting_details', 'Waiting details'),
+                              ('quotation_preparation', 'Quotation preparation'),
+                              ('negotiation', 'Negotiation'),
+                              ('lost', 'Lost'),
+                              ('deal_closed', 'Deal closed'),
+                              ('new_beginning', 'New beginning'),
                               ], string='Stage', default='new', tracking=True)
+    not_interested_reason = fields.Many2one('not.interested.reason', string='not interested Reason')
+    lost_reason_id = fields.Many2one('lost.reason.record', string='lost Reason')
+    interested_id = fields.Many2one('interest.record', string='Interest')
     gender = fields.Selection([('Mr', 'Mr'), ('Ms', 'Ms')], string='Gender', required=True)
     first_name = fields.Char(string='First name', required=True)
     last_name = fields.Char(string='Last name', required=True)
@@ -48,11 +47,21 @@ class Patients(models.Model):
                                string='Currency',
                                default=lambda self: self.env.ref('base.DZD'))
     balance = fields.Monetary(currency_field="currency", string='Balance', compute='_compute_balance', store=True)
+    salesperson = fields.Many2one('res.users', string='Salesperson')
+    app_total = fields.Monetary(currency_field="currency", string='Total appointments', compute='_compute_app_total', store=True)
 
     @api.depends('deal_total', 'payment_total')
     def _compute_balance(self):
         for rec in self:
             rec.balance = rec.deal_total - rec.payment_total
+
+    @api.depends('appointment_ids.net_total')
+    def _compute_app_total(self):
+        for rec in self:
+            if rec.deal_ids:
+                rec.app_total = sum(rec.deal_ids.mapped('net_total'))
+            else:
+                rec.app_total = 0
 
     @api.depends('deal_ids.net_total')
     def _compute_deal_total(self):
@@ -96,11 +105,77 @@ class Patients(models.Model):
         return {
             'type': 'ir.actions.act_window',
             'name': 'Add Contact',
-            'res_model': 'contact.record',
+            'res_model': 'contact.stage.wizard',
             'view_mode': 'form',
             'target': 'new',
             'context': {
+                'default_patient_id': self.id,
+            }
+        }
+
+    def action_not_interested(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Not interested action',
+            'res_model': 'not.interested.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient_id': self.id,
+            }
+        }
+
+    def action_lost(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Lost action',
+            'res_model': 'lost.stage.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient_id': self.id,
+            }
+        }
+
+    def action_qualified(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'qualified action',
+            'res_model': 'qualified.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient_id': self.id,
                 'default_patient': self.id,
+            }
+        }
+
+    def action_details_received(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Details received',
+            'res_model': 'details.received.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient_id': self.id,
+            }
+        }
+
+    def action_quotation(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Add Quotation',
+            'res_model': 'quotations.prepare.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_patient_id': self.id,
             }
         }
 
@@ -168,6 +243,9 @@ class Patients(models.Model):
                 'default_patient': self.id,
             }
         }
+
+    def action_resend(self):
+        self.stage = 'new'
 
 
 

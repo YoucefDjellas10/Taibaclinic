@@ -5,18 +5,6 @@
 
             <div class="psp_hero">
                 <div class="psp_hero_inner">
-
-                    <div class="psp_title_block">
-                        <span class="psp_icon">
-                            <i class="fa fa-user-md"/>
-                        </span>
-                        <div>
-                            <p class="psp_clinic_name"><t t-esc="labels.clinicName"/></p>
-                            <h1 class="psp_title"><t t-esc="labels.title"/></h1>
-                            <p class="psp_subtitle"><t t-esc="labels.subtitle"/></p>
-                        </div>
-                    </div>
-
                     <div class="psp_search_container">
                         <div class="psp_search_box">
                             <span class="psp_search_icon">
@@ -38,27 +26,28 @@
                             </t>
                         </div>
 
-                        <button
-                            class="psp_search_btn"
-                            t-on-click="onSearch"
-                            t-att-disabled="state.loading or !state.query.trim()"
-                        >
-                            <t t-if="state.loading">
-                                <i class="fa fa-spinner fa-spin"/>
-                                <span><t t-esc="labels.searching"/></span>
-                            </t>
-                            <t t-else="">
-                                <i class="fa fa-search"/>
-                                <span><t t-esc="labels.search"/></span>
-                            </t>
-                        </button>
+                        <div class="psp_buttons_row">
+                            <button
+                                class="psp_search_btn"
+                                t-on-click="onSearch"
+                                t-att-disabled="state.loading or !state.query.trim()"
+                            >
+                                <t t-if="state.loading">
+                                    <i class="fa fa-spinner fa-spin"/>
+                                    <span><t t-esc="labels.searching"/></span>
+                                </t>
+                                <t t-else="">
+                                    <i class="fa fa-search"/>
+                                    <span><t t-esc="labels.search"/></span>
+                                </t>
+                            </button>
 
-                        <button class="psp_new_btn" t-on-click="openNewPatient">
-                            <i class="fa fa-plus"/>
-                            <span><t t-esc="labels.newBtn"/></span>
-                        </button>
+                            <button class="psp_new_btn" t-on-click="openNewPatient">
+                                <i class="fa fa-plus"/>
+                                <span><t t-esc="labels.newBtn"/></span>
+                            </button>
+                        </div>
                     </div>
-
                 </div>
             </div>
 
@@ -130,7 +119,6 @@
                                         </t>
                                     </div>
 
-                                    <!-- Prochain RDV -->
                                     <t t-if="patient.next_appointment">
                                         <div class="psp_next_appointment">
                                             <i class="fa fa-calendar-check-o"/>

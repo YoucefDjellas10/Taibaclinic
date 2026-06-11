@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="dental_lab_order_view_list" model="ir.ui.view">
+        <field name="name">dental.lab.order.list</field>
+        <field name="model">dental.lab.order</field>
+        <field name="arch" type="xml">
+            <list string="Lab Orders"
+                  decoration-danger="state == 'rework'"
+                  decoration-warning="state in ('sent', 'manufacturing')"
+                  decoration-success="state in ('validated', 'delivered', 'placed')"
+                  decoration-muted="state == 'cancelled'"
+                  multi_edit="1">
+
+                <field name="priority" widget="priority"/>
+                <field name="name" string="Reference"/>
+                <field name="order_date"/>
+                <field name="lab_id"/>
+                <field name="doctor_id"/>
+                <field name="work_type"/>
+                <field name="impression_type"/>
+                <field name="expected_date" optional="hide"/>
+                <field name="received_date" optional="hide"/>
+                <field name="fitting_count" optional="hide"/>
+                <field name="amount_total"/>
+                <field name="invoice_status"
+                       widget="badge"
+                       decoration-success="invoice_status == 'paid'"
+                       decoration-warning="invoice_status == 'partial'"
+                       decoration-danger="invoice_status == 'not_billed'"
+                       decoration-info="invoice_status == 'to_pay'"/>
+                <field name="state"
+                       widget="badge"
+                       decoration-danger="state == 'rework'"
+                       decoration-success="state in ('validated', 'delivered', 'placed')"
+                       decoration-warning="state in ('sent', 'manufacturing')"
+                       decoration-muted="state == 'cancelled'"/>
+                <field name="currency_id" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="dental_lab_order_view_form" model="ir.ui.view">
+        <field name="name">dental.lab.order.form</field>
+        <field name="model">dental.lab.order</field>
+        <field name="arch" type="xml">
+            <form string="Lab Order">
+                <header>
+                    <button name="action_confirm"
+                            string="Confirm"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'draft'"/>
+                    <button name="action_send_to_lab"
+                            string="Send to Lab"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_start_manufacturing"
+                            string="Start Manufacturing"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'sent'"/>
+                    <button name="action_fitting"
+                            string="Fitting Session"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state not in ('manufacturing', 'rework')"/>
+                    <button name="action_rework"
+                            string="Return for Adjustment"
+                            type="object"
+                            invisible="state != 'fitting'"/>
+                    <button name="action_validate"
+                            string="Validate"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'fitting'"/>
+                    <button name="action_deliver"
+                            string="Mark as Delivered"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'validated'"/>
+                    <button name="action_place"
+                            string="Mark as Placed"
+                            type="object"
+                            class="oe_highlight"
+                            invisible="state != 'delivered'"/>
+                    <button name="action_cancel"
+                            string="Cancel"
+                            type="object"
+                            confirm="Are you sure you want to cancel this order?"
+                            invisible="state in ('cancelled', 'placed', 'invoiced')"/>
+                    <button name="action_reset_to_draft"
+                            string="Reset to Draft"
+                            type="object"
+                            invisible="state != 'cancelled'"/>
+
+                    <field name="state"
+                           widget="statusbar"
+                           statusbar_visible="draft,confirmed,sent,manufacturing,fitting,validated,delivered,placed"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_title">
+                        <field name="priority" widget="priority" class="me-2"/>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group string="General Information">
+                            <field name="lab_id"/>
+                            <field name="doctor_id"/>
+                            <field name="work_type"/>
+                            <field name="impression_type"/>
+                            <field name="general_shade"/>
+                            <field name="tracking_number"/>
+                        </group>
+                        <group string="Dates">
+                            <field name="order_date" readonly="1" invisible="not order_date"/>
+                            <field name="sent_date" readonly="1" invisible="not sent_date"/>
+                            <field name="expected_date" readonly="1" invisible="not expected_date"/>
+                            <field name="received_date" readonly="1" invisible="not received_date"/>
+                            <field name="fitting_date" readonly="1" invisible="not fitting_date"/>
+                            <field name="rework_reason" readonly="1" invisible="not rework_reason"
+                                   placeholder="Describe the adjustment needed…"/>
+                            <field name="placement_date" readonly="1" invisible="not placement_date"/>
+                        </group>
+                    </group>
+
+
+                    <notebook>
+                        <page string="Order Lines" name="order_lines">
+                            <field name="line_ids"
+                                   widget="one2many_list"
+                                   context="{'default_currency_id': currency_id}">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="product_id"/>
+                                    <field name="prosthesis_type"/>
+                                    <field name="material"/>
+                                    <field name="tooth_numbers" widget="many2many_tags"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="price_total" sum="Total"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </list>
+                            </field>
+
+                            <group class="oe_subtotal_footer">
+                                <field name="currency_id" invisible="1"/>
+                                <field name="amount_total"
+                                       class="oe_subtotal_footer_separator"
+                                       widget="monetary"/>
+                            </group>
+                        </page>
+
+                        <page string="Billing" name="billing">
+                            <header>
+                                <button name="action_declare_payment"
+                                        string="Declare Payment"
+                                        type="object"
+                                        class="btn-primary"
+                                        invisible="state in ('draft', 'cancelled') or invoice_status == 'paid'"/>
+                                <field name="invoice_status" widget="statusbar"/>
+                            </header>
+                            <sheet>
+                                <group>
+                                    <field name="amount_total" readonly="1"/>
+                                    <field name="amount_paid" readonly="1"/>
+                                    <field name="amount_remaining"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </group>
+                            </sheet>
+                        </page>
+
+                        <page string="Attachments &amp; Notes" name="attachments">
+                            <group>
+                                <field name="notes"
+                                       placeholder="Instructions or remarks for the lab technician…"/>
+                            </group>
+                            <field name="attachment_ids"
+                                   widget="many2many_binary"
+                                   string="Files (photos, X-rays, STL)"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_dental_lab_order" model="ir.actions.act_window">
+        <field name="name">Lab Orders</field>
+        <field name="res_model">dental.lab.order</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_dental_labo_main"
+              name="Laboratory"
+              sequence="50"/>
+
+    <menuitem id="menu_dental_lab_main"
+              name="Lab Orders"
+              action="action_dental_lab_order"
+              parent="menu_dental_labo_main"
+              sequence="90"/>
+
+</odoo>

@@ -72,6 +72,22 @@
         </field>
     </record>
 
+    <record id="treatment_plan_search" model="ir.ui.view">
+        <field name="name">treatment.plan.search</field>
+        <field name="model">treatment.plan</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="status" icon="fa-cogs"/>
+                    <field name="gender" icon="fa-cogs"/>
+                </searchpanel>
+                <field name="patient"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+
     <record id="treatment_plan_list_action" model="ir.actions.act_window">
         <field name="name">Treatments plan list</field>
         <field name="res_model">treatment.plan</field>

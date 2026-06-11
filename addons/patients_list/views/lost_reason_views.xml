@@ -1,0 +1,36 @@
+<odoo>
+    <record id="lost_reason_record_form" model="ir.ui.view">
+        <field name="name">lost.reason.record.form</field>
+        <field name="model">lost.reason.record</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="lost_reason_record_list" model="ir.ui.view">
+        <field name="name">lost.reason.record.list</field>
+        <field name="model">lost.reason.record</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="lost_reason_record_action" model="ir.actions.act_window">
+        <field name="name">Lost reasons</field>
+        <field name="res_model">lost.reason.record</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="lost_reason_record_sub"
+              name="Lost reasons"
+              parent="configuration_list_main"
+              action="lost_reason_record_action"
+              sequence="90"/>
+
+
+</odoo>

@@ -1,11 +1,7 @@
 /* ===================================================
    Taiba Dental Clinic - Today's Appointments Page
-   Extends: patient_search_page.scss
    =================================================== */
 
-/* ===================================================
-   LAYOUT — hero fixe / scroll milieu / footer fixe
-   =================================================== */
 .o_action_manager,
 .o_action {
     display: flex !important;
@@ -24,13 +20,12 @@
 }
 
 /* ===================================================
-   HERO  (-25% sur tout : padding, tailles, espacements)
+   HERO — une seule ligne
    =================================================== */
 .tap_hero {
     flex-shrink: 0;
     background: linear-gradient(135deg, #0d6e8a 0%, #0a4f6b 60%, #073d54 100%);
-    /* était 28px 40px 36px → -25% ≈ 21px 30px 27px */
-    padding: 21px 30px 27px;
+    padding: 8px 30px;
     position: relative;
     overflow: hidden;
     z-index: 10;
@@ -40,125 +35,99 @@
 .tap_hero::before {
     content: '';
     position: absolute;
-    top: -45px; right: -45px;   /* était -60px */
-    width: 150px; height: 150px; /* était 200px */
+    top: -45px; right: -45px;
+    width: 150px; height: 150px;
     background: rgba(255,255,255,0.04);
     border-radius: 50%;
 }
 .tap_hero::after {
     content: '';
     position: absolute;
-    bottom: -30px; left: 10%;   /* était -40px */
-    width: 105px; height: 105px; /* était 140px */
+    bottom: -30px; left: 10%;
+    width: 105px; height: 105px;
     background: rgba(255,255,255,0.03);
     border-radius: 50%;
 }
 
 .tap_hero_inner {
-    max-width: 900px;
+    max-width: 1400px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
-}
-
-/* ---- Title block ---- */
-.tap_title_block {
     display: flex;
     align-items: center;
-    gap: 12px;           /* était 16px */
-    margin-bottom: 12px; /* était 16px */
+    gap: 16px;
+    flex-wrap: nowrap;
 }
-
-.tap_icon {
-    width: 38px; height: 38px;  /* était 50px */
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 11px;         /* était 14px */
-    display: flex; align-items: center; justify-content: center;
-    font-size: 17px; color: #fff; /* était 22px */
-    flex-shrink: 0;
-}
-
-.tap_title_text { flex: 1; }
-
-.tap_clinic_name {
-    font-size: 9px;  /* était 10px */
-    font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    margin: 0 0 2px; /* était 3px */
-}
-
-.tap_title {
-    margin: 0;
-    font-size: 17px; font-weight: 700; /* était 22px */
-    color: #fff; letter-spacing: -0.3px;
-}
-
-.tap_subtitle {
-    margin: 2px 0 0; /* était 3px */
-    font-size: 11px; /* était 12px */
-    color: rgba(255,255,255,0.65);
-}
-.tap_subtitle .fa { margin-right: 4px; color: rgba(255,255,255,0.4); }
 
 /* ---- Counters ---- */
 .tap_counters {
     display: flex;
-    gap: 8px;            /* était 10px */
-    margin-bottom: 12px; /* était 16px */
-    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
 }
 
 .tap_counter_card {
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 8px;      /* était 10px */
-    padding: 7px 12px;       /* était 10px 16px */
+    border-radius: 8px;
+    padding: 5px 10px;
     text-align: center;
-    min-width: 54px;         /* était 72px */
+    min-width: 54px;
 }
 
 .tap_counter_value {
     display: block;
-    font-size: 17px; font-weight: 700; /* était 22px */
+    font-size: 15px; font-weight: 700;
     color: #fff; line-height: 1;
 }
 
 .tap_counter_label {
     display: block;
-    font-size: 9px; font-weight: 600; /* était 10px */
+    font-size: 9px; font-weight: 600;
     letter-spacing: 0.5px; text-transform: uppercase;
     color: rgba(255,255,255,0.5);
-    margin-top: 2px; /* était 3px */
+    margin-top: 2px;
 }
 
 .tap_counter_pending .tap_counter_value { color: #f9d670; }
 .tap_counter_active  .tap_counter_value { color: #7ae0c2; }
 .tap_counter_done    .tap_counter_value { color: #80e29a; }
 
+/* ---- Séparateur vertical ---- */
+.tap_hero_separator {
+    width: 1px;
+    height: 32px;
+    background: rgba(255,255,255,0.2);
+    flex-shrink: 0;
+}
+
 /* ---- Actions bar ---- */
 .tap_actions_bar {
     display: flex;
-    gap: 8px;  /* était 10px */
+    gap: 8px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex: 1;
+    margin-bottom: 0;
 }
 
 .tap_filter_pills {
     display: flex;
-    gap: 4px;  /* était 5px */
-    flex-wrap: wrap;
+    gap: 4px;
+    flex-wrap: nowrap;
     flex: 1;
 }
 
 .tap_filter_pill {
-    height: 26px; padding: 0 11px;  /* était 32px / 14px */
+    height: 26px; padding: 0 11px;
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.15);
     border-radius: 20px;
     color: rgba(255,255,255,0.7);
-    font-size: 11px; font-weight: 500; /* était 12px */
+    font-size: 11px; font-weight: 500;
     cursor: pointer; font-family: inherit;
     white-space: nowrap;
     transition: all 0.18s;
@@ -174,12 +143,12 @@
 .tap_btn_group { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
 
 .tap_refresh_btn {
-    width: 28px; height: 28px;  /* était 36px */
+    width: 28px; height: 28px;
     background: rgba(255,255,255,0.1);
     border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 7px;          /* était 9px */
+    border-radius: 7px;
     color: rgba(255,255,255,0.8);
-    font-size: 12px; cursor: pointer; /* était 14px */
+    font-size: 12px; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
     transition: background 0.2s, color 0.2s;
 }
@@ -408,8 +377,62 @@
 /* ===================================================
    RESPONSIVE
    =================================================== */
+@media (max-width: 900px) {
+    .tap_hero { padding: 8px 16px; }
+
+    .tap_hero_inner {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tap_hero_separator { display: none; }
+
+    /* Ligne 1 : compteurs sur toute la largeur */
+    .tap_counters {
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 4px;
+    }
+
+    .tap_counter_card {
+        flex: 1;
+        min-width: 0;
+        padding: 5px 6px;
+    }
+
+    /* Ligne 2 : filtres sur toute la largeur */
+    .tap_actions_bar {
+        width: 100%;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .tap_filter_pills {
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 4px;
+        padding-bottom: 2px;
+        /* scrollbar invisible */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .tap_filter_pills::-webkit-scrollbar { display: none; }
+
+    /* Ligne 3 : boutons refresh + new sur toute la largeur */
+    .tap_btn_group {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .tap_btn_group .psp_new_btn {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 640px) {
-    .tap_hero         { padding: 15px 16px 20px; }
     .tap_results_area { padding: 14px 16px; }
     .tap_footer_inner { padding: 8px 16px; }
 
@@ -417,14 +440,39 @@
     .tap_nav_btn       { padding: 0 12px; }
     .tap_today_placeholder { width: 56px; }
 
-    .tap_counters  { gap: 6px; }
-    .tap_counter_card  { padding: 6px 10px; min-width: 50px; }
-    .tap_counter_value { font-size: 15px; }
-
-    .tap_actions_bar  { flex-direction: column; align-items: flex-start; }
-    .tap_filter_pills { width: 100%; }
-
     .tap_appointment_card { gap: 10px; padding: 11px 12px; }
     .tap_time     { font-size: 14px; }
     .tap_time_col { min-width: 46px; }
 }
+
+.tap_footer_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.tap_footer_date {
+    font-size: 12px;
+    font-weight: 600;
+    color: #0d6e8a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.tap_footer_date .fa {
+    font-size: 11px;
+    color: #0d6e8a;
+    opacity: 0.7;
+}
+
+/* Quand on est sur Today : pas de bouton donc centrer juste la date */
+.tap_footer_center:only-child {
+    flex: 1;
+    text-align: center;
+}
+
+/* Supprimer l'ancien placeholder */
+.tap_today_placeholder { display: none; }

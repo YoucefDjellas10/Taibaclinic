@@ -1,0 +1,52 @@
+<odoo>
+    <!-- Inherit Form View -->
+    <record id="appointment_record_form_inherit_labo_lines" model="ir.ui.view">
+        <field name="name">appointment.record.form.inherit.labo.lines</field>
+        <field name="model">appointment.record</field>
+        <field name="inherit_id" ref="patients_list.appointment_record_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Laboratoire" name="page_labo">
+                    <field name="Labo_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="appointment_record_form_inherit_doctor" model="ir.ui.view">
+        <field name="name">appointment.record.form.inherit.doctor</field>
+        <field name="model">appointment.record</field>
+        <field name="inherit_id" ref="patients_list.appointment_record_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='reason']" position="after">
+                <field name="doctor"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit List View -->
+    <record id="appointment_record_list_inherit_doctor" model="ir.ui.view">
+        <field name="name">appointment.record.list.inherit.doctor</field>
+        <field name="model">appointment.record</field>
+        <field name="inherit_id" ref="patients_list.appointment_record_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='create_uid']" position="after">
+                <field name="doctor"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit Calendar View -->
+    <record id="appointment_record_calendar_inherit_doctor" model="ir.ui.view">
+        <field name="name">appointment.record.calendar.inherit.doctor</field>
+        <field name="model">appointment.record</field>
+        <field name="inherit_id" ref="patients_list.appointment_record_calendar"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='patient']" position="after">
+                <field name="doctor"/>
+            </xpath>
+            <xpath expr="//calendar" position="attributes">
+                <attribute name="color">doctor</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

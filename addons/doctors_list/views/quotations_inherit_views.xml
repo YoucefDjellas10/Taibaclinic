@@ -1,0 +1,35 @@
+<odoo>
+    <record id="quotations_form_inherit_doctor" model="ir.ui.view">
+        <field name="name">quotations.form.inherit.doctor</field>
+        <field name="model">quotations</field>
+        <field name="inherit_id" ref="patients_list.quotations_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='expiration_date']" position="after">
+                <field name="doctor"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="quotations_prepare_wizard_form_inherit_doctor" model="ir.ui.view">
+        <field name="name">quotations.prepare.wizard.form.inherit.doctor</field>
+        <field name="model">quotations.prepare.wizard</field>
+        <field name="inherit_id" ref="patients_list.quotations_prepare_wizard_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='age']" position="before">
+                <field name="doctor"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit List View -->
+    <record id="appointment_quotations_inherit_list_doctor" model="ir.ui.view">
+        <field name="name">quotations.list.inherit.doctor</field>
+        <field name="model">quotations</field>
+        <field name="inherit_id" ref="patients_list.quotations_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage']" position="after">
+                <field name="doctor" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

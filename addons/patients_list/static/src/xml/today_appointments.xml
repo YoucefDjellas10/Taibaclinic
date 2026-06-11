@@ -2,35 +2,11 @@
 <templates xml:space="preserve">
     <t t-name="patients_list.TodayAppointmentsPage" owl="1">
 
-        <!--
-            Layout :
-              .tap_layout          → flex-column, height: 100vh (ou 100%)
-                .tap_hero          → fixe en haut (hauteur naturelle)
-                .tap_scroll_area   → flex: 1, overflow-y: auto  ← scroll ici
-                .tap_footer        → fixe en bas, toujours visible
-        -->
         <div class="o_today_appointments_page tap_layout">
 
-            <!-- ═══ HERO (haut fixe) ════════════════════════════════════════ -->
+            <!-- ═══ HERO — une seule ligne ══════════════════════════════════ -->
             <div class="tap_hero">
                 <div class="tap_hero_inner">
-
-                    <!-- Title -->
-                    <div class="tap_title_block">
-                        <span class="tap_icon">
-                            <i class="fa fa-calendar-check-o"/>
-                        </span>
-                        <div class="tap_title_text">
-                            <p class="tap_clinic_name">Taiba Dental Clinic</p>
-                            <h1 class="tap_title">
-                                <t t-esc="dateTitle"/>
-                            </h1>
-                            <p class="tap_subtitle">
-                                <i class="fa fa-calendar"/>
-                                <t t-esc="dateSubtitle"/>
-                            </p>
-                        </div>
-                    </div>
 
                     <!-- Counters -->
                     <div class="tap_counters">
@@ -51,6 +27,9 @@
                             <span class="tap_counter_label">Completed</span>
                         </div>
                     </div>
+
+                    <!-- Séparateur -->
+                    <div class="tap_hero_separator"/>
 
                     <!-- Filter pills + refresh + new -->
                     <div class="tap_actions_bar">
@@ -78,11 +57,10 @@
                 </div>
             </div>
 
-            <!-- ═══ SCROLLABLE RESULTS (milieu) ════════════════════════════ -->
+            <!-- ═══ SCROLLABLE RESULTS ══════════════════════════════════════ -->
             <div class="tap_scroll_area">
                 <div class="tap_results_area">
 
-                    <!-- Loading -->
                     <t t-if="state.loading">
                         <div class="tap_loading">
                             <div class="tap_loading_spinner">
@@ -92,7 +70,6 @@
                         </div>
                     </t>
 
-                    <!-- Empty -->
                     <t t-elif="!state.loading and filteredAppointments.length === 0">
                         <div class="tap_no_results">
                             <div class="tap_no_results_icon">
@@ -106,7 +83,6 @@
                         </div>
                     </t>
 
-                    <!-- Cards -->
                     <t t-else="">
                         <div class="tap_results_header">
                             <span class="tap_results_count">
@@ -124,7 +100,6 @@
                                         {{ apt.status === 'cancelled'   ? 'tap_card_cancelled' : '' }}"
                                     t-on-click="() => this.openAppointment(apt.id)"
                                 >
-                                    <!-- Time -->
                                     <div class="tap_time_col">
                                         <span class="tap_time"><t t-esc="formatTime(apt.date)"/></span>
                                         <t t-if="isUpcoming(apt.date) and apt.status !== 'cancelled'">
@@ -135,14 +110,12 @@
                                         </t>
                                     </div>
 
-                                    <!-- Avatar -->
                                     <div class="tap_card_avatar">
                                         <span class="tap_avatar_initials">
                                             <t t-esc="getInitials(apt.patientInfo.name or apt.patient[1])"/>
                                         </span>
                                     </div>
 
-                                    <!-- Body -->
                                     <div class="tap_card_body">
                                         <div class="tap_card_top">
                                             <h3 class="tap_patient_name">
@@ -184,7 +157,6 @@
                                         </t>
                                     </div>
 
-                                    <!-- Right -->
                                     <div class="tap_card_right">
                                         <button
                                             class="tap_patient_btn"
@@ -205,33 +177,35 @@
                 </div>
             </div>
 
-            <!-- ═══ FOOTER FIXE (bas) ════════════════════════════════════════ -->
-            <div class="tap_footer">
-                <div class="tap_footer_inner">
+            <!-- ═══ FOOTER FIXE ═════════════════════════════════════════════ -->
+                <div class="tap_footer">
+                    <div class="tap_footer_inner">
 
-                    <button class="tap_nav_btn" t-on-click="goToPrevDay" title="Previous day">
-                        <i class="fa fa-chevron-left"/>
-                        <span>Previous</span>
-                    </button>
-
-                    <t t-if="!isToday">
-                        <button class="tap_today_btn" t-on-click="goToToday">
-                            <i class="fa fa-dot-circle-o"/>
-                            <span>Today</span>
+                        <button class="tap_nav_btn" t-on-click="goToPrevDay" title="Previous day">
+                            <i class="fa fa-chevron-left"/>
+                            <span>Previous</span>
                         </button>
-                    </t>
-                    <t t-else="">
-                        <div class="tap_today_placeholder"/>
-                    </t>
 
-                    <button class="tap_nav_btn" t-on-click="goToNextDay" title="Next day">
-                        <span>Next</span>
-                        <i class="fa fa-chevron-right"/>
-                    </button>
+                        <div class="tap_footer_center">
+                            <span class="tap_footer_date">
+                                <i class="fa fa-calendar"/>
+                                <t t-esc="dateSubtitle"/>
+                            </span>
+                            <t t-if="!isToday">
+                                <button class="tap_today_btn" t-on-click="goToToday">
+                                    <i class="fa fa-dot-circle-o"/>
+                                    <span>Today</span>
+                                </button>
+                            </t>
+                        </div>
 
+                        <button class="tap_nav_btn" t-on-click="goToNextDay" title="Next day">
+                            <span>Next</span>
+                            <i class="fa fa-chevron-right"/>
+                        </button>
+
+                    </div>
                 </div>
-            </div>
-
         </div>
     </t>
 </templates>

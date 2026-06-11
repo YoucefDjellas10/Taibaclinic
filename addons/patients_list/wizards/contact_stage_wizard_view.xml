@@ -1,0 +1,32 @@
+<odoo>
+    <record id="view_contact_stage_wizard_form" model="ir.ui.view">
+        <field name="name">contact.stage.wizard.form</field>
+        <field name="model">contact.stage.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cancel Appointment">
+                <sheet>
+                    <group>
+                        <field name="patient_id" invisible="1" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="type"/>
+                        <field name="report" placeholder="Please explain the discuss..." />
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                            name="action_confirm_cancel"
+                            string="Confirm Cancellation"
+                            type="object"
+                            class="btn-contact"
+                    />
+                    <button
+                            string="Discard"
+                            class="btn-secondary"
+                            special="cancel"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

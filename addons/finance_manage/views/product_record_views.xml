@@ -1,0 +1,70 @@
+<odoo>
+    <record id="product_record_form" model="ir.ui.view">
+        <field name="name">product.record.form</field>
+        <field name="model">product.record</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="availability" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="category_id"/>
+                        </group>
+                        <group>
+                            <field name="remaining_qt"/>
+                            <field name="min"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Purchases">
+                            <field name="purchase_ids" readonly="1"/>
+                        </page>
+                        <page string="Appointments">
+                            <field name="appointment_ids" readonly="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="product_record_list" model="ir.ui.view">
+        <field name="name">product.record.list</field>
+        <field name="model">product.record</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="category_id" optional="show"/>
+                <field name="min" optional="hide"/>
+                <field name="remaining_qt" optional="show"/>
+                <field name="availability" widget="badge"
+                       decoration-success="availability == 'available'"
+                       decoration-warning="availability == 'low_stock'"
+                       decoration-danger="availability == 'out_of_stock'"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="product_record_action" model="ir.actions.act_window">
+        <field name="name">Product list</field>
+        <field name="res_model">product.record</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="pricing_main"
+              name="Pricing"
+              sequence="100"/>
+
+    <menuitem id="inventory_main"
+              name="Inventory management"
+              sequence="100"/>
+
+    <menuitem id="product_record_action_sub"
+              name="Product list"
+              parent="inventory_main"
+              action="product_record_action"
+              sequence="0"/>
+</odoo>

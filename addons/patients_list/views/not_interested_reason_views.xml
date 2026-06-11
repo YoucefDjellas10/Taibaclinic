@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="not_interested_reason_view_list" model="ir.ui.view">
+        <field name="name">not.interested.reason.list</field>
+        <field name="model">not.interested.reason</field>
+        <field name="arch" type="xml">
+            <list string="not interested reason">
+                <field name="name" string="Nom"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="not_interested_reason_view_form" model="ir.ui.view">
+        <field name="name">not.interested.reason.form</field>
+        <field name="model">not.interested.reason</field>
+        <field name="arch" type="xml">
+            <form string="not interested reason">
+                <sheet>
+                    <group>
+                        <field name="name" string="Nom"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="not_interested_reason_action" model="ir.actions.act_window">
+        <field name="name">Not interested reason</field>
+        <field name="res_model">not.interested.reason</field>
+        <field name="view_mode">list,form</field>
+    </record>
+    <menuitem
+            id="not_interested_reason_menu_sub"
+            name="Not interested reason"
+            parent="configuration_list_main"
+            action="not_interested_reason_action"
+            sequence="10"/>
+
+</odoo>

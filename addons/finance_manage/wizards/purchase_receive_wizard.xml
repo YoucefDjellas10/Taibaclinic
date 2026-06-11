@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_purchase_receive_wizard_form" model="ir.ui.view">
+        <field name="name">purchase.receive.wizard.form</field>
+        <field name="model">purchase.receive.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Receive Order">
+                <group>
+                    <field name="order_id" invisible="1"/>
+                    <field name="is_payment_only" invisible="1"/>
+
+                    <!-- Hide "Paid?" toggle when it's payment-only mode -->
+                    <field name="is_paid" widget="boolean_toggle"
+                           invisible="is_payment_only == True"/>
+
+                    <!-- Amount: visible only when is_paid is True -->
+                    <field name="amount"
+                           invisible="is_paid == False"
+                           required="is_paid == True"/>
+
+                    <field name="currency_id"  invisible="1" readonly="1"/>
+                </group>
+
+                <div class="alert alert-info" role="alert"
+                     invisible="is_paid == True">
+                    <i class="fa fa-info-circle"/>
+                    Stock will be updated. The order will remain <b>Unpaid</b>.
+                </div>
+
+                <footer>
+                    <button name="action_confirm"
+                            string="Confirm"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel"
+                            special="cancel"
+                            class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

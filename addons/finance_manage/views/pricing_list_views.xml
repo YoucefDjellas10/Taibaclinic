@@ -6,12 +6,16 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="treatment"/>
-                        <field name="currency"/>
-                        <field name="min_price"/>
-                        <field name="default_price"/>
-                        <field name="category"/>
-                        <field name="note"/>
+                        <group>
+                            <field name="treatment"/>
+                            <field name="min_price"/>
+                            <field name="note"/>
+                        </group>
+                        <group>
+                            <field name="category"/>
+                            <field name="currency" invisible="1"/>
+                            <field name="default_price"/>
+                        </group>
                     </group>
                 </sheet>
             </form>
@@ -23,11 +27,11 @@
         <field name="arch" type="xml">
             <list>
                 <field name="treatment"/>
-                <field name="currency"/>
+                <field name="category"/>
+                <field name="currency" optional="hide"/>
                 <field name="min_price"/>
                 <field name="default_price"/>
-                <field name="category"/>
-                <field name="note"/>
+                <field name="note" optional="hide"/>
             </list>
         </field>
     </record>
@@ -56,7 +60,7 @@
               sequence="100"/>
     <menuitem id="pricing_list_sub"
               name="Pricing list"
-              parent="finance_menu"
+              parent="pricing_main"
               action="pricing_list_action"
               sequence="0"/>
 </odoo>

@@ -8,9 +8,9 @@
 
     <menuitem
         id="menu_patient_search"
-        name="Recherche Patient"
+        name="Search Patient"
         action="action_patient_search"
-        sequence="10"
+        sequence="2"
     />
 
 </odoo>

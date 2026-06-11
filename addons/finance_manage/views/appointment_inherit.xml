@@ -1,0 +1,28 @@
+<odoo>
+    <record id="appointment_record_form_inherit_products" model="ir.ui.view">
+        <field name="name">appointment.record.form.inherit.products</field>
+        <field name="model">appointment.record</field>
+        <field name="inherit_id" ref="patients_list.appointment_record_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button
+                        name="action_complete"
+                        string="Mark as Completed"
+                        type="object"
+                        class="btn-success"
+                        invisible="status != 'in_progress'"
+                />
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Products">
+                    <field name="product_ids">
+                        <list editable="bottom">
+                            <field name="product"/>
+                            <field name="quantity"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

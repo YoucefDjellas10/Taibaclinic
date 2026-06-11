@@ -28,7 +28,7 @@
 
     <menuitem id="medical_history_sub"
               name="Medical history"
-              parent="patient_list_main"
+              parent="configuration_list_main"
               action="medical_history_action"
               sequence="200"/>
 

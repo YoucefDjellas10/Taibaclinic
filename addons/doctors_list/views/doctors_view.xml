@@ -14,6 +14,8 @@
                             <field name="age"/>
                         </group>
                         <group>
+                            <field name="percentage"/>
+                            <field name="category"/>
                             <field name="mobile"/>
                             <field name="nd_mobile"/>
                             <field name="account"/>

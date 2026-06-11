@@ -8,10 +8,9 @@
     </record>
 
     <!-- MENU -->
-    <menuitem id="menu_medical_root" name="Medical"/>
     <menuitem id="menu_prescription"
               name="Prescriptions"
-              parent="menu_medical_root"
+              parent="patient_list_main"
               action="action_prescription"/>
 
     <!-- list -->

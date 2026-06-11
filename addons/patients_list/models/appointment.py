@@ -51,9 +51,32 @@ class AppointmentRecord(models.Model):
     net_total = fields.Monetary(currency_field='currency', compute='_compute_totals', string='Net Total')
     lines_ids = fields.One2many('treatment.plan.lines', 'appointment', string='Lines')
     patient_type = fields.Selection(string='Patient Type', related="patient.patient_type")
-    doctor = fields.Many2one('doctors', string="Doctor")
     payment_ids = fields.One2many('patient.payment', 'appointment', string='Payments')
     deal_ids = fields.One2many('treatment.plan', 'appointment', string="Deals")
+
+    def action_confirm(self):
+        self.write({'status': 'confirmed'})
+
+    def action_start(self):
+        self.write({'status': 'in_progress'})
+
+    def action_cancel(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Cancel Appointment',
+            'res_model': 'appointment.cancel.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_appointment_id': self.id,
+            }
+        }
+
+    def action_reset(self):
+        self.write({'status': 'scheduled', 'cancel_reason': False})
+
+    cancel_reason = fields.Text(string='Cancellation Reason', readonly=True)
 
     def action_add_payment(self):
         self.ensure_one()

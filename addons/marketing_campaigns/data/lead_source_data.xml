@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Séquence pour les campagnes -->
+    <record id="seq_marketing_campaign" model="ir.sequence">
+        <field name="name">Campagne Marketing</field>
+        <field name="code">marketing.campaign</field>
+        <field name="prefix">CAMP-%(year)s-</field>
+        <field name="padding">4</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- Sources de leads par défaut -->
+    <record id="lead_source_meta_fb" model="lead.source">
+        <field name="name">Facebook Ads</field>
+        <field name="platform">meta</field>
+    </record>
+    <record id="lead_source_meta_ig" model="lead.source">
+        <field name="name">Instagram Ads</field>
+        <field name="platform">meta</field>
+    </record>
+    <record id="lead_source_google" model="lead.source">
+        <field name="name">Google Ads</field>
+        <field name="platform">google</field>
+    </record>
+    <record id="lead_source_tiktok" model="lead.source">
+        <field name="name">TikTok Ads</field>
+        <field name="platform">tiktok</field>
+    </record>
+    <record id="lead_source_organic" model="lead.source">
+        <field name="name">Recherche organique (SEO)</field>
+        <field name="platform">organic</field>
+    </record>
+    <record id="lead_source_referral" model="lead.source">
+        <field name="name">Bouche à oreille</field>
+        <field name="platform">referral</field>
+    </record>
+    <record id="lead_source_walk_in" model="lead.source">
+        <field name="name">Visite directe</field>
+        <field name="platform">walk_in</field>
+    </record>
+    <record id="lead_source_whatsapp" model="lead.source">
+        <field name="name">WhatsApp</field>
+        <field name="platform">whatsapp</field>
+    </record>
+
+</odoo>

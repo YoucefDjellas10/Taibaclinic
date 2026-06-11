@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ═══ FORM ═══ -->
+    <record id="view_ad_record_form" model="ir.ui.view">
+        <field name="name">ad.record.form</field>
+        <field name="model">ad.record</field>
+        <field name="arch" type="xml">
+            <form string="Publicité (Ad)">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_patients" type="object"
+                                class="oe_stat_button" icon="fa-user"
+                                invisible="patient_count == 0">
+                            <field name="patient_count" widget="statinfo" string="Patients"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="Nom de la publicité..."/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Identifiants">
+                            <field name="ad_id" placeholder="ex: 120203258497310411"/>
+                            <field name="adset_name" placeholder="Nom de l'ad set"/>
+                            <field name="campaign_id"/>
+                            <field name="platform" readonly="1"/>
+                            <field name="lead_source_id" readonly="1"/>
+                        </group>
+                        <group string="Contenu">
+                            <field name="ad_format"/>
+                            <field name="headline"/>
+                            <field name="destination_url" widget="url"/>
+                        </group>
+                    </group>
+
+                    <group string="Description de l'annonce">
+                        <field name="description" nolabel="1" colspan="2"/>
+                    </group>
+
+                    <group string="Performances">
+                        <group>
+                            <field name="impressions"/>
+                            <field name="clicks"/>
+                        </group>
+                        <group>
+                            <field name="spend"/>
+                            <field name="leads_generated"/>
+                        </group>
+                    </group>
+
+                    <group string="Patients liés">
+                        <field name="patient_ids" nolabel="1" widget="many2many_tags"/>
+                    </group>
+
+                    <group string="Notes">
+                        <field name="note" nolabel="1" colspan="2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ═══ LIST ═══ -->
+    <record id="view_ad_record_list" model="ir.ui.view">
+        <field name="name">ad.record.list</field>
+        <field name="model">ad.record</field>
+        <field name="arch" type="xml">
+            <list string="Publicités" decoration-muted="state == 'stopped'">
+                <field name="name"/>
+                <field name="ad_id"/>
+                <field name="campaign_id"/>
+                <field name="platform"/>
+                <field name="lead_source_id"/>
+                <field name="ad_format"/>
+                <field name="impressions"/>
+                <field name="clicks"/>
+                <field name="spend" sum="Total dépensé"/>
+                <field name="leads_generated" sum="Total leads"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'active'"
+                       decoration-warning="state == 'paused'"
+                       decoration-danger="state == 'stopped'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ═══ SEARCH ═══ -->
+<!--    <record id="view_ad_record_search" model="ir.ui.view">-->
+<!--        <field name="name">ad.record.search</field>-->
+<!--        <field name="model">ad.record</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="Rechercher ads">-->
+<!--                <field name="name"/>-->
+<!--                <field name="ad_id"/>-->
+<!--                <field name="campaign_id"/>-->
+<!--                <separator/>-->
+<!--                <filter string="Active" name="active" domain="[('state','=','active')]"/>-->
+<!--                <filter string="En pause" name="paused" domain="[('state','=','paused')]"/>-->
+<!--                <separator/>-->
+<!--                <filter string="Meta" name="meta" domain="[('platform','=','meta')]"/>-->
+<!--                <filter string="Google" name="google" domain="[('platform','=','google')]"/>-->
+<!--                <group expand="0" string="Grouper par">-->
+<!--                    <filter string="Campagne" name="group_campaign" context="{'group_by': 'campaign_id'}"/>-->
+<!--                    <filter string="Plateforme" name="group_platform" context="{'group_by': 'platform'}"/>-->
+<!--                    <filter string="Source Lead" name="group_source" context="{'group_by': 'lead_source_id'}"/>-->
+<!--                </group>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <!-- ═══ ACTION ═══ -->
+    <record id="action_ad_record" model="ir.actions.act_window">
+        <field name="name">Publicités (Ads)</field>
+        <field name="res_model">ad.record</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- ═══ DEPOSITS LIST (standalone) ═══ -->
+    <record id="view_campaign_deposit_list" model="ir.ui.view">
+        <field name="name">campaign.deposit.list</field>
+        <field name="model">campaign.deposit</field>
+        <field name="arch" type="xml">
+            <list string="Dépôts" decoration-info="platform == 'meta'"
+                  decoration-success="platform == 'google'">
+                <field name="date"/>
+                <field name="campaign_id"/>
+                <field name="platform"/>
+                <field name="amount" sum="Total déposé"/>
+                <field name="payment_method"/>
+                <field name="reference"/>
+                <field name="responsible_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_campaign_deposit_form" model="ir.ui.view">
+        <field name="name">campaign.deposit.form</field>
+        <field name="model">campaign.deposit</field>
+        <field name="arch" type="xml">
+            <form string="Dépôt Budget">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="campaign_id"/>
+                            <field name="date"/>
+                            <field name="amount"/>
+                        </group>
+                        <group>
+                            <field name="payment_method"/>
+                            <field name="reference"/>
+                            <field name="responsible_id"/>
+                        </group>
+                    </group>
+                    <group string="Note">
+                        <field name="note" nolabel="1" colspan="2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_campaign_deposit" model="ir.actions.act_window">
+        <field name="name">Dépôts Budgets</field>
+        <field name="res_model">campaign.deposit</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

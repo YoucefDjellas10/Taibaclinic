@@ -30,7 +30,7 @@
 
     <menuitem id="price_category_action_sub"
               name="Price Category"
-              parent="finance_menu"
+              parent="pricing_main"
               action="price_category_action"
               sequence="10"/>
 </odoo>

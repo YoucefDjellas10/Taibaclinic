@@ -13,7 +13,7 @@ class TreatmentPlan(models.Model):
     currency = fields.Many2one('res.currency',
                                string='Currency',
                                default=lambda self: self.env.ref('base.DZD'))
-    price = fields.Monetary(string='Price', currency_field='currency', related='treatment.price')
+    price = fields.Monetary(string='Price', currency_field='currency', readonly=False)
     total = fields.Monetary(string='Total', currency_field='currency', compute='computed_total')
     teeth = fields.Many2many('teeth', string='Teeth')
     treatment_date = fields.Datetime(string='Treatment date', default=fields.Datetime.now)

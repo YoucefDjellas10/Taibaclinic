@@ -8,7 +8,7 @@
 
     <menuitem id="menu_medicine"
               name="Medicines"
-              parent="menu_medical_root"
+              parent="configuration_list_main"
               action="action_medicine"/>
 
     <record id="view_medicine_list" model="ir.ui.view">

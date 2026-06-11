@@ -1,0 +1,31 @@
+<odoo>
+    <record id="view_expense_refuse_wizard_form" model="ir.ui.view">
+        <field name="name">expense.refuse.wizard.form</field>
+        <field name="model">expense.refuse.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Refuse Expense">
+                <div class="o_dialog_warning alert alert-warning" role="alert">
+                    <i class="fa fa-exclamation-triangle"/>
+                    Please provide a reason for refusing this expense.
+                </div>
+
+                <group>
+                    <field name="expense_id" readonly="1" invisible="1"/>
+                    <field name="refuse_reason"
+                           placeholder="Enter the reason for refusal..."
+                           required="1"/>
+                </group>
+
+                <footer>
+                    <button name="action_confirm_refuse"
+                            string="Confirm Refusal"
+                            type="object"
+                            class="btn-danger"/>
+                    <button string="Cancel"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

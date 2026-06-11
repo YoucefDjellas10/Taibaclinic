@@ -5,19 +5,55 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-                    <field name="status" widget="statusbar"/>
+                    <button
+                            name="action_confirm"
+                            string="Confirm"
+                            type="object"
+                            class="btn-primary"
+                            invisible="status != 'scheduled'"
+                    />
+                    <button
+                            name="action_start"
+                            string="Start Treatment"
+                            type="object"
+                            class="btn-primary"
+                            invisible="status != 'confirmed'"
+                    />
+                    <button
+                            name="action_cancel"
+                            string="Cancel"
+                            type="object"
+                            class="btn-danger"
+                            invisible="status in ('in_progress', 'completed', 'cancelled')"
+                    />
+                    <button
+                            name="action_reset"
+                            string="Reset to Scheduled"
+                            type="object"
+                            invisible="status != 'cancelled'"
+                    />
+
+                    <field
+                            name="status"
+                            widget="statusbar"
+                            statusbar_visible="scheduled,confirmed,in_progress,completed"
+                    />
                 </header>
                 <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+
                     <group>
                         <group>
-                            <field name="name"/>
                             <field name="patient"/>
                             <field name="date"/>
                         </group>
                         <group>
                             <field name="reason"/>
                             <field name="status"/>
-                            <field name="doctor"/>
                             <field name="note"/>
                         </group>
                     </group>
@@ -48,13 +84,13 @@
                             </group>
                         </page>
                         <page string="Payments">
-                            <header>
+                            <div>
                                 <button name="action_add_payment"
                                         string="Add Payment"
                                         type="object"
                                         icon="fa-money"
                                         class="btn-payment"/>
-                            </header>
+                            </div>
                             <field name="payment_ids" readonly="1">
                                 <list>
                                     <field name="name" optional="hide"/>
@@ -69,13 +105,13 @@
                             </field>
                         </page>
                         <page string="Deal">
-                            <header>
+                            <div>
                                 <button name="action_add_deals"
                                         string="Add Deal"
                                         type="object"
                                         icon="fa-calculator"
                                         class="btn-deal"/>
-                            </header>
+                            </div>
                             <field name="deal_ids" readonly="1">
                                 <list>
                                     <field name="name" optional="hide"/>
@@ -100,7 +136,6 @@
         <field name="arch" type="xml">
             <list default_order="date desc">
                 <field name="create_uid"/>
-                <field name="doctor"/>
                 <field name="date"/>
                 <field name="reason" widget="badge"/>
                 <field name="status" widget="badge"
@@ -108,6 +143,7 @@
                        decoration-danger="status == 'cancelled'"
                        decoration-warning="status == 'confirmed'"
                        decoration-success="status == 'completed'"/>
+                <field name="net_total"/>
                 <field name="note"/>
             </list>
         </field>
@@ -118,15 +154,26 @@
         <field name="arch" type="xml">
             <calendar string="Appointments Calendar"
                       date_start="date"
-                      color="doctor"
-                      mode="week">
 
+                      mode="week">
                 <field name="name"/>
                 <field name="patient"/>
-                <field name="doctor"/>
                 <field name="status"/>
 
             </calendar>
+        </field>
+    </record>
+
+    <record id="appointment_record_search" model="ir.ui.view">
+        <field name="name">appointment.record</field>
+        <field name="model">appointment.record</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="status" icon="fa-cogs"/>
+                    <field name="reason" icon="fa-sun"/>
+                </searchpanel>
+            </search>
         </field>
     </record>
 
@@ -138,7 +185,7 @@
 
     <menuitem id="appointment_record_sub"
               name="Appointment List"
-              parent="treatment_plan_list_main"
+              parent="patient_list_main"
               action="appointment_record_action"
               sequence="1"/>
 
@@ -147,7 +194,7 @@
         <field name="tag">today_appointments_action</field>
     </record>
     <menuitem id="to_day_appointment_record_main"
-              name="Appointments"
+              name="Daily Appointment"
               action="action_today_appointments"
               sequence="1"/>
 

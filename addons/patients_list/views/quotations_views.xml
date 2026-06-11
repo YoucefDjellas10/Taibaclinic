@@ -72,6 +72,22 @@
         </field>
     </record>
 
+    <record id="quotation_search" model="ir.ui.view">
+        <field name="name">quotations.search</field>
+        <field name="model">quotations</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="stage" icon="fa-cogs"/>
+                    <field name="gender" icon="fa-cogs"/>
+                </searchpanel>
+                <field name="patient"/>
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+
     <record id="quotations_list_action" model="ir.actions.act_window">
         <field name="name">Quotations list</field>
         <field name="res_model">quotations</field>

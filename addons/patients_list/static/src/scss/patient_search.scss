@@ -15,15 +15,21 @@
    =================================================== */
 .o_action_manager,
 .o_view_controller,
-.o_action {
+.o_action,
+.o_main_navbar ~ .o_action_manager,
+.o_content {
     overflow-y: auto !important;
     height: 100% !important;
 }
 
+/* Le composant custom prend toute la hauteur disponible
+   et se scroll lui-même */
 .o_patient_search_page {
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     height: auto !important;
-    overflow: visible !important;
+    overflow-y: auto !important;
     background: #eef2f7;
     font-family: 'Segoe UI', system-ui, sans-serif;
 }
@@ -332,11 +338,148 @@
 }
 
 /* Responsive */
+.psp_buttons_row {
+    display: contents;
+}
+
+/* Mobile uniquement */
 @media (max-width: 640px) {
-    .psp_hero { padding: 24px 20px 40px; }
+    .psp_hero { padding: 20px 16px 36px; }
     .psp_results_area { padding: 0 16px 30px; }
-    .psp_search_container { flex-direction: column; }
-    .psp_search_btn { width: 100%; justify-content: center; }
-    .psp_new_btn { width: 100%; justify-content: center; }
-    .psp_search_box { width: 100%; }
+
+    .psp_search_container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .psp_search_box {
+        width: 100%;
+        height: 50px;
+    }
+
+    .psp_buttons_row {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .psp_search_btn,
+    .psp_new_btn {
+        flex: 1;
+        height: 48px;
+        padding: 0 12px;
+        font-size: 14px;
+        justify-content: center;
+        width: auto;
+    }
+}
+
+/* ===================================================
+   DESKTOP ONLY — ajustements layout
+   =================================================== */
+
+@media (min-width: 641px) {
+
+    /* Hero plus aéré */
+    .psp_hero {
+        padding: 48px 60px 64px;
+    }
+
+    .psp_hero_inner {
+        max-width: 1100px;
+    }
+
+    /* Barre de recherche plus grande */
+    .psp_search_box {
+        height: 58px;
+    }
+
+    .psp_search_input {
+        font-size: 16px;
+    }
+
+    .psp_search_btn,
+    .psp_new_btn {
+        height: 58px;
+        padding: 0 36px;
+        font-size: 16px;
+    }
+
+    /* Zone résultats plus large */
+    .psp_results_area {
+        max-width: 1100px;
+        padding: 0 60px 60px;
+    }
+
+    /* Cards en grille 2 colonnes sur grand écran */
+    .psp_results_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    /* Card plus généreuse */
+    .psp_patient_card {
+        padding: 20px 24px;
+    }
+
+    .psp_card_avatar {
+        width: 54px;
+        height: 54px;
+        border-radius: 14px;
+    }
+
+    .psp_avatar_initials {
+        font-size: 17px;
+    }
+
+    .psp_patient_name {
+        font-size: 16px;
+    }
+
+    .psp_card_details {
+        gap: 18px;
+    }
+
+    .psp_detail_item {
+        font-size: 14px;
+    }
+
+    /* États vides/loading plus larges */
+    .psp_loading,
+    .psp_no_results,
+    .psp_initial_state {
+        padding: 80px 40px;
+    }
+
+    .psp_no_results_icon,
+    .psp_initial_icon {
+        font-size: 64px;
+    }
+
+    .psp_no_results h3 {
+        font-size: 22px;
+    }
+
+    /* Header résultats */
+    .psp_results_header {
+        padding: 20px 0 14px;
+    }
+
+    .psp_results_count {
+        font-size: 15px;
+    }
+}
+
+/* Très grand écran — 3 colonnes */
+@media (min-width: 1200px) {
+    .psp_results_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .psp_hero_inner,
+    .psp_results_area {
+        max-width: 1400px;
+    }
 }

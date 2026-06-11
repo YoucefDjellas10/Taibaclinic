@@ -32,9 +32,9 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="patient_attachments_list_sub_menu"
-              name="Patient attachments"
-              parent="patient_list_main"
-              action="patient_attachments_list_action"
-              sequence="500"/>
+<!--    <menuitem id="patient_attachments_list_sub_menu"-->
+<!--              name="Patient attachments"-->
+<!--              parent="patient_list_main"-->
+<!--              action="patient_attachments_list_action"-->
+<!--              sequence="500"/>-->
 </odoo>

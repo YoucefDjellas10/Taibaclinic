@@ -1,0 +1,143 @@
+<odoo>
+
+    <record id="view_purchase_order_line_tree" model="ir.ui.view">
+        <field name="name">purchase.order.line.tree</field>
+        <field name="model">purchase.order.line</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="product"/>
+                <field name="quantity"/>
+                <field name="unit_price"/>
+                <field name="subtotal" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_list" model="ir.ui.view">
+        <field name="name">purchase.order.record.list</field>
+        <field name="model">purchase.order.record</field>
+        <field name="arch" type="xml">
+            <list default_order="order_date desc">
+                <field name="name"/>
+                <field name="supplier_id"/>
+                <field name="order_date"/>
+                <field name="expected_date"/>
+                <field name="total"/>
+                <field name="status" widget="badge"
+                       decoration-success="status == 'received'"
+                       decoration-info="status == 'confirmed'"
+                       decoration-danger="status == 'cancelled'"
+                />
+                <field name="currency" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_search" model="ir.ui.view">
+        <field name="name">purchase.order.record</field>
+        <field name="model">purchase.order.record</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="supplier_id" icon="fa-cogs"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="view_purchase_order_form" model="ir.ui.view">
+        <field name="name">purchase.order.record.form</field>
+        <field name="model">purchase.order.record</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="confirme_action"
+                            string="Confirmer"
+                            type="object"
+                            class="btn-primary"
+                            invisible="status != 'draft'"/>
+
+                    <button name="receive_action"
+                            string="Réceptionner"
+                            type="object"
+                            class="btn-primary"
+                            invisible="status != 'confirmed'"/>
+
+                    <button name="cancel_action"
+                            string="Annuler"
+                            type="object"
+                            class="btn-danger"
+                            invisible="status in ('received', 'cancelled')"/>
+                    <!--                    <button name="action_mark_as_paid" string="Mark as Paid"-->
+                    <!--                            type="object" class="btn-success"-->
+                    <!--                           invisible="status != 'received' or payment_status == 'paid'"/>-->
+
+
+                    <field name="status" widget="statusbar"
+                           statusbar_visible="draft,confirmed,received,cancelled"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="order_date" readonly="status in ('received', 'cancelled')"/>
+                            <field name="note" placeholder="Notes..." readonly="status in ('received', 'cancelled')"/>
+                        </group>
+                        <group>
+                            <field name="supplier_id" readonly="status in ('received', 'cancelled')"/>
+                            <field name="expected_date" readonly="status in ('received', 'cancelled')"/>
+                            <field name="currency" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Order Lines">
+                            <field name="line_ids" widget="one2many"
+                                   readonly="status in ('received', 'cancelled')"/>
+                            <group class="oe_subtotal_footer">
+                                <field name="total" widget="monetary"/>
+                            </group>
+                        </page>
+                        <page string="History" invisible="not confirmed_by and not received_by and not cancelled_by">
+                            <group>
+                                <field name="confirmed_by" invisible="not confirmed_by"/>
+                                <field name="confirmation_date" invisible="not confirmation_date"/>
+                                <field name="received_by" invisible="not received_by"/>
+                                <field name="reception_date" invisible="not reception_date"/>
+                                <field name="cancelled_by" invisible="not cancelled_by"/>
+                                <field name="cancellation_date" invisible="not cancellation_date"/>
+                            </group>
+                        </page>
+                        <page string="Attachments">
+                            <field name="attachment_ids" widget="many2many_binary"
+                                   readonly="status in ('received', 'cancelled')"/>
+                        </page>
+                        <page string="Payment">
+                            <group>
+                                <field name="payment_status" widget="badge"
+                                       decoration-success="payment_status == 'paid'"
+                                       decoration-warning="payment_status == 'unpaid'"/>
+                                <field name="paid_amount" invisible="payment_status == 'unpaid'"/>
+                                <field name="payment_date" invisible="payment_status == 'unpaid'"/>
+                                <field name="paid_by" invisible="payment_status == 'unpaid'"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_purchase_order_record" model="ir.actions.act_window">
+        <field name="name">Purchase Orders</field>
+        <field name="res_model">purchase.order.record</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+            id="menu_purchase_order_list"
+            name="Purchase Orders"
+            parent="finance_menu"
+            action="action_purchase_order_record"
+            sequence="1"/>
+
+</odoo>

@@ -23,6 +23,16 @@
         'report/prescription_template.xml',
         'views/prescription_views.xml',
         'views/medicine_views.xml',
+        'views/not_interested_reason_views.xml',
+        'views/interest_list_views.xml',
+        'views/lost_reason_views.xml',
+        "wizards/appointment_cancel_wizard_views.xml",
+        "wizards/contact_stage_wizard_view.xml",
+        "wizards/not_interested_wizard_view.xml",
+        "wizards/qualified_stage_view.xml",
+        "wizards/details_recieved_wizard_view.xml",
+        "wizards/quotation_prepare_wizard_view.xml",
+        "wizards/lost_stage_wizard_view.xml",
     ],
     'assets': {
         'web.assets_backend': [

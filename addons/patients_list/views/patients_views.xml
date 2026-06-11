@@ -5,6 +5,54 @@
         <field name="arch" type="xml">
             <form>
                 <header>
+                    <button name="action_quotation"
+                            string="Quotation"
+                            type="object"
+                            class="btn-quotation"
+                            invisible="stage != 'quotation_preparation'"
+                    />
+                    <button name="action_qualified"
+                            string="Qualified"
+                            type="object"
+                            class="btn-success"
+                            invisible="stage not in ('new', 'contacted')"
+                    />
+                    <button name="action_details_received"
+                            string="Details received"
+                            type="object"
+                            class="btn-info"
+                            invisible="stage != 'qualified'"
+                    />
+                    <button name="action_add_contact"
+                            string="Add Contact"
+                            type="object"
+                            icon="fa-address-book"
+                            class="btn-contact"
+                            invisible="stage not in ('new', 'contacted')"
+                    />
+                    <button name="action_not_interested"
+                            string="Not interested"
+                            type="object"
+                            class="btn-danger"
+                            invisible="stage not in ('new', 'contacted')"
+                    />
+                    <button name="action_resend"
+                            string="Resend"
+                            type="object"
+                            class="btn-secondary"
+                            invisible="stage not in ('not_interested', 'lost')"
+                    />
+                    <button name="action_lost"
+                            string="Lost"
+                            type="object"
+                            class="btn-danger"
+                            invisible="stage not in ('qualified', 'waiting_details', 'quotation_preparation', 'negotiation')"
+                    />
+
+                    <field name="stage" widget="statusbar" statusbar_visible="new,contacted,not_interested,qualified"
+                           invisible="patient_type != 'lead' or stage not in ('new', 'contacted', 'not_interested')"/>
+                    <field name="stage" widget="statusbar" statusbar_visible="qualified,waiting_details,quotation_preparation,lost,deal_closed"
+                           invisible="patient_type != 'lead' or stage in ('new', 'contacted', 'not_interested')"/>
                 </header>
                 <sheet>
                     <group>
@@ -18,8 +66,12 @@
                             <field name="note"/>
                         </group>
                         <group>
+                            <field name="not_interested_reason" invisible="stage != 'not_interested'" readonly="1"/>
+                            <field name="lost_reason_id" invisible="stage != 'lost'" readonly="1"/>
                             <field name="balance" readonly="1"/>
+                            <field name="salesperson" invisible="patient_type != 'lead'"/>
                             <field name="stage"/>
+                            <field name="interested_id" invisible="not interested_id"/>
                             <field name="medical_histiory" widget="many2many_tags"/>
                             <field name="email"/>
                             <field name="mobile"/>
@@ -143,9 +195,26 @@
                 <field name="email"/>
                 <field name="mobile"/>
                 <field name="city"/>
+                <field name="salesperson" optional="hide"/>
             </list>
         </field>
     </record>
+
+    <record id="patients_search" model="ir.ui.view">
+        <field name="name">patients.search</field>
+        <field name="model">patients</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="patient_type" icon="fa-cogs"/>
+                </searchpanel>
+                <field name="name"/>
+                <field name="email"/>
+                <field name="mobile"/>
+            </search>
+        </field>
+    </record>
+
 
     <record id="patient_list_action" model="ir.actions.act_window">
         <field name="name">Patient list</field>

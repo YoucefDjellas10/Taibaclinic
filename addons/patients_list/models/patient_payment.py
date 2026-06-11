@@ -1,7 +1,7 @@
 from odoo import fields, models, api
 
 
-class AppointmentRecord(models.Model):
+class PatientPayment(models.Model):
     _name = 'patient.payment'
     _description = 'Payments for patients'
 
@@ -13,13 +13,6 @@ class AppointmentRecord(models.Model):
                                default=lambda self: self.env.ref('base.DZD'))
     amount = fields.Monetary(currency_field='currency',  string='Amount')
     note = fields.Text(string='Note')
-    doctor = fields.Many2one('doctors', string="Doctor")
-
-    @api.onchange('appointment')
-    def _onchange_appointment_set_doctor(self):
-        for record in self:
-            if record.appointment and record.appointment.doctor:
-                record.doctor = record.appointment.doctor
 
     @api.model
     def create(self, vals_list):

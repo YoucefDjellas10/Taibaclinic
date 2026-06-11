@@ -3,8 +3,88 @@ import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { Component, useState, useRef } from "@odoo/owl";
 import { _t } from "@web/core/l10n/translation";
-import { DateTime } from "@web/core/l10n/dates";
+
 console.log("JS LOADED OK");
+
+// ─── Fuzzy helpers ───────────────────────────────────────────────
+
+function normalize(str) {
+    return (str || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}
+
+function isSubsequence(abbr, word) {
+    let i = 0;
+    for (let j = 0; j < word.length && i < abbr.length; j++) {
+        if (abbr[i] === word[j]) i++;
+    }
+    return i === abbr.length;
+}
+
+function levenshtein(a, b) {
+    const m = a.length, n = b.length;
+    const dp = Array.from({ length: m + 1 }, (_, i) => [i]);
+    for (let j = 0; j <= n; j++) dp[0][j] = j;
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            dp[i][j] = a[i-1] === b[j-1]
+                ? dp[i-1][j-1]
+                : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+        }
+    }
+    return dp[m][n];
+}
+
+function wordScore(searchWord, nameWord) {
+    if (nameWord === searchWord) return 0;
+    if (nameWord.startsWith(searchWord)) return 0.5;
+    if (nameWord.includes(searchWord)) return 1;
+    if (isSubsequence(searchWord, nameWord)) return 2;
+    const dist = levenshtein(searchWord, nameWord);
+    const ratio = dist / Math.max(searchWord.length, nameWord.length);
+    if (ratio <= 0.5) return 2 + ratio;
+    return 99;
+}
+
+function patientScore(patient, searchWords) {
+    const nameParts = normalize(patient.name).split(" ").filter(Boolean);
+    let totalScore = 0;
+    for (const sw of searchWords) {
+        if (sw.length < 3) continue;
+        let best = 99;
+        for (const np of nameParts) {
+            const s = wordScore(sw, np);
+            if (s < best) best = s;
+        }
+        if (best === 99) return null;
+        totalScore += best;
+    }
+    return totalScore;
+}
+
+function buildDomains(words) {
+    if (words.length === 0) return [["id", "=", 0]];
+
+    const conditions = [];
+    for (const w of words) {
+        const letter = w.slice(0, 1);
+        conditions.push(["first_name", "ilike", letter]);
+        conditions.push(["last_name",  "ilike", letter]);
+        conditions.push(["name",       "ilike", letter]);
+    }
+
+    const domain = [];
+    for (let i = 0; i < conditions.length - 1; i++) {
+        domain.push("|");
+    }
+    return [...domain, ...conditions];
+}
+
+// ─── Composant ───────────────────────────────────────────────────
+
 class PatientSearchPage extends Component {
     static template = "patients_list.PatientSearchPage";
 
@@ -50,66 +130,46 @@ class PatientSearchPage extends Component {
     }
 
     async onSearch() {
-        const query = this.state.query.trim().replace(/\s+/g, " ");
-        if (!query) return;
+        const raw = this.state.query.trim().replace(/\s+/g, " ");
+        if (!raw) return;
 
         this.state.loading = true;
         this.state.searched = false;
 
         try {
-            const words = query.split(" ").filter(Boolean);
-            let results = [];
+            const searchWords = normalize(raw)
+                .split(" ")
+                .filter(w => w.length >= 3);
 
-            if (words.length >= 2) {
-                const word1 = words[0];
-                const word2 = words[1];
-
-                const r1 = await this.orm.searchRead(
-                    "patients",
-                    [["name", "ilike", query]],
-                    ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
-                    { limit: 50 }
-                );
-                const r2 = await this.orm.searchRead(
-                    "patients",
-                    [["name", "ilike", `${word2} ${word1}`]],
-                    ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
-                    { limit: 50 }
-                );
-                const r3 = await this.orm.searchRead(
-                    "patients",
-                    [["first_name", "ilike", word1], ["last_name", "ilike", word2]],
-                    ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
-                    { limit: 50 }
-                );
-                const r4 = await this.orm.searchRead(
-                    "patients",
-                    [["first_name", "ilike", word2], ["last_name", "ilike", word1]],
-                    ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
-                    { limit: 50 }
-                );
-
-                const seen = new Set();
-                for (const r of [...r1, ...r2, ...r3, ...r4]) {
-                    if (!seen.has(r.id)) {
-                        seen.add(r.id);
-                        results.push(r);
-                    }
-                }
-            } else {
-                results = await this.orm.searchRead(
-                    "patients",
-                    ["|", "|",
-                        ["first_name", "ilike", query],
-                        ["last_name", "ilike", query],
-                        ["name", "ilike", query],
-                    ],
-                    ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
-                    { limit: 50 }
-                );
+            if (searchWords.length === 0) {
+                this.state.results = [];
+                this.state.searched = true;
+                return;
             }
 
-            // Récupérer les prochains RDV
+            // 1. Pool large depuis Odoo (1ère lettre de chaque mot en OR)
+            const domain = buildDomains(searchWords);
+            const pool = await this.orm.searchRead(
+                "patients",
+                domain,
+                ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
+                { limit: 500 }
+            );
+
+            // 2. Score + filtre côté JS
+            const scored = [];
+            for (const p of pool) {
+                const score = patientScore(p, searchWords);
+                if (score !== null) {
+                    scored.push({ patient: p, score });
+                }
+            }
+
+            // 3. Tri par score (meilleur = plus petit score en premier)
+            scored.sort((a, b) => a.score - b.score);
+            const results = scored.map(s => s.patient).slice(0, 50);
+
+            // 4. Prochains RDV
             if (results.length > 0) {
                 const patientIds = results.map(p => p.id);
                 const today = new Date().toISOString().slice(0, 19).replace("T", " ");
@@ -125,16 +185,11 @@ class PatientSearchPage extends Component {
                     { order: "date asc", limit: 200 }
                 );
 
-                // Garder le premier RDV par patient
                 const appointmentMap = {};
                 for (const apt of appointments) {
                     const patId = apt.patient[0];
-                    if (!appointmentMap[patId]) {
-                        appointmentMap[patId] = apt;
-                    }
+                    if (!appointmentMap[patId]) appointmentMap[patId] = apt;
                 }
-
-                // Attacher le RDV à chaque patient
                 for (const patient of results) {
                     patient.next_appointment = appointmentMap[patient.id] || null;
                 }
@@ -153,18 +208,14 @@ class PatientSearchPage extends Component {
     }
 
     onKeyDown(ev) {
-        if (ev.key === "Enter") {
-            this.onSearch();
-        }
+        if (ev.key === "Enter") this.onSearch();
     }
 
     onClear() {
         this.state.query = "";
         this.state.results = [];
         this.state.searched = false;
-        if (this.searchInputRef.el) {
-            this.searchInputRef.el.focus();
-        }
+        if (this.searchInputRef.el) this.searchInputRef.el.focus();
     }
 
     openPatient(patientId) {
@@ -188,20 +239,20 @@ class PatientSearchPage extends Component {
 
     getStageBadgeClass(stage) {
         const map = {
-            new:           "badge-new",
-            contacted:     "badge-contacted",
-            qualified:     "badge-qualified",
-            consult_booked:"badge-consult",
-            consult_done:  "badge-consult",
-            plan_sent:     "badge-plan",
-            pending:       "badge-pending",
-            approved:      "badge-approved",
-            deposit:       "badge-approved",
-            scheduled:     "badge-scheduled",
-            in_treatment:  "badge-treatment",
-            completed:     "badge-completed",
-            followup:      "badge-followup",
-            closed:        "badge-closed",
+            new:            "badge-new",
+            contacted:      "badge-contacted",
+            qualified:      "badge-qualified",
+            consult_booked: "badge-consult",
+            consult_done:   "badge-consult",
+            plan_sent:      "badge-plan",
+            pending:        "badge-pending",
+            approved:       "badge-approved",
+            deposit:        "badge-approved",
+            scheduled:      "badge-scheduled",
+            in_treatment:   "badge-treatment",
+            completed:      "badge-completed",
+            followup:       "badge-followup",
+            closed:         "badge-closed",
         };
         return map[stage] || "badge-default";
     }
@@ -255,7 +306,6 @@ class PatientSearchPage extends Component {
     formatDate(dateStr) {
         if (!dateStr) return "";
         const date = new Date(dateStr + "Z");
-
         return date.toLocaleString("fr-FR", {
             day: "2-digit",
             month: "short",
@@ -266,15 +316,13 @@ class PatientSearchPage extends Component {
         });
     }
 
-
-
     getInitials(name) {
         if (!name) return "?";
         return name
             .split(" ")
             .filter(Boolean)
             .slice(0, 2)
-            .map((w) => w[0].toUpperCase())
+            .map(w => w[0].toUpperCase())
             .join("");
     }
 }

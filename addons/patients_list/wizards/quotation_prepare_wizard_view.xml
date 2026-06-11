@@ -1,0 +1,77 @@
+<odoo>
+    <record id="quotations_prepare_wizard_view_form" model="ir.ui.view">
+        <field name="name">quotations.prepare.wizard.form</field>
+        <field name="model">quotations.prepare.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Prepare Quotation">
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="patient_id" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group string="Patient Information">
+                            <field name="age" readonly="1"/>
+                            <field name="gender" readonly="1"/>
+                            <field name="medical_histiory"
+                                   readonly="1"
+                                   widget="many2many_tags"/>
+                        </group>
+                        <group string="Quotation Details">
+                            <field name="stage"/>
+                            <field name="quotation_date"/>
+                            <field name="expiration_date"/>
+                            <field name="currency" invisible="1"/>
+                        </group>
+                    </group>
+
+                    <separator string="Description"/>
+                        <field name="description"
+                               nolabel="1"
+                               placeholder="Add a description..."/>
+
+                    <notebook>
+                        <page string="Treatments">
+                            <field name="quotation_treatment_ids">
+                                <list editable="bottom">
+                                    <field name="treatment"/>
+                                    <field name="teeth" widget="many2many_tags"/>
+                                    <field name="quantity"/>
+                                    <field name="price"/>
+                                    <field name="total" readonly="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+
+                    <group class="oe_subtotal_footer oe_right">
+                        <field name="gross_total" readonly="1"/>
+                        <field name="discount"/>
+                        <div class="oe_subtotal_footer_separator oe_inline">
+                            <label for="net_total"/>
+                        </div>
+                        <field name="net_total"
+                               readonly="1"
+                               class="oe_subtotal_footer_separator"/>
+                    </group>
+
+                </sheet>
+
+                <footer>
+                    <button name="confirm_action"
+                            string="Confirm"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+</odoo>

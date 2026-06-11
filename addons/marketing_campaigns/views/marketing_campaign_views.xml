@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ═══ FORM ═══ -->
+    <record id="view_marketing_campaign_form" model="ir.ui.view">
+        <field name="name">marketing.campaign.form</field>
+        <field name="model">marketing.campaign</field>
+        <field name="arch" type="xml">
+            <form string="Campagne Marketing">
+                <header>
+                    <button name="action_activate" string="Activer" type="object"
+                            class="btn-primary"
+                            invisible="state not in ['draft','paused']"/>
+                    <button name="action_pause" string="Mettre en pause" type="object"
+                            invisible="state != 'active'"/>
+                    <button name="action_close" string="Terminer" type="object"
+                            invisible="state == 'closed'"/>
+                    <button name="action_draft" string="Remettre en brouillon" type="object"
+                            invisible="state != 'paused'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,active,paused,closed"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_ads" type="object"
+                                class="oe_stat_button" icon="fa-bullhorn">
+                            <field name="ad_count" widget="statinfo" string="Ads"/>
+                        </button>
+                    </div>
+
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" placeholder="Nom de la campagne..."/></h1>
+                        <div class="o_row">
+                            <field name="reference" readonly="1"/>
+                        </div>
+                    </div>
+
+                    <group>
+                        <group string="Informations générales">
+                            <field name="platform"/>
+                            <field name="lead_source_id"/>
+                            <field name="objective"/>
+                            <field name="responsible_id"/>
+                        </group>
+                        <group string="Période">
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                        </group>
+                    </group>
+
+                    <!-- IDs Publicitaires -->
+                    <group string="Identifiants publicitaires">
+                        <group>
+                            <field name="campaign_id_ext"
+                                   placeholder="ex: 120203258497310411"/>
+                            <field name="adset_id"
+                                   placeholder="ex: 120203258497650411"/>
+                        </group>
+                    </group>
+
+                    <!-- Budget -->
+                    <group string="Budget &amp; Financement">
+                        <group>
+                            <field name="currency"/>
+                            <field name="budget_total"/>
+                            <field name="budget_daily"/>
+                        </group>
+                        <group>
+                            <field name="total_deposited"/>
+                            <field name="amount_remaining"
+                                   decoration-danger="amount_remaining &lt; 0"
+                                   decoration-success="amount_remaining &gt;= 0"/>
+                        </group>
+                    </group>
+
+                    <!-- Dépôts -->
+                    <notebook>
+                        <page string="Dépôts / Recharges" name="deposits">
+                            <field name="deposit_ids">
+                                <list string="Dépôts" editable="bottom">
+                                    <field name="date"/>
+                                    <field name="amount"/>
+                                    <field name="payment_method"/>
+                                    <field name="reference"/>
+                                    <field name="responsible_id"/>
+                                    <field name="note"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <!-- Ads (publicités) -->
+                        <page string="Publicités (Ads)" name="ads">
+                            <field name="ad_ids">
+                                <list string="Ads" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="ad_id"/>
+                                    <field name="adset_name"/>
+                                    <field name="ad_format"/>
+                                    <field name="state"/>
+                                    <field name="impressions"/>
+                                    <field name="clicks"/>
+                                    <field name="spend"/>
+                                    <field name="leads_generated"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <!-- KPIs -->
+                        <page string="Performances" name="kpis">
+                            <group>
+                                <group string="Métriques globales">
+                                    <field name="impressions"/>
+                                    <field name="clicks"/>
+                                    <field name="ctr" widget="percentage"/>
+                                </group>
+                                <group string="Résultats">
+                                    <field name="leads_count"/>
+                                    <field name="cpl"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page string="Notes" name="notes">
+                            <field name="note" placeholder="Notes internes sur cette campagne..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ═══ LIST ═══ -->
+    <record id="view_marketing_campaign_list" model="ir.ui.view">
+        <field name="name">marketing.campaign.list</field>
+        <field name="model">marketing.campaign</field>
+        <field name="arch" type="xml">
+            <list string="Campagnes" decoration-info="state == 'active'"
+                  decoration-muted="state == 'closed'"
+                  decoration-warning="state == 'paused'">
+                <field name="reference"/>
+                <field name="name"/>
+                <field name="platform"/>
+                <field name="lead_source_id"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="budget_total" sum="Total budget"/>
+                <field name="total_deposited" sum="Total déposé"/>
+                <field name="amount_remaining"/>
+                <field name="ad_count"/>
+                <field name="leads_count"/>
+                <field name="responsible_id"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'active'"
+                       decoration-warning="state == 'paused'"
+                       decoration-info="state == 'draft'"
+                       decoration-danger="state == 'closed'"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ═══ SEARCH ═══ -->
+<!--    <record id="view_marketing_campaign_search" model="ir.ui.view">-->
+<!--        <field name="name">marketing.campaign.search</field>-->
+<!--        <field name="model">marketing.campaign</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="Rechercher campagnes">-->
+<!--                <field name="name"/>-->
+<!--                <field name="reference"/>-->
+<!--                <field name="campaign_id_ext"/>-->
+<!--                <field name="lead_source_id"/>-->
+<!--                <field name="responsible_id"/>-->
+<!--                <separator/>-->
+<!--                <filter string="Active" name="active" domain="[('state','=','active')]"/>-->
+<!--                <filter string="En pause" name="paused" domain="[('state','=','paused')]"/>-->
+<!--                <filter string="Terminée" name="closed" domain="[('state','=','closed')]"/>-->
+<!--                <separator/>-->
+<!--                <filter string="Meta" name="meta" domain="[('platform','=','meta')]"/>-->
+<!--                <filter string="Google" name="google" domain="[('platform','=','google')]"/>-->
+<!--                <group expand="0" string="Grouper par">-->
+<!--                    <filter string="Plateforme" name="group_platform" context="{'group_by': 'platform'}"/>-->
+<!--                    <filter string="Statut" name="group_state" context="{'group_by': 'state'}"/>-->
+<!--                    <filter string="Source Lead" name="group_source" context="{'group_by': 'lead_source_id'}"/>-->
+<!--                    <filter string="Responsable" name="group_resp" context="{'group_by': 'responsible_id'}"/>-->
+<!--                </group>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <!-- ═══ KANBAN ═══ -->
+
+    <!-- ═══ ACTION ═══ -->
+    <record id="action_marketing_campaign" model="ir.actions.act_window">
+        <field name="name">Campagnes</field>
+        <field name="res_model">marketing.campaign</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Créer votre première campagne marketing !
+            </p>
+        </field>
+    </record>
+
+</odoo>

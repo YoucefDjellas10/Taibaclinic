@@ -9,7 +9,7 @@
                         <field name="name"/>
                         <field name="patient"/>
                         <field name="appointment"/>
-                        <field name="doctor"/>
+<!--                        <field name="doctor"/>-->
                         <field name="currency" invisible="1"/>
                         <field name="amount"/>
                         <field name="note"/>
@@ -27,7 +27,7 @@
                 <field name="create_uid"/>
                 <field name="create_date"/>
                 <field name="patient"/>
-                <field name="doctor" optional="hide"/>
+<!--                <field name="doctor" optional="hide"/>-->
                 <field name="currency" optional="hide"/>
                 <field name="amount"/>
                 <field name="note"/>
@@ -41,11 +41,11 @@
         <field name="arch" type="xml">
             <search>
                 <field name="patient"/>
-                <field name="doctor"/>
+<!--                <field name="doctor"/>-->
                 <field name="appointment"/>
                 <searchpanel>
                     <field name="patient"/>
-                    <field name="doctor"/>
+<!--                    <field name="doctor"/>-->
                 </searchpanel>
 
             </search>
@@ -60,6 +60,7 @@
 
     <menuitem id="patient_payment_list_sub_menu"
               name="Payment"
+              parent="finance_manage.finance_menu"
               action="patient_payment_list_action"
               sequence="250"/>
 </odoo>
