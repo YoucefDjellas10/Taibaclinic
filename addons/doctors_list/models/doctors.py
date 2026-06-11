@@ -95,30 +95,30 @@ class TreatmentPlanInherit(models.Model):
             else:
                 record.price = 0
 
-    @api.constrains('price', 'treatment', 'category')
-    def _check_min_price(self):
-        for record in self:
-
-            prices_list = self.env['pricing.list'].search([
-                ('treatment', '=', record.treatment.id),
-                ('category', '=', record.category.id),
-            ], limit=1)
-
-            if not record.doctor and not record.appointment.doctor:
-                raise ValidationError(
-                    f"doctor field is required"
-                )
-
-            if not record.category and not record.appointment.doctor.category:
-                raise ValidationError(
-                    f"doctor category field is required"
-                )
-
-            if prices_list and record.price < prices_list.min_price:
-                raise ValidationError(
-                    f"The price {record.price} is lower than the minimum allowed price"
-                    f"({prices_list.min_price}) for the '{record.treatment.name}' process."
-                )
+    # @api.constrains('price', 'treatment', 'category')
+    # def _check_min_price(self):
+    #     for record in self:
+    #
+    #         prices_list = self.env['pricing.list'].search([
+    #             ('treatment', '=', record.treatment.id),
+    #             ('category', '=', record.category.id),
+    #         ], limit=1)
+    #
+    #         if not record.doctor and not record.appointment.doctor:
+    #             raise ValidationError(
+    #                 f"doctor field is required"
+    #             )
+    #
+    #         if not record.category and not record.appointment.doctor.category:
+    #             raise ValidationError(
+    #                 f"doctor category field is required"
+    #             )
+    #
+    #         if prices_list and record.price < prices_list.min_price:
+    #             raise ValidationError(
+    #                 f"The price {record.price} is lower than the minimum allowed price"
+    #                 f"({prices_list.min_price}) for the '{record.treatment.name}' process."
+    #             )
 
 
 class QuotationsTreatmentInherit(models.Model):
@@ -143,30 +143,30 @@ class QuotationsTreatmentInherit(models.Model):
             else:
                 record.price = 0
 
-    @api.constrains('price', 'treatment', 'category')
-    def _check_min_price(self):
-        for record in self:
-
-            prices_list = self.env['pricing.list'].search([
-                ('treatment', '=', record.treatment.id),
-                ('category', '=', record.category.id),
-            ], limit=1)
-
-            if not record.doctor and not record.quotation.doctor:
-                raise ValidationError(
-                    f"doctor field is required"
-                )
-
-            if not record.category and not record.quotation.doctor.category:
-                raise ValidationError(
-                    f"doctor category field is required"
-                )
-
-            if prices_list and record.price < prices_list.min_price:
-                raise ValidationError(
-                    f"The price {record.price} is lower than the minimum allowed price"
-                    f"({prices_list.min_price}) for the '{record.treatment.name}' process."
-                )
+    # @api.constrains('price', 'treatment', 'category')
+    # def _check_min_price(self):
+    #     for record in self:
+    #
+    #         prices_list = self.env['pricing.list'].search([
+    #             ('treatment', '=', record.treatment.id),
+    #             ('category', '=', record.category.id),
+    #         ], limit=1)
+    #
+    #         if not record.doctor and not record.quotation.doctor:
+    #             raise ValidationError(
+    #                 f"doctor field is required"
+    #             )
+    #
+    #         if not record.category and not record.quotation.doctor.category:
+    #             raise ValidationError(
+    #                 f"doctor category field is required"
+    #             )
+    #
+    #         if prices_list and record.price < prices_list.min_price:
+    #             raise ValidationError(
+    #                 f"The price {record.price} is lower than the minimum allowed price"
+    #                 f"({prices_list.min_price}) for the '{record.treatment.name}' process."
+    #             )
 
 
 class QuotationsTreatmentWizardInherit(models.Model):
@@ -191,30 +191,30 @@ class QuotationsTreatmentWizardInherit(models.Model):
             else:
                 record.price = 0
 
-    @api.constrains('price', 'treatment', 'category')
-    def _check_min_price(self):
-        for record in self:
-
-            prices_list = self.env['pricing.list'].search([
-                ('treatment', '=', record.treatment.id),
-                ('category', '=', record.category.id),
-            ], limit=1)
-
-            if not record.doctor and not record.quotation.doctor:
-                raise ValidationError(
-                    f"doctor field is required"
-                )
-
-            if not record.category and not record.quotation.doctor.category:
-                raise ValidationError(
-                    f"doctor category field is required"
-                )
-
-            if prices_list and record.price < prices_list.min_price:
-                raise ValidationError(
-                    f"The price {record.price} is lower than the minimum allowed price"
-                    f"({prices_list.min_price}) for the '{record.treatment.name}' process."
-                )
+    # @api.constrains('price', 'treatment', 'category')
+    # def _check_min_price(self):
+    #     for record in self:
+    #
+    #         prices_list = self.env['pricing.list'].search([
+    #             ('treatment', '=', record.treatment.id),
+    #             ('category', '=', record.category.id),
+    #         ], limit=1)
+    #
+    #         if not record.doctor and not record.quotation.doctor:
+    #             raise ValidationError(
+    #                 f"doctor field is required"
+    #             )
+    #
+    #         if not record.category and not record.quotation.doctor.category:
+    #             raise ValidationError(
+    #                 f"doctor category field is required"
+    #             )
+    #
+    #         if prices_list and record.price < prices_list.min_price:
+    #             raise ValidationError(
+    #                 f"The price {record.price} is lower than the minimum allowed price"
+    #                 f"({prices_list.min_price}) for the '{record.treatment.name}' process."
+    #             )
 
 
 class QuotationsPrepareWizardInherit(models.Model):
