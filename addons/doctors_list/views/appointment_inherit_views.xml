@@ -36,17 +36,17 @@
     </record>
 
     <!-- Inherit Calendar View -->
-    <record id="appointment_record_calendar_inherit_doctor" model="ir.ui.view">
-        <field name="name">appointment.record.calendar.inherit.doctor</field>
-        <field name="model">appointment.record</field>
-        <field name="inherit_id" ref="patients_list.appointment_record_calendar"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='patient']" position="after">
-                <field name="doctor"/>
-            </xpath>
-            <xpath expr="//calendar" position="attributes">
-                <attribute name="color">doctor</attribute>
-            </xpath>
-        </field>
-    </record>
+<!--    <record id="appointment_record_calendar_inherit_doctor" model="ir.ui.view">-->
+<!--        <field name="name">appointment.record.calendar.inherit.doctor</field>-->
+<!--        <field name="model">appointment.record</field>-->
+<!--        <field name="inherit_id" ref="patients_list.appointment_record_calendar"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//field[@name='patient']" position="after">-->
+<!--                <field name="doctor"/>-->
+<!--            </xpath>-->
+<!--            <xpath expr="//calendar" position="attributes">-->
+<!--                <attribute name="color">doctor</attribute>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
 </odoo>
