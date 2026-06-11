@@ -58,9 +58,9 @@
     <menuitem id="finance_menu"
               name="Finance"
               sequence="100"/>
-    <menuitem id="pricing_list_sub"
-              name="Pricing list"
-              parent="pricing_main"
-              action="pricing_list_action"
-              sequence="0"/>
+<!--    <menuitem id="pricing_list_sub"-->
+<!--              name="Pricing list"-->
+<!--              parent="pricing_main"-->
+<!--              action="pricing_list_action"-->
+<!--              sequence="0"/>-->
 </odoo>
