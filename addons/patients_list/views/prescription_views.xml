@@ -35,10 +35,13 @@
             <form>
 
                 <header>
-                    <button name="%(action_prescription_report)d"
-                            string="Print"
-                            type="action"
-                            class="btn-primary"/>
+                    <button
+                            name="action_print_prescription"
+                            string="🖨️ Imprimer l'ordonnance"
+                            type="object"
+                            class="btn-primary"
+                            icon="fa-print"
+                    />
                 </header>
 
                 <sheet>
@@ -46,7 +49,7 @@
                     <group>
                         <field name="name" readonly="1"/>
                         <field name="patient_id"/>
-                        <field name="doctor_name"/>
+                        <field name="appointment_id"/>
                         <field name="date"/>
                     </group>
 

@@ -50,6 +50,7 @@
                         <group>
                             <field name="patient"/>
                             <field name="date"/>
+                            <field name="balance_payments"/>
                         </group>
                         <group>
                             <field name="reason"/>
@@ -79,9 +80,13 @@
                                         <field name="gross_total"/>
                                         <field name="discount"/>
                                         <field name="net_total"/>
+                                        <field name="currency" invisible="1"/>
                                     </group>
                                 </group>
                             </group>
+                        </page>
+                        <page string="Prescriptions">
+                            <field name="prescription_ids"/>
                         </page>
                         <page string="Payments">
                             <div>
@@ -103,6 +108,18 @@
                                     <field name="note"/>
                                 </list>
                             </field>
+                            <group>
+                                <group>
+                                </group>
+                                <group>
+                                    <group>
+                                    </group>
+                                    <group>
+                                        <field name="total_payments"/>
+                                        <field name="currency" invisible="1"/>
+                                    </group>
+                                </group>
+                            </group>
                         </page>
                         <page string="Deal">
                             <div>

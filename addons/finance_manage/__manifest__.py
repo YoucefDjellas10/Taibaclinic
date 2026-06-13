@@ -12,6 +12,7 @@
         "views/product_record_views.xml",
         "views/product_category_record_views.xml",
         "views/appointment_inherit.xml",
+        "views/material_inventory_views.xml",
         "wizards/refuse_reason_wizard.xml",
         "wizards/purchase_receive_wizard.xml",
     ],

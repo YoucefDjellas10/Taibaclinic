@@ -51,7 +51,8 @@
 
                     <field name="stage" widget="statusbar" statusbar_visible="new,contacted,not_interested,qualified"
                            invisible="patient_type != 'lead' or stage not in ('new', 'contacted', 'not_interested')"/>
-                    <field name="stage" widget="statusbar" statusbar_visible="qualified,waiting_details,quotation_preparation,lost,deal_closed"
+                    <field name="stage" widget="statusbar"
+                           statusbar_visible="qualified,waiting_details,quotation_preparation,lost,deal_closed"
                            invisible="patient_type != 'lead' or stage in ('new', 'contacted', 'not_interested')"/>
                 </header>
                 <sheet>
@@ -109,6 +110,18 @@
                                         class="btn-appointment"/>
                             </header>
                             <field name="appointment_ids" readonly="1"/>
+                            <group>
+                                <group>
+                                </group>
+                                <group>
+                                    <group>
+                                    </group>
+                                    <group>
+                                        <field name="app_total"/>
+                                        <field name="currency" invisible="1"/>
+                                    </group>
+                                </group>
+                            </group>
                         </page>
                         <page string="Quotations" invisible="patient_type == 'door'">
                             <header>

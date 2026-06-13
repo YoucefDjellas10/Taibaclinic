@@ -1,0 +1,54 @@
+<odoo>
+    <record id="view_create_lab_order_wizard_form" model="ir.ui.view">
+        <field name="name">create.lab.order.wizard.form</field>
+        <field name="model">create.lab.order.wizard</field>
+        <field name="arch" type="xml">
+            <form string="New Lab Order">
+                <sheet>
+                    <div class="oe_title">
+                        <field name="priority" widget="priority" class="me-2"/>
+                    </div>
+
+                    <group>
+                        <group string="General Information">
+                            <field name="appointment_id" readonly="1"/>
+                            <field name="doctor_id" readonly="1"/>
+                            <field name="lab_id"/>
+                            <field name="work_type"/>
+                            <field name="impression_type"/>
+                            <field name="general_shade"/>
+                            <field name="tracking_number"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Order Lines">
+                            <field name="line_ids">
+                                <list editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="prosthesis_type"/>
+                                    <field name="material"/>
+                                    <field name="tooth_numbers" widget="many2many_tags"/>
+                                    <field name="quantity"/>
+                                    <field name="price_unit"/>
+                                    <field name="price_total" sum="Total"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes">
+                            <field name="notes" placeholder="Instructions for the lab technician…"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_create_lab_order"
+                            string="Create Lab Order"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

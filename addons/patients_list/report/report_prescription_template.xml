@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_prescription_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="base_url" t-value="env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
+
+                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #2c2c2c; margin: 0; padding: 0; background: #ffffff;">
+
+                    <!-- CONTENU avec padding-bottom pour laisser place au bloc fixe -->
+                    <div style="padding-bottom: 90px;">
+
+                        <!-- HEADER -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="border-bottom: 2px solid #0d9488;">
+                            <tr>
+                                <td style="padding: 14px 18px 10px 18px; vertical-align: middle; width: 65%;">
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td style="vertical-align: middle; padding-right: 12px;">
+                                                <div style="width: 52px; height: 52px; border-radius: 50%; overflow: hidden; border: 2px solid #0d9488;">
+                                                    <img t-attf-src="#{base_url}/doctors_list/static/src/img/homepage.png"
+                                                         style="width: 52px; height: 52px; display: block;"/>
+                                                </div>
+                                            </td>
+                                            <td style="vertical-align: middle;">
+                                                <div style="font-size: 18px; font-weight: 900; color: #0d9488; letter-spacing: 0.5px; line-height: 1.2;">Taiba Dental Clinic</div>
+                                                <div style="font-size: 10px; color: #64748b; line-height: 1.5;">Cabinet Dentaire Specialise</div>
+                                                <div style="font-size: 9.5px; color: #94a3b8; line-height: 1.4;">Rue Sakhri Ali - El Eulma 19600 - Tel. 0550 49 42 98</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="padding: 14px 18px 10px 0; vertical-align: middle; text-align: right; width: 35%;">
+                                    <div style="font-size: 9px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px;">Reference</div>
+                                    <div style="font-size: 13px; font-weight: 900; color: #0d9488;"><t t-esc="doc.name"/></div>
+                                    <div style="font-size: 10px; color: #64748b; margin-top: 3px;">
+                                        El Eulma, le <t t-esc="doc.date.strftime('%d/%m/%Y') if doc.date else ''"/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- TITRE -->
+                        <div style="text-align: center; padding: 10px 0 8px 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 12px;">
+                            <span style="font-size: 20px; font-weight: 900; color: #0d9488; letter-spacing: 5px; text-transform: uppercase;">O R D O N N A N C E</span>
+                        </div>
+
+                        <!-- MEDECIN + PATIENT -->
+                        <div style="padding: 0 18px; margin-bottom: 14px;">
+
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 10px;">
+                                <tr>
+                                    <td style="width: 36%; font-size: 11px; color: #64748b; padding: 5px 0; vertical-align: bottom;">Medecin Consultant :</td>
+                                    <td style="border-bottom: 1px dotted #94a3b8; padding: 4px 6px; vertical-align: bottom;">
+                                        <span style="font-size: 12px; font-weight: 700; color: #1e293b;">
+                                            <t t-if="doc.doctor_name">Dr. <t t-esc="doc.doctor_name"/></t>
+                                        </span>
+                                        <span style="font-size: 10px; color: #94a3b8; margin-left: 8px;">Chirurgien Dentiste</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <div style="border-top: 1px dashed #e2e8f0; margin-bottom: 10px;"></div>
+
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="width: 36%; font-size: 11px; color: #64748b; padding: 5px 0; vertical-align: bottom;">Nom du Malade :</td>
+                                    <td style="border-bottom: 1px dotted #94a3b8; padding: 4px 6px; vertical-align: bottom;">
+                                        <span style="font-size: 13px; font-weight: 800; color: #0d9488;"><t t-esc="doc.patient_id.name"/></span>
+                                    </td>
+                                </tr>
+                                <tr><td colspan="2" style="height: 7px;"></td></tr>
+                                <tr>
+                                    <td style="width: 36%; font-size: 11px; color: #64748b; padding: 5px 0; vertical-align: bottom;">Age :</td>
+                                    <td style="border-bottom: 1px dotted #94a3b8; padding: 4px 6px; vertical-align: bottom;">
+                                        <span style="font-size: 12px; font-weight: 700; color: #1e293b;"><t t-esc="doc.patient_id.age"/> ans</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- MEDICAMENTS -->
+                        <div style="padding: 0 18px; margin-bottom: 12px;">
+                            <div style="font-size: 11px; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 1.2px; border-left: 3px solid #0d9488; padding-left: 8px; margin-bottom: 10px;">
+                                Medicaments Prescrits
+                            </div>
+
+                            <t t-foreach="doc.line_ids" t-as="line">
+                                <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 8px; border-left: 2px solid #0d9488; background: #f8fffe;">
+                                    <tr>
+                                        <td style="padding: 8px 12px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <span style="font-size: 10px; font-weight: 900; color: #ffffff; background: #0d9488; padding: 2px 7px; border-radius: 10px; margin-right: 6px;">
+                                                            <t t-esc="line_index + 1"/>
+                                                        </span>
+                                                        <span style="font-size: 13px; font-weight: 800; color: #1e293b;">
+                                                            <t t-esc="line.medication_id.name"/>
+                                                        </span>
+                                                    </td>
+                                                    <t t-if="line.dosage">
+                                                        <td style="text-align: right;">
+                                                            <span style="font-size: 11px; font-weight: 700; color: #0d9488; border: 1px solid #0d9488; padding: 1px 7px; border-radius: 4px;">
+                                                                <t t-esc="line.dosage"/>
+                                                            </span>
+                                                        </td>
+                                                    </t>
+                                                </tr>
+                                            </table>
+                                            <table cellpadding="0" cellspacing="0" style="margin-top: 5px;">
+                                                <tr>
+                                                    <t t-if="line.frequency">
+                                                        <td style="font-size: 10.5px; color: #64748b; padding-right: 14px;">Freq. : <t t-esc="line.frequency"/></td>
+                                                    </t>
+                                                    <t t-if="line.duration">
+                                                        <td style="font-size: 10.5px; color: #64748b; padding-right: 14px;">Duree : <t t-esc="line.duration"/></td>
+                                                    </t>
+                                                    <t t-if="line.instructions">
+                                                        <td style="font-size: 10.5px; color: #475569; font-style: italic;">Note : <t t-esc="line.instructions"/></td>
+                                                    </t>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </t>
+
+                            <t t-if="not doc.line_ids">
+                                <div style="text-align:center; color:#94a3b8; font-size:11px; font-style:italic; padding: 12px 0;">
+                                    Aucun medicament prescrit
+                                </div>
+                            </t>
+                        </div>
+
+                        <!-- NOTES -->
+                        <t t-if="doc.note">
+                            <div style="padding: 0 18px; margin-bottom: 14px;">
+                                <table width="100%" cellpadding="0" cellspacing="0" style="border-left: 3px solid #f59e0b; background: #fffbf0;">
+                                    <tr>
+                                        <td style="padding: 8px 12px;">
+                                            <div style="font-size: 10px; font-weight: 800; color: #d97706; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 4px;">Recommandations</div>
+                                            <div style="font-size: 11.5px; color: #444; line-height: 1.6;"><t t-esc="doc.note"/></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </t>
+
+                    </div>
+                    <!-- FIN CONTENU -->
+
+                    <!-- SIGNATURE + FOOTER FIXES EN BAS -->
+                    <div style="position: fixed; bottom: 0; left: 0; right: 0;">
+
+                        <!-- Signature -->
+                        <div style="padding: 0 18px; margin-bottom: 12px;">
+                            <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="width: 55%; vertical-align: bottom;">
+                                        <div style="font-size: 9px; color: #94a3b8; font-style: italic; line-height: 1.7;">
+                                            Ordonnance valable 3 mois a compter de la date d emission.<br/>
+                                            A delivrer en pharmacie sur presentation de ce document.
+                                        </div>
+                                    </td>
+                                    <td style="width: 45%; text-align: center; vertical-align: bottom;">
+                                        <div style="border-top: 1.5px solid #0d9488; padding-top: 5px; margin: 0 10px;">
+                                            <div style="font-size: 11px; font-weight: 800; color: #0d9488;">
+                                                <t t-if="doc.doctor_name">Dr. <t t-esc="doc.doctor_name"/></t>
+                                                <t t-else="">Signature du Medecin</t>
+                                            </div>
+                                            <div style="font-size: 9px; color: #94a3b8;">Cachet &amp; Signature</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- Footer -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="border-top: 2px solid #0d9488;">
+                            <tr>
+                                <td style="padding: 7px 18px; text-align: center; font-size: 9px; color: #94a3b8; letter-spacing: 0.3px;">
+                                    Taiba Dental Clinic - Rue Sakhri Ali, El Eulma 19600 - Tel. 0550 49 42 98
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

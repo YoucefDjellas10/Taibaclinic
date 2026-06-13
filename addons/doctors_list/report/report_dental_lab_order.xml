@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="paperformat_lab_order" model="report.paperformat">
+        <field name="name">Lab Order A4</field>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">5</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line">False</field>
+        <field name="header_spacing">3</field>
+        <field name="dpi">96</field>
+    </record>
+
+    <record id="action_report_dental_lab_order" model="ir.actions.report">
+        <field name="name">Lab Order</field>
+        <field name="model">dental.lab.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">doctors_list.report_dental_lab_order_document</field>
+        <field name="report_file">doctors_list.report_dental_lab_order_document</field>
+        <field name="binding_model_id" ref="doctors_list.model_dental_lab_order"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="paperformat_lab_order"/>
+    </record>
+
+    <template id="report_dental_lab_order_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+
+                <t t-set="base_url" t-value="env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
+
+                <t t-set="state_labels" t-value="{
+                    'draft':         'Brouillon',
+                    'confirmed':     'Confirme',
+                    'sent':          'Envoye au Labo',
+                    'manufacturing': 'En Fabrication',
+                    'fitting':       'Essayage',
+                    'rework':        'Retouche',
+                    'validated':     'Valide',
+                    'delivered':     'Livre',
+                    'placed':        'Place',
+                    'cancelled':     'Annule'
+                }"/>
+
+                <div style="font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: #2c2c2c; margin: 0; padding: 0;">
+
+                    <!-- HEADER -->
+                    <table width="100%" cellpadding="0" cellspacing="0" style="background: #ffffff; border-bottom: 2px solid #0d9488;">
+                        <tr>
+                            <td style="padding: 18px 22px; vertical-align: middle; width: 55%;">
+                                <table cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="vertical-align: middle; padding-right: 16px;">
+                                            <div style="width: 62px; height: 62px; border-radius: 50%; overflow: hidden; border: 2px solid #0d9488;">
+                                                <img t-attf-src="#{base_url}/doctors_list/static/src/img/homepage.png"
+                                                     style="width: 62px; height: 62px; display: block;"/>
+                                            </div>
+                                        </td>
+                                        <td style="vertical-align: middle;">
+                                            <div style="font-size: 24px; font-weight: 900; color: #0d9488; letter-spacing: 0.5px; line-height: 1.2;">Taiba Dental Clinic</div>
+                                            <div style="font-size: 13px; color: #64748b; line-height: 1.5;">Dental Implants Provider</div>
+                                            <div style="font-size: 11px; color: #94a3b8; line-height: 1.4;">Rue Sakhri Ali - El Eulma 19600 - Tel. 0550 49 42 98</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="padding: 18px 22px; vertical-align: middle; text-align: right; width: 45%;">
+                                <div style="font-size: 38px; font-weight: 900; color: #0d9488; letter-spacing: 4px; line-height: 1.1;">LAB ORDER</div>
+                                <div style="font-size: 14px; font-weight: 700; color: #1e293b; margin-top: 5px;">Ref: <t t-esc="o.name"/></div>
+                                <div style="font-size: 13px; color: #64748b; margin-top: 3px; margin-bottom: 10px;">Date: <t t-esc="o.order_date.strftime('%d/%m/%Y') if o.order_date else ''"/></div>
+                                <t t-if="o.priority == '2'">
+                                    <span style="background: #dc2626; color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 11px; font-weight: 800;">!! VERY URGENT</span>
+                                </t>
+                                <t t-elif="o.priority == '1'">
+                                    <span style="background: #f59e0b; color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 11px; font-weight: 800;">!! URGENT</span>
+                                </t>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- STATUS BAND -->
+                    <table width="100%" cellpadding="0" cellspacing="0" style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                        <tr>
+                            <td style="padding: 9px 22px;">
+                                <table cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td style="font-size: 14px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.8px; vertical-align: middle;">STATUS :</td>
+                                        <td style="padding: 0 10px; vertical-align: middle;">
+                                            <div style="width: 10px; height: 10px; background: #0d9488; border-radius: 50%;"></div>
+                                        </td>
+                                        <td style="font-size: 16px; font-weight: 900; color: #0d9488; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle;">
+                                            <t t-esc="state_labels.get(o.state, o.state)"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- BODY -->
+                    <div style="padding: 18px 22px 20px 22px;">
+
+                        <!-- INFO CARDS -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 18px;">
+                            <tr>
+                                <td style="width: 50%; vertical-align: top; padding-right: 10px;">
+                                    <table width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #e2e8f0; border-left: 3px solid #0d9488; border-radius: 4px;">
+                                        <tr>
+                                            <td style="padding: 13px 15px;">
+                                                <div style="font-size: 14px; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 11px;">General Information</div>
+                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td style="color: #94a3b8; font-size: 15px; padding: 4px 0; width: 42%;">Laboratory</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="o.lab_id.name"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Doctor</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="o.doctor_id.name"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Work Type</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="dict(o._fields['work_type'].selection).get(o.work_type, o.work_type)"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Impression</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="dict(o._fields['impression_type'].selection).get(o.impression_type, o.impression_type)"/></td>
+                                                    </tr>
+                                                    <t t-if="o.general_shade">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Shade (Vita)</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="o.general_shade"/></td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="o.tracking_number">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Tracking #</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="o.tracking_number"/></td>
+                                                        </tr>
+                                                    </t>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+
+                                <td style="width: 50%; vertical-align: top; padding-left: 10px;">
+                                    <table width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #e2e8f0; border-left: 3px solid #0d9488; border-radius: 4px;">
+                                        <tr>
+                                            <td style="padding: 13px 15px;">
+                                                <div style="font-size: 14px; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 11px;">Dates</div>
+                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td style="color: #94a3b8; font-size: 15px; padding: 4px 0; width: 46%;">Order Date</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;">
+                                                            <t t-esc="o.order_date.strftime('%d/%m/%Y') if o.order_date else ''"/>
+                                                        </td>
+                                                    </tr>
+                                                    <t t-if="o.sent_date">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Sent to Lab</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;">
+                                                                <t t-esc="o.sent_date.strftime('%d/%m/%Y') if o.sent_date else ''"/>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="o.expected_date">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Expected Date</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;">
+                                                                <t t-esc="o.expected_date.strftime('%d/%m/%Y') if o.expected_date else ''"/>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="o.received_date">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Received</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;">
+                                                                <t t-esc="o.received_date.strftime('%d/%m/%Y') if o.received_date else ''"/>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="o.fitting_date">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Fitting Date</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;">
+                                                                <t t-esc="o.fitting_date.strftime('%d/%m/%Y') if o.fitting_date else ''"/>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="o.placement_date">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Placement Date</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;">
+                                                                <t t-esc="o.placement_date.strftime('%d/%m/%Y') if o.placement_date else ''"/>
+                                                            </td>
+                                                        </tr>
+                                                    </t>
+                                                    <t t-if="o.fitting_count">
+                                                        <tr>
+                                                            <td style="color: #94a3b8; font-size: 15px; padding: 4px 0;">Fitting Sessions</td>
+                                                            <td style="font-weight: 700; font-size: 15px; color: #1e293b; padding: 4px 0;"><t t-esc="o.fitting_count"/></td>
+                                                        </tr>
+                                                    </t>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- ORDER LINES -->
+                        <div style="font-size: 14px; font-weight: 800; color: #0d9488; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;">Order Lines</div>
+                        <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse; margin-bottom: 18px; font-size: 15px;">
+                            <thead>
+                                <tr style="background: #0d9488;">
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: center; width: 24px;">#</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: left;">Product</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: left;">Prosthesis Type</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: left;">Material</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: center;">Teeth (FDI)</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: center;">Qty</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: right;">Unit Price</th>
+                                    <th style="padding: 10px 8px; color: #fff; font-size: 13px; font-weight: 700; text-align: right;">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.line_ids" t-as="line">
+                                    <t t-set="row_bg" t-value="'#f8fafc' if line_index % 2 == 0 else '#ffffff'"/>
+                                    <tr>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; text-align: center; color: #94a3b8; font-size: 13px; border-bottom: 1px solid #f1f5f9;"><t t-esc="line_index + 1"/></td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; font-weight: 700; color: #1e293b; border-bottom: 1px solid #f1f5f9;"><t t-esc="line.product_id.name"/></td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; color: #475569; border-bottom: 1px solid #f1f5f9;"><t t-esc="dict(line._fields['prosthesis_type'].selection).get(line.prosthesis_type, '-')"/></td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; color: #475569; border-bottom: 1px solid #f1f5f9;"><t t-esc="dict(line._fields['material'].selection).get(line.material, '-')"/></td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; text-align: center; color: #475569; border-bottom: 1px solid #f1f5f9;">
+                                            <t t-esc="', '.join(line.tooth_numbers.mapped('name')) if line.tooth_numbers else '-'"/>
+                                        </td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; text-align: center; font-weight: 700; color: #1e293b; border-bottom: 1px solid #f1f5f9;"><t t-esc="line.quantity"/></td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; text-align: right; color: #475569; border-bottom: 1px solid #f1f5f9;">
+                                            <t t-esc="'{:,.2f}'.format(line.price_unit)"/> <t t-esc="o.currency_id.symbol"/>
+                                        </td>
+                                        <td t-attf-style="background: #{row_bg}; padding: 9px 8px; text-align: right; font-weight: 800; color: #1e293b; border-bottom: 1px solid #f1f5f9;">
+                                            <t t-esc="'{:,.2f}'.format(line.price_total)"/> <t t-esc="o.currency_id.symbol"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                            <tfoot>
+                                <tr style="border-top: 2px solid #0d9488;">
+                                    <td colspan="7" style="padding: 10px 8px; text-align: right; font-weight: 700; font-size: 15px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">TOTAL</td>
+                                    <td style="padding: 10px 8px; text-align: right; font-weight: 900; font-size: 19px; color: #0d9488;">
+                                        <t t-esc="'{:,.2f}'.format(o.amount_total)"/> <t t-esc="o.currency_id.symbol"/>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+
+                        <!-- BILLING -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 18px;">
+                            <tr>
+                                <td style="width: 55%;"/>
+                                <td style="width: 45%; vertical-align: top;">
+                                    <table width="100%" cellpadding="0" cellspacing="0" style="border: 1px solid #e2e8f0; border-radius: 5px; overflow: hidden;">
+                                        <tr>
+                                            <td style="background: #0d9488; padding: 8px 15px;">
+                                                <span style="font-size: 14px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: 1.2px;">Billing</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 13px 15px;">
+                                                <table width="100%" cellpadding="0" cellspacing="0">
+                                                    <tr style="border-bottom: 1px dashed #e2e8f0;">
+                                                        <td style="color: #64748b; font-size: 15px; padding: 5px 0;">Total</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #1e293b; text-align: right; padding: 5px 0;">
+                                                            <t t-esc="'{:,.2f}'.format(o.amount_total)"/> <t t-esc="o.currency_id.symbol"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="border-bottom: 1px dashed #e2e8f0;">
+                                                        <td style="color: #0d9488; font-size: 15px; font-weight: 600; padding: 5px 0;">Amount Paid</td>
+                                                        <td style="font-weight: 700; font-size: 15px; color: #0d9488; text-align: right; padding: 5px 0;">
+                                                            <t t-esc="'{:,.2f}'.format(o.amount_paid)"/> <t t-esc="o.currency_id.symbol"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color: #dc2626; font-size: 16px; font-weight: 800; padding: 7px 0 4px 0;">Remaining</td>
+                                                        <td style="font-weight: 900; font-size: 17px; color: #dc2626; text-align: right; padding: 7px 0 4px 0;">
+                                                            <t t-esc="'{:,.2f}'.format(o.amount_remaining)"/> <t t-esc="o.currency_id.symbol"/>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div style="text-align: right; margin-top: 9px;">
+                                                    <t t-if="o.invoice_status == 'paid'">
+                                                        <span style="background: #0d9488; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 800;">PAID</span>
+                                                    </t>
+                                                    <t t-elif="o.invoice_status == 'partial'">
+                                                        <span style="background: #f59e0b; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 800;">PARTIAL</span>
+                                                    </t>
+                                                    <t t-elif="o.invoice_status == 'not_billed'">
+                                                        <span style="background: #dc2626; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 800;">NOT BILLED</span>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span style="background: #3b82f6; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 13px; font-weight: 800;">TO PAY</span>
+                                                    </t>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- REWORK REASON -->
+                        <t t-if="o.rework_reason">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px; border-left: 4px solid #dc2626; background: #fff5f5;">
+                                <tr>
+                                    <td style="padding: 11px 15px;">
+                                        <div style="font-size: 14px; font-weight: 800; color: #dc2626; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Adjustment / Rework Reason</div>
+                                        <div style="font-size: 15px; color: #444; line-height: 1.6;"><t t-esc="o.rework_reason"/></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+
+                        <!-- NOTES -->
+                        <t t-if="o.notes">
+                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px; border-left: 4px solid #f59e0b; background: #fffbf0;">
+                                <tr>
+                                    <td style="padding: 11px 15px;">
+                                        <div style="font-size: 14px; font-weight: 800; color: #d97706; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;">Notes for Technician</div>
+                                        <div style="font-size: 15px; color: #444; line-height: 1.6;"><t t-esc="o.notes"/></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+
+                        <!-- SIGNATURES -->
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-top: 30px; border-top: 1px solid #e2e8f0;">
+                            <tr>
+                                <td style="text-align: center; width: 33%; padding: 0 12px;">
+                                    <div style="border-top: 1px solid #cbd5e1; margin: 32px 8px 0 8px; padding-top: 6px; font-size: 13px; color: #94a3b8;">Doctor's Signature</div>
+                                </td>
+                                <td style="text-align: center; width: 33%; padding: 0 12px;">
+                                    <div style="border-top: 1px solid #cbd5e1; margin: 32px 8px 0 8px; padding-top: 6px; font-size: 13px; color: #94a3b8;">Lab Technician</div>
+                                </td>
+                                <td style="text-align: center; width: 33%; padding: 0 12px;">
+                                    <div style="border-top: 1px solid #cbd5e1; margin: 32px 8px 0 8px; padding-top: 6px; font-size: 13px; color: #94a3b8;">Clinic Stamp</div>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <!-- FOOTER -->
+                    <table width="100%" cellpadding="0" cellspacing="0" style="border-top: 2px solid #0d9488;">
+                        <tr>
+                            <td style="padding: 8px 22px; text-align: center; font-size: 10px; color: #94a3b8; letter-spacing: 0.3px;">
+                                Taiba Dental Clinic - Rue Sakhri Ali, El Eulma 19600 - Tel. 0550 49 42 98 - 4.9 *
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -242,11 +242,22 @@ class DentalLabOrder(models.Model):
     def action_reset_to_draft(self):
         self.state = 'draft'
 
-    @api.model
-    def create(self, vals):
-        record = super().create(vals)
-        record.name = f"Lab-order-{record.id}"
-        return record
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('appointment') and not vals.get('doctor_id'):
+                appointment = self.env['appointment.record'].browse(vals['appointment'])
+                if appointment.doctor:
+                    vals['doctor_id'] = appointment.doctor.id
+        records = super().create(vals_list)
+        for record in records:
+            record.name = f"Lab-order-{record.id}"
+
+        return records
+
+    def action_print_report(self):
+        self.ensure_one()
+        return self.env.ref('doctors_list.action_report_dental_lab_order').report_action(self)
 
 
 class DentalLabOrderLine(models.Model):
@@ -328,3 +339,29 @@ class AppointmentInherit(models.Model):
     _inherit = 'appointment.record'
 
     Labo_ids = fields.One2many('dental.lab.order', 'appointment', string='Lab lines')
+    currency = fields.Many2one('res.currency',
+                               string='Currency',
+                               default=lambda self: self.env.ref('base.DZD'))
+    total_payments_labo = fields.Monetary(currency_field='currency', string='Total labo',
+                                          compute='_compute_total_payments_labo', store=True)
+    doctor = fields.Many2one('doctors', string="Doctor")
+
+    @api.depends('Labo_ids.amount_total')
+    def _compute_total_payments_labo(self):
+        for record in self:
+            total = sum(record.Labo_ids.mapped('amount_total'))
+            record.total_payments_labo = total
+
+    def action_open_create_lab_order_wizard(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'New Lab Order',
+            'res_model': 'create.lab.order.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            'context': {
+                'default_appointment_id': self.id,
+                'default_doctor_id': self.doctor.id if self.doctor else False,
+            },
+        }

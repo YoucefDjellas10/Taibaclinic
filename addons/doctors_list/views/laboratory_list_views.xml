@@ -6,8 +6,22 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="total_orders"/>
+                            <field name="total_paid"/>
+                            <field name="total_remaining"/>
+                        </group>
+
                     </group>
+                    <notebook>
+                        <page string="Lab Orders">
+                            <field name="order_ids"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

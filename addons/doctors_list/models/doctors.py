@@ -222,3 +222,15 @@ class QuotationsPrepareWizardInherit(models.Model):
 
     doctor = fields.Many2one('doctors', string="Doctor", required=True)
     category = fields.Many2one(string='category', related='doctor.category')
+
+
+class PrescriptionInherit(models.Model):
+    _inherit = 'patient.prescription'
+
+    doctor = fields.Many2one('doctors', string="Doctor", required=True)
+    appointment_id = fields.Many2one('appointment.record', string="Appointment", required=True)
+
+    @api.onchange('appointment_id')
+    def _onchange_appointment_id_doctor(self):
+        if self.appointment_id:
+            self.doctor = self.appointment_id.doctor

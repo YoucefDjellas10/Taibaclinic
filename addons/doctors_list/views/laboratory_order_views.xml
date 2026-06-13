@@ -46,6 +46,10 @@
         <field name="arch" type="xml">
             <form string="Lab Order">
                 <header>
+                    <button name="action_print_report"
+                            string="Print Lab Order"
+                            type="object"
+                            icon="fa-print"/>
                     <button name="action_confirm"
                             string="Confirm"
                             type="object"
@@ -189,6 +193,24 @@
             </form>
         </field>
     </record>
+
+    <record id="laboratory_list_search" model="ir.ui.view">
+        <field name="name">dental.lab.order</field>
+        <field name="model">dental.lab.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="state" icon="fa-cogs"/>
+                    <field name="work_type" icon="fa-cogs"/>
+                    <field name="invoice_status" icon="fa-cogs"/>
+                    <field name="lab_id" icon="fa-cogs"/>
+                    <field name="doctor_id" icon="fa-sun"/>
+
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
 
     <record id="action_dental_lab_order" model="ir.actions.act_window">
         <field name="name">Lab Orders</field>

@@ -52,7 +52,24 @@ class AppointmentRecord(models.Model):
     lines_ids = fields.One2many('treatment.plan.lines', 'appointment', string='Lines')
     patient_type = fields.Selection(string='Patient Type', related="patient.patient_type")
     payment_ids = fields.One2many('patient.payment', 'appointment', string='Payments')
+    total_payments = fields.Monetary(currency_field='currency', string='Total Payments',
+                                     compute='_compute_total_payments', store=True)
     deal_ids = fields.One2many('treatment.plan', 'appointment', string="Deals")
+    balance_payments = fields.Monetary(currency_field='currency', string='Balance Payments',
+                                       compute='_compute_balance', store=True)
+    prescription_ids = fields.One2many('patient.prescription', 'appointment_id',
+                                       string='Prescriptions')
+
+    @api.depends('total_payments', 'net_total')
+    def _compute_balance(self):
+        for record in self:
+            record.balance_payments = record.net_total - record.total_payments
+
+    @api.depends('payment_ids.amount')
+    def _compute_total_payments(self):
+        for record in self:
+            total = sum(record.payment_ids.mapped('amount'))
+            record.total_payments = total
 
     def action_confirm(self):
         self.write({'status': 'confirmed'})
@@ -118,5 +135,3 @@ class AppointmentRecord(models.Model):
         record = super().create(vals)
         record.name = f"App-{record.id}"
         return record
-
-

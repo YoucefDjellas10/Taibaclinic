@@ -33,6 +33,8 @@
         "wizards/details_recieved_wizard_view.xml",
         "wizards/quotation_prepare_wizard_view.xml",
         "wizards/lost_stage_wizard_view.xml",
+        "report/report_prescription_action.xml",
+        "report/report_prescription_template.xml",
     ],
     'assets': {
         'web.assets_backend': [

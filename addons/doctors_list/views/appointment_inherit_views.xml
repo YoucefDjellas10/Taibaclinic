@@ -7,7 +7,26 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
                 <page string="Laboratoire" name="page_labo">
+                    <header>
+                        <button name="action_open_create_lab_order_wizard"
+                                string="New Lab Order"
+                                type="object"
+                                class="btn-primary"/>
+                    </header>
                     <field name="Labo_ids"/>
+                    <group>
+                        <group>
+                        </group>
+                        <group>
+                            <group>
+                            </group>
+                            <group>
+                                <field name="total_payments_labo"/>
+                                <field name="currency" invisible="1"/>
+                            </group>
+                        </group>
+                    </group>
+
                 </page>
             </xpath>
         </field>
@@ -18,6 +37,17 @@
         <field name="inherit_id" ref="patients_list.appointment_record_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='reason']" position="after">
+                <field name="doctor"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="patient_prescription_form_inherit_doctor" model="ir.ui.view">
+        <field name="name">patient.prescription.form.inherit.doctor</field>
+        <field name="model">patient.prescription</field>
+        <field name="inherit_id" ref="patients_list.view_prescription_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='appointment_id']" position="after">
                 <field name="doctor"/>
             </xpath>
         </field>
@@ -35,7 +65,7 @@
         </field>
     </record>
 
-<!--     Inherit Calendar View -->
+    <!--     Inherit Calendar View -->
     <record id="appointment_record_calendar_inherit_doctor" model="ir.ui.view">
         <field name="name">appointment.record.calendar.inherit.doctor</field>
         <field name="model">appointment.record</field>

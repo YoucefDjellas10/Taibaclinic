@@ -48,20 +48,17 @@ class Patients(models.Model):
                                default=lambda self: self.env.ref('base.DZD'))
     balance = fields.Monetary(currency_field="currency", string='Balance', compute='_compute_balance', store=True)
     salesperson = fields.Many2one('res.users', string='Salesperson')
-    app_total = fields.Monetary(currency_field="currency", string='Total appointments', compute='_compute_app_total', store=True)
+    app_total = fields.Monetary(currency_field="currency", string='Total appointments', compute='_compute_app_total_', store=True)
 
-    @api.depends('deal_total', 'payment_total')
+    @api.depends('app_total', 'payment_total')
     def _compute_balance(self):
         for rec in self:
-            rec.balance = rec.deal_total - rec.payment_total
+            rec.balance = rec.app_total - rec.payment_total
 
     @api.depends('appointment_ids.net_total')
-    def _compute_app_total(self):
+    def _compute_app_total_(self):
         for rec in self:
-            if rec.deal_ids:
-                rec.app_total = sum(rec.deal_ids.mapped('net_total'))
-            else:
-                rec.app_total = 0
+            rec.app_total = sum(rec.appointment_ids.mapped('net_total'))
 
     @api.depends('deal_ids.net_total')
     def _compute_deal_total(self):

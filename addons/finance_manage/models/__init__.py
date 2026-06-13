@@ -6,3 +6,4 @@ from . import purchase_order_record
 from . import supplier_record
 from . import product_record
 from . import appopintments_inherit
+from . import material_inventory

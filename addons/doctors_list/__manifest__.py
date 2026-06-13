@@ -12,6 +12,8 @@
         'wizards/send_order_views.xml',
         'wizards/adjustment_stage_views.xml',
         'wizards/declare_payment_wizard_view.xml',
-],
+        'wizards/lab_order_wizard_views.xml',
+        'report/report_dental_lab_order.xml',
+    ],
     'license': 'LGPL-3',
 }

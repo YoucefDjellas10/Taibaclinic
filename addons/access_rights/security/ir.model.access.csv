@@ -23,6 +23,8 @@ access_doctor_speciality_admin,Access doctor speciality for admin,doctors_list.m
 access_send_order_wizard_admin,Access doctor send orde wizard admin,doctors_list.model_send_order_wizard,access_rights.group_admin,1,1,1,1
 access_adjustment_stage_wizard_admin,Access adjustment stage wizard admin,doctors_list.model_adjustment_stage_wizard,access_rights.group_admin,1,1,1,1
 access_declare_payment_wizard_admin,Access declare payment wizard admin,doctors_list.model_declare_payment_wizard,access_rights.group_admin,1,1,1,1
+access_create_lab_order_wizard_line_admin,Access create lab order wizard.line admin,doctors_list.model_create_lab_order_wizard_line,access_rights.group_admin,1,1,1,1
+access_create_lab_order_wizard_admin,Access create lab order wizard admin,doctors_list.model_create_lab_order_wizard,access_rights.group_admin,1,1,1,1
 access_medical_medicine_admin,Access medical.medicine for admin,patients_list.model_medical_medicine,access_rights.group_admin,1,1,1,1
 access_patient_prescription_admin,Access doctors for admin,patients_list.model_patient_prescription,access_rights.group_admin,1,1,1,1
 access_appointment_cancel_wizard_admin,Access appointment cancel wizard for admin,patients_list.model_appointment_cancel_wizard,access_rights.group_admin,1,1,1,1
@@ -50,6 +52,8 @@ access_expense_refuse_wizard_admin,Access expense refuse wizard for admin,financ
 access_purchase_receive_wizard_admin,Access purchase_receive_wizard for admin,finance_manage.model_purchase_receive_wizard,access_rights.group_admin,1,1,1,1
 access_purchase_receive_wizard_admin,Access purchase receive wizard for admin,finance_manage.model_purchase_receive_wizard,access_rights.group_admin,1,1,1,1
 access_app_products_admin,Access app products for admin,finance_manage.model_app_products,access_rights.group_admin,1,1,1,1
+access_material_inventory_admin,Access material inventory for admin,finance_manage.model_material_inventory,access_rights.group_admin,1,1,1,1
+access_material_price_history_admin,Access material price history for admin,finance_manage.model_material_price_history,access_rights.group_admin,1,1,1,1
 
 access_marketing_campaign_admin,Access marketing campaign for admin,marketing_campaigns.model_marketing_campaign,access_rights.group_admin,1,1,1,1
 access_lead_source_admin,Access lead source for admin,marketing_campaigns.model_lead_source,access_rights.group_admin,1,1,1,1

@@ -9,12 +9,22 @@ class Prescription(models.Model):
 
     name = fields.Char(string="Reference", default="New", copy=False)
     patient_id = fields.Many2one('patients', string="Patient", required=True)
-    doctor_name = fields.Char(string="Doctor", required=True)
+    appointment_id = fields.Many2one('appointment.record', string="Appointment", required=True)
+    doctor_name = fields.Char(string="Doctor")
     date = fields.Date(string="Date", default=fields.Date.today)
 
     line_ids = fields.One2many('prescription.line', 'prescription_id', string="Medications")
 
     note = fields.Text(string="Notes")
+
+    def action_print_prescription(self):
+        self.ensure_one()
+        return self.env.ref('patients_list.action_report_prescription').report_action(self)
+
+    @api.onchange('appointment_id')
+    def _onchange_appointment_id(self):
+        if self.appointment_id:
+            self.patient_id = self.appointment_id.patient
 
     @api.model_create_multi
     def create(self, vals_list):
