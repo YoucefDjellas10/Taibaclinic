@@ -10,6 +10,7 @@
             id="menu_doctor_dashboard"
             name="Dashboard"
             action="action_doctor_dashboard"
-            sequence="1"/>
+            parent="doctors_main"
+            sequence="100"/>
     </data>
 </odoo>
