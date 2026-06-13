@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="doctors_list.DoctorDashboard" owl="1">
+        <div class="tdc_wrap">
+
+            <!-- ══ HEADER ══ -->
+            <div class="tdc_header">
+                <div class="tdc_header_top">
+                    <div class="tdc_header_left">
+                        <div class="tdc_header_icon">
+                            <i class="fa fa-stethoscope"/>
+                        </div>
+                        <div>
+                            <div class="tdc_header_title">Tableau de Bord Medecins</div>
+                            <div class="tdc_header_sub">Taiba Dental Clinic</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tdc_nav">
+                    <button class="tdc_nav_btn" t-on-click="prevMonth">
+                        <i class="fa fa-chevron-left"/>
+                    </button>
+                    <div class="tdc_month_label">
+                        <i class="fa fa-calendar"/>
+                        <span><t t-esc="monthLabel"/></span>
+                    </div>
+                    <button class="tdc_nav_btn" t-on-click="nextMonth">
+                        <i class="fa fa-chevron-right"/>
+                    </button>
+                    <t t-if="!isCurrentMonth">
+                        <button class="tdc_current_btn" t-on-click="goCurrentMonth">
+                            <i class="fa fa-dot-circle-o"/>
+                            <span>Mois actuel</span>
+                        </button>
+                    </t>
+                </div>
+            </div>
+
+            <!-- ══ LOADING ══ -->
+            <t t-if="state.loading">
+                <div class="tdc_loading">
+                    <i class="fa fa-spinner fa-spin fa-3x"/>
+                    <p>Chargement en cours...</p>
+                </div>
+            </t>
+
+            <t t-if="!state.loading and state.data">
+            <div class="tdc_body">
+
+                <!-- ══ CARTES GLOBALES ══ -->
+                <div class="tdc_stats_grid">
+
+                    <div class="tdc_stat_card">
+                        <div class="tdc_stat_icon tdc_icon_teal">
+                            <i class="fa fa-calendar-check-o"/>
+                        </div>
+                        <div class="tdc_stat_info">
+                            <div class="tdc_stat_label">Total RDV</div>
+                            <div class="tdc_stat_value tdc_color_teal tdc_value_big">
+                                <t t-esc="state.data.stats.total_appointments"/>
+                            </div>
+                            <div class="tdc_stat_sub">ce mois</div>
+                        </div>
+                    </div>
+
+                    <div class="tdc_stat_card">
+                        <div class="tdc_stat_icon tdc_icon_amber">
+                            <i class="fa fa-money"/>
+                        </div>
+                        <div class="tdc_stat_info">
+                            <div class="tdc_stat_label">CA Brut</div>
+                            <div class="tdc_stat_value tdc_color_amber">
+                                <t t-esc="fmt(state.data.stats.total_gross)"/>
+                            </div>
+                            <div class="tdc_stat_sub">Labo : <t t-esc="fmt(state.data.stats.total_labo)"/></div>
+                        </div>
+                    </div>
+
+                    <div class="tdc_stat_card">
+                        <div class="tdc_stat_icon tdc_icon_teal">
+                            <i class="fa fa-bar-chart"/>
+                        </div>
+                        <div class="tdc_stat_info">
+                            <div class="tdc_stat_label">Revenu Net</div>
+                            <div class="tdc_stat_value tdc_color_teal">
+                                <t t-esc="fmt(state.data.stats.total_net)"/>
+                            </div>
+                            <div class="tdc_stat_sub">apres cout labo</div>
+                        </div>
+                    </div>
+
+                    <div class="tdc_stat_card">
+                        <div class="tdc_stat_icon tdc_icon_purple">
+                            <i class="fa fa-user-md"/>
+                        </div>
+                        <div class="tdc_stat_info">
+                            <div class="tdc_stat_label">Part Medecins</div>
+                            <div class="tdc_stat_value tdc_color_purple">
+                                <t t-esc="fmt(state.data.stats.total_doctor_earnings)"/>
+                            </div>
+                            <div class="tdc_stat_sub">total a payer</div>
+                        </div>
+                    </div>
+
+                    <div class="tdc_stat_card">
+                        <div class="tdc_stat_icon tdc_icon_teal">
+                            <i class="fa fa-hospital-o"/>
+                        </div>
+                        <div class="tdc_stat_info">
+                            <div class="tdc_stat_label">Part Clinique</div>
+                            <div class="tdc_stat_value tdc_color_teal">
+                                <t t-esc="fmt(state.data.stats.total_clinic_earnings)"/>
+                            </div>
+                            <div class="tdc_stat_sub">benefice net</div>
+                        </div>
+                    </div>
+
+                    <div class="tdc_stat_card tdc_stat_card_dark">
+                        <div class="tdc_stat_icon tdc_icon_white">
+                            <i class="fa fa-bolt"/>
+                        </div>
+                        <div class="tdc_stat_info">
+                            <div class="tdc_stat_label tdc_label_white">Efficacite</div>
+                            <div class="tdc_stat_value tdc_color_white tdc_value_big">
+                                <t t-esc="clinicRate()"/>%
+                            </div>
+                            <div class="tdc_stat_sub tdc_sub_white">part clinique moy.</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ══ TITRE ══ -->
+                <div class="tdc_section_title">
+                    <div class="tdc_section_bar"/>
+                    <span>Detail par Medecin</span>
+                    <div class="tdc_section_badge">
+                        <i class="fa fa-users"/>
+                        <t t-esc="state.data.doctors.length"/> medecin(s)
+                    </div>
+                </div>
+
+                <!-- ══ VIDE ══ -->
+                <t t-if="state.data.doctors.length === 0">
+                    <div class="tdc_empty">
+                        <i class="fa fa-inbox fa-3x"/>
+                        <p>Aucun rendez-vous ce mois</p>
+                    </div>
+                </t>
+
+                <!-- ══ CARTES MEDECINS ══ -->
+                <div class="tdc_docs_grid">
+                    <t t-foreach="state.data.doctors" t-as="doc" t-key="doc.id">
+                        <div class="tdc_doc_card">
+
+                            <div class="tdc_doc_header">
+                                <div class="tdc_doc_avatar">
+                                    <t t-esc="initials(doc.name)"/>
+                                </div>
+                                <div class="tdc_doc_info">
+                                    <div class="tdc_doc_name"><t t-esc="doc.name"/></div>
+                                    <div class="tdc_doc_spec">
+                                        <i class="fa fa-graduation-cap"/>
+                                        <t t-esc="doc.speciality or 'Generaliste'"/>
+                                    </div>
+                                </div>
+                                <div class="tdc_doc_pct">
+                                    <t t-esc="doc.percentage"/>%
+                                </div>
+                            </div>
+
+                            <div class="tdc_doc_body">
+
+                                <div class="tdc_badges">
+                                    <div class="tdc_badge tdc_badge_green">
+                                        <div class="tdc_badge_num"><t t-esc="doc.completed"/></div>
+                                        <div class="tdc_badge_label">
+                                            <i class="fa fa-check-circle"/>
+                                            Termines
+                                        </div>
+                                    </div>
+                                    <div class="tdc_badge tdc_badge_blue">
+                                        <div class="tdc_badge_num"><t t-esc="doc.in_progress"/></div>
+                                        <div class="tdc_badge_label">
+                                            <i class="fa fa-spinner"/>
+                                            En cours
+                                        </div>
+                                    </div>
+                                    <div class="tdc_badge tdc_badge_yellow">
+                                        <div class="tdc_badge_num"><t t-esc="doc.scheduled"/></div>
+                                        <div class="tdc_badge_label">
+                                            <i class="fa fa-clock-o"/>
+                                            Planifies
+                                        </div>
+                                    </div>
+                                    <div class="tdc_badge tdc_badge_red">
+                                        <div class="tdc_badge_num"><t t-esc="doc.cancelled"/></div>
+                                        <div class="tdc_badge_label">
+                                            <i class="fa fa-times-circle"/>
+                                            Annules
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tdc_fin_table">
+                                    <div class="tdc_fin_row">
+                                        <span class="tdc_fin_label">
+                                            <i class="fa fa-money"/>
+                                            CA Brut
+                                        </span>
+                                        <span class="tdc_fin_val"><t t-esc="fmt(doc.gross_total)"/></span>
+                                    </div>
+                                    <div class="tdc_fin_row">
+                                        <span class="tdc_fin_label">
+                                            <i class="fa fa-flask"/>
+                                            Cout Labo
+                                        </span>
+                                        <span class="tdc_fin_val tdc_color_amber"><t t-esc="fmt(doc.labo_total)"/></span>
+                                    </div>
+                                    <div class="tdc_fin_row tdc_fin_row_net">
+                                        <span class="tdc_fin_label tdc_color_teal">
+                                            <i class="fa fa-bar-chart"/>
+                                            Revenu Net
+                                        </span>
+                                        <span class="tdc_fin_val tdc_color_teal tdc_fin_val_lg"><t t-esc="fmt(doc.net_revenue)"/></span>
+                                    </div>
+                                    <div class="tdc_fin_row">
+                                        <span class="tdc_fin_label tdc_color_purple">
+                                            <i class="fa fa-user-md"/>
+                                            Part Medecin (<t t-esc="doc.percentage"/>%)
+                                        </span>
+                                        <span class="tdc_fin_val tdc_color_purple tdc_fin_val_lg"><t t-esc="fmt(doc.doctor_earnings)"/></span>
+                                    </div>
+                                    <div class="tdc_fin_row tdc_fin_row_last">
+                                        <span class="tdc_fin_label tdc_color_teal">
+                                            <i class="fa fa-hospital-o"/>
+                                            Part Clinique
+                                        </span>
+                                        <span class="tdc_fin_val tdc_color_teal tdc_fin_val_lg"><t t-esc="fmt(doc.clinic_earnings)"/></span>
+                                    </div>
+                                </div>
+
+                                <div class="tdc_bar_wrap">
+                                    <div class="tdc_bar_labels">
+                                        <span class="tdc_color_purple">
+                                            <i class="fa fa-user-md"/>
+                                            Medecin <t t-esc="doc.percentage"/>%
+                                        </span>
+                                        <span class="tdc_color_teal">
+                                            <i class="fa fa-hospital-o"/>
+                                            Clinique <t t-esc="clinicPct(doc.percentage)"/>%
+                                        </span>
+                                    </div>
+                                    <div class="tdc_bar_bg">
+                                        <div class="tdc_bar_fill" t-attf-style="width:#{doc.percentage}%;"/>
+                                    </div>
+                                </div>
+
+                                <div class="tdc_doc_footer">
+                                    <span class="tdc_rdv_badge">
+                                        <i class="fa fa-calendar"/>
+                                        <t t-esc="doc.total_appointments"/> RDV au total
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+            </div>
+            </t>
+
+        </div>
+    </t>
+</templates>

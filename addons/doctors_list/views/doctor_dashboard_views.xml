@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_doctor_dashboard" model="ir.actions.client">
+            <field name="name">Dashboard Medecins</field>
+            <field name="tag">doctor_dashboard</field>
+        </record>
+
+        <menuitem
+            id="menu_doctor_dashboard"
+            name="Dashboard"
+            action="action_doctor_dashboard"
+            sequence="1"/>
+    </data>
+</odoo>
