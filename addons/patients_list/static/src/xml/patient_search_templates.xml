@@ -27,21 +27,6 @@
                         </div>
 
                         <div class="psp_buttons_row">
-                            <button
-                                class="psp_search_btn"
-                                t-on-click="onSearch"
-                                t-att-disabled="state.loading or !state.query.trim()"
-                            >
-                                <t t-if="state.loading">
-                                    <i class="fa fa-spinner fa-spin"/>
-                                    <span><t t-esc="labels.searching"/></span>
-                                </t>
-                                <t t-else="">
-                                    <i class="fa fa-search"/>
-                                    <span><t t-esc="labels.search"/></span>
-                                </t>
-                            </button>
-
                             <button class="psp_new_btn" t-on-click="openNewPatient">
                                 <i class="fa fa-plus"/>
                                 <span><t t-esc="labels.newBtn"/></span>

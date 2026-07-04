@@ -100,6 +100,8 @@ class PatientSearchPage extends Component {
         });
 
         this.searchInputRef = useRef("searchInput");
+        this.debounceTimer = null;
+        this.searchToken = 0;
     }
 
     get labels() {
@@ -123,16 +125,20 @@ class PatientSearchPage extends Component {
 
     onInputChange(ev) {
         this.state.query = ev.target.value;
+        clearTimeout(this.debounceTimer);
         if (!this.state.query.trim()) {
             this.state.results = [];
             this.state.searched = false;
+            return;
         }
+        this.debounceTimer = setTimeout(() => this.onSearch(), 300);
     }
 
     async onSearch() {
         const raw = this.state.query.trim().replace(/\s+/g, " ");
         if (!raw) return;
 
+        const token = ++this.searchToken;
         this.state.loading = true;
         this.state.searched = false;
 
@@ -155,6 +161,7 @@ class PatientSearchPage extends Component {
                 ["name", "first_name", "last_name", "gender", "mobile", "email", "stage", "age"],
                 { limit: 500 }
             );
+            if (token !== this.searchToken) return; // une recherche plus récente a été lancée entre-temps
 
             // 2. Score + filtre côté JS
             const scored = [];
@@ -195,20 +202,26 @@ class PatientSearchPage extends Component {
                 }
             }
 
+            if (token !== this.searchToken) return; // idem : ignore si une recherche plus récente a démarré
+
             this.state.results = results;
             this.state.searched = true;
 
         } catch (error) {
+            if (token !== this.searchToken) return;
             console.error("Erreur lors de la recherche:", error);
             this.state.results = [];
             this.state.searched = true;
         } finally {
-            this.state.loading = false;
+            if (token === this.searchToken) this.state.loading = false;
         }
     }
 
     onKeyDown(ev) {
-        if (ev.key === "Enter") this.onSearch();
+        if (ev.key === "Enter") {
+            clearTimeout(this.debounceTimer);
+            this.onSearch();
+        }
     }
 
     onClear() {
