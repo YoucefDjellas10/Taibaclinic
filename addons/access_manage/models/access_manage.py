@@ -26,7 +26,7 @@ class AccessManage(models.Model):
                 continue
             user = self.env['res.users'].create({
                 'name': record.name,
-                'login': record.name,
+                'login': record.email,
                 'email': record.email,
                 'phone': record.phone_number,
                 'password': record.password,
@@ -44,8 +44,8 @@ class AccessManage(models.Model):
             user_vals = {}
             if 'name' in vals:
                 user_vals['name'] = record.name
-                user_vals['login'] = record.name
             if 'email' in vals:
+                user_vals['login'] = record.email
                 user_vals['email'] = record.email
             if 'phone_number' in vals:
                 user_vals['phone'] = record.phone_number
@@ -64,20 +64,36 @@ class AccessManage(models.Model):
         return res
 
     def action_sync_missing_users(self):
-        linked_user_ids = self.search([]).mapped('user_id').ids
+        linked_records = self.search([('user_id', '!=', False)])
+        record_by_user = {record.user_id.id: record for record in linked_records}
         known_groups = self.env['res.groups'].search([
             ('name', 'in', ['CEO', 'ADMIN', 'RECEPTION', 'DOCTOR', 'SALESPERSON']),
         ])
-        missing_users = self.env['res.users'].search([
-            ('id', 'not in', linked_user_ids),
-            ('share', '=', False),
-        ])
-        vals_list = [{
-            'name': user.login,
-            'email': user.email,
-            'phone_number': user.phone,
-            'group_list': [(6, 0, (user.group_ids & known_groups).ids)],
-            'user_id': user.id,
-        } for user in missing_users]
-        if vals_list:
-            self.create(vals_list)
+        all_users = self.env['res.users'].search([('share', '=', False)])
+
+        create_vals_list = []
+        for user in all_users:
+            expected_groups = user.group_ids & known_groups
+            record = record_by_user.get(user.id)
+            if record:
+                update_vals = {}
+                if record.name != user.name:
+                    update_vals['name'] = user.name
+                if record.email != user.login:
+                    update_vals['email'] = user.login
+                if record.phone_number != user.phone:
+                    update_vals['phone_number'] = user.phone
+                if set(record.group_list.ids) != set(expected_groups.ids):
+                    update_vals['group_list'] = [(6, 0, expected_groups.ids)]
+                if update_vals:
+                    record.write(update_vals)
+            else:
+                create_vals_list.append({
+                    'name': user.name,
+                    'email': user.login,
+                    'phone_number': user.phone,
+                    'group_list': [(6, 0, expected_groups.ids)],
+                    'user_id': user.id,
+                })
+        if create_vals_list:
+            self.create(create_vals_list)
