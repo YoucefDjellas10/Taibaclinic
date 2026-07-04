@@ -78,3 +78,223 @@ access_patient_payment_reception,Access patient payment for reception,patients_l
 access_doctors_reception,Access doctors for reception,doctors_list.model_doctors,access_rights.group_reception,1,0,0,0
 access_doctor_speciality_reception,Access doctor speciality for reception,doctors_list.model_doctor_speciality,access_rights.group_reception,1,0,0,0
 
+
+access_access_manage_reception,Access access.manage for reception,access_manage.model_access_manage,access_rights.group_reception,1,0,0,0
+access_laboratory_list_reception,Access laboratory list for reception,doctors_list.model_laboratory_list,access_rights.group_reception,1,0,0,0
+access_dental_lab_order_reception,Access dental lab order for reception,doctors_list.model_dental_lab_order,access_rights.group_reception,1,0,0,0
+access_dental_lab_order_line_reception,Access dental lab order line for reception,doctors_list.model_dental_lab_order_line,access_rights.group_reception,1,0,0,0
+access_laboratory_product_reception,Access laboratory product for reception,doctors_list.model_laboratory_product,access_rights.group_reception,1,0,0,0
+access_send_order_wizard_reception,Access doctor send orde wizard reception,doctors_list.model_send_order_wizard,access_rights.group_reception,1,0,0,0
+access_adjustment_stage_wizard_reception,Access adjustment stage wizard reception,doctors_list.model_adjustment_stage_wizard,access_rights.group_reception,1,0,0,0
+access_declare_payment_wizard_reception,Access declare payment wizard reception,doctors_list.model_declare_payment_wizard,access_rights.group_reception,1,0,0,0
+access_create_lab_order_wizard_line_reception,Access create lab order wizard.line reception,doctors_list.model_create_lab_order_wizard_line,access_rights.group_reception,1,0,0,0
+access_create_lab_order_wizard_reception,Access create lab order wizard reception,doctors_list.model_create_lab_order_wizard,access_rights.group_reception,1,0,0,0
+access_medical_medicine_reception,Access medical.medicine for reception,patients_list.model_medical_medicine,access_rights.group_reception,1,0,0,0
+access_patient_prescription_reception,Access doctors for reception,patients_list.model_patient_prescription,access_rights.group_reception,1,0,0,0
+access_appointment_cancel_wizard_reception,Access appointment cancel wizard for reception,patients_list.model_appointment_cancel_wizard,access_rights.group_reception,1,0,0,0
+access_contact_stage_wizard_reception,Access contact stage wizard for reception,patients_list.model_contact_stage_wizard,access_rights.group_reception,1,0,0,0
+access_not_interested_wizard_reception,Access not interested wizard for reception,patients_list.model_not_interested_wizard,access_rights.group_reception,1,0,0,0
+access_qualified_wizard_reception,Access qualified wizard for reception,patients_list.model_qualified_wizard,access_rights.group_reception,1,0,0,0
+access_details_received_wizard_reception,Access details received wizard for reception,patients_list.model_details_received_wizard,access_rights.group_reception,1,0,0,0
+access_quotations_treatment_wizard_reception,Access quotations treatment wizard for reception,patients_list.model_quotations_treatment_wizard,access_rights.group_reception,1,0,0,0
+access_quotations_prepare_wizard_reception,Access quotations prepare wizard for reception,patients_list.model_quotations_prepare_wizard,access_rights.group_reception,1,0,0,0
+access_lost_reason_record_reception,Access lost reason record for reception,patients_list.model_lost_reason_record,access_rights.group_reception,1,0,0,0
+access_lost_stage_wizard_reception,Access lost stage wizard for reception,patients_list.model_lost_stage_wizard,access_rights.group_reception,1,0,0,0
+access_interest_record_reception,Access interest record for reception,patients_list.model_interest_record,access_rights.group_reception,1,0,0,0
+access_prescription_line_reception,Access prescription.line for reception,patients_list.model_prescription_line,access_rights.group_reception,1,0,0,0
+access_not_interested_reason_reception,Access not interested reason for reception,patients_list.model_not_interested_reason,access_rights.group_reception,1,0,0,0
+access_price_category_reception,Access price.category for reception,finance_manage.model_price_category,access_rights.group_reception,1,0,0,0
+access_pricing_list_reception,Access pricing_list for reception,finance_manage.model_pricing_list,access_rights.group_reception,1,0,0,0
+access_expense_record_reception,Access expense_record for reception,finance_manage.model_expense_record,access_rights.group_reception,1,0,0,0
+access_expense_type_record_reception,Access expense_type_record for reception,finance_manage.model_expense_type_record,access_rights.group_reception,1,0,0,0
+access_purchase_order_record_reception,Access purchase_order_record for reception,finance_manage.model_purchase_order_record,access_rights.group_reception,1,0,0,0
+access_purchase_order_line_reception,Access purchase order line for reception,finance_manage.model_purchase_order_line,access_rights.group_reception,1,0,0,0
+access_supplier_record_reception,Access supplier record for reception,finance_manage.model_supplier_record,access_rights.group_reception,1,0,0,0
+access_product_record_reception,Access product_record for reception,finance_manage.model_product_record,access_rights.group_reception,1,0,0,0
+access_product_category_record_reception,Access product category record for reception,finance_manage.model_product_category_record,access_rights.group_reception,1,0,0,0
+access_expense_refuse_wizard_reception,Access expense refuse wizard for reception,finance_manage.model_expense_refuse_wizard,access_rights.group_reception,1,0,0,0
+access_purchase_receive_wizard_reception,Access purchase_receive_wizard for reception,finance_manage.model_purchase_receive_wizard,access_rights.group_reception,1,0,0,0
+access_app_products_reception,Access app products for reception,finance_manage.model_app_products,access_rights.group_reception,1,0,0,0
+access_material_inventory_reception,Access material inventory for reception,finance_manage.model_material_inventory,access_rights.group_reception,1,0,0,0
+access_material_price_history_reception,Access material price history for reception,finance_manage.model_material_price_history,access_rights.group_reception,1,0,0,0
+access_marketing_campaign_reception,Access marketing campaign for reception,marketing_campaigns.model_marketing_campaign,access_rights.group_reception,1,0,0,0
+access_lead_source_reception,Access lead source for reception,marketing_campaigns.model_lead_source,access_rights.group_reception,1,0,0,0
+access_ad_record_reception,Access ad record for reception,marketing_campaigns.model_ad_record,access_rights.group_reception,1,0,0,0
+access_campaign_deposit_reception,Access campaign deposit for reception,marketing_campaigns.model_campaign_deposit,access_rights.group_reception,1,0,0,0
+
+access_access_manage_ceo,Access access.manage for ceo,access_manage.model_access_manage,access_rights.group_ceo,1,1,1,1
+access_countries_ceo,Access countries for ceo,patients_list.model_country_records,access_rights.group_ceo,1,1,1,1
+access_patients_ceo,Access patients for ceo,patients_list.model_patients,access_rights.group_ceo,1,1,1,1
+access_cities_ceo,Access cities records for ceo,patients_list.model_cities_records,access_rights.group_ceo,1,1,1,1
+access_appointment_record_ceo,Access appointment record for ceo,patients_list.model_appointment_record,access_rights.group_ceo,1,1,1,1
+access_contact_record_ceo,Access contact record for ceo,patients_list.model_contact_record,access_rights.group_ceo,1,1,1,1
+access_medical_history_ceo,Access medical history for ceo,patients_list.model_medical_history,access_rights.group_ceo,1,1,1,1
+access_quotations_ceo,Access quotations for ceo,patients_list.model_quotations,access_rights.group_ceo,1,1,1,1
+access_quotations_treatment_ceo,Access quotations treatment for ceo,patients_list.model_quotations_treatment,access_rights.group_ceo,1,1,1,1
+access_treatments_ceo,Access treatments for ceo,patients_list.model_treatments,access_rights.group_ceo,1,1,1,1
+access_teeth_ceo,Access teeth for ceo,patients_list.model_teeth,access_rights.group_ceo,1,1,1,1
+access_treatment_plan_ceo,Access treatment plan for ceo,patients_list.model_treatment_plan,access_rights.group_ceo,1,1,1,1
+access_treatment_plan_lines_ceo,Access treatment plan lines for ceo,patients_list.model_treatment_plan_lines,access_rights.group_ceo,1,1,1,1
+access_patient_attachments_ceo,Access patient attachments for ceo,patients_list.model_patient_attachments,access_rights.group_ceo,1,1,1,1
+access_patient_payment_ceo,Access patient payment for ceo,patients_list.model_patient_payment,access_rights.group_ceo,1,1,1,1
+access_doctors_ceo,Access doctors for ceo,doctors_list.model_doctors,access_rights.group_ceo,1,1,1,1
+access_laboratory_list_ceo,Access laboratory list for ceo,doctors_list.model_laboratory_list,access_rights.group_ceo,1,1,1,1
+access_dental_lab_order_ceo,Access dental lab order for ceo,doctors_list.model_dental_lab_order,access_rights.group_ceo,1,1,1,1
+access_dental_lab_order_line_ceo,Access dental lab order line for ceo,doctors_list.model_dental_lab_order_line,access_rights.group_ceo,1,1,1,1
+access_laboratory_product_ceo,Access laboratory product for ceo,doctors_list.model_laboratory_product,access_rights.group_ceo,1,1,1,1
+access_doctor_speciality_ceo,Access doctor speciality for ceo,doctors_list.model_doctor_speciality,access_rights.group_ceo,1,1,1,1
+access_send_order_wizard_ceo,Access doctor send orde wizard ceo,doctors_list.model_send_order_wizard,access_rights.group_ceo,1,1,1,1
+access_adjustment_stage_wizard_ceo,Access adjustment stage wizard ceo,doctors_list.model_adjustment_stage_wizard,access_rights.group_ceo,1,1,1,1
+access_declare_payment_wizard_ceo,Access declare payment wizard ceo,doctors_list.model_declare_payment_wizard,access_rights.group_ceo,1,1,1,1
+access_create_lab_order_wizard_line_ceo,Access create lab order wizard.line ceo,doctors_list.model_create_lab_order_wizard_line,access_rights.group_ceo,1,1,1,1
+access_create_lab_order_wizard_ceo,Access create lab order wizard ceo,doctors_list.model_create_lab_order_wizard,access_rights.group_ceo,1,1,1,1
+access_medical_medicine_ceo,Access medical.medicine for ceo,patients_list.model_medical_medicine,access_rights.group_ceo,1,1,1,1
+access_patient_prescription_ceo,Access doctors for ceo,patients_list.model_patient_prescription,access_rights.group_ceo,1,1,1,1
+access_appointment_cancel_wizard_ceo,Access appointment cancel wizard for ceo,patients_list.model_appointment_cancel_wizard,access_rights.group_ceo,1,1,1,1
+access_contact_stage_wizard_ceo,Access contact stage wizard for ceo,patients_list.model_contact_stage_wizard,access_rights.group_ceo,1,1,1,1
+access_not_interested_wizard_ceo,Access not interested wizard for ceo,patients_list.model_not_interested_wizard,access_rights.group_ceo,1,1,1,1
+access_qualified_wizard_ceo,Access qualified wizard for ceo,patients_list.model_qualified_wizard,access_rights.group_ceo,1,1,1,1
+access_details_received_wizard_ceo,Access details received wizard for ceo,patients_list.model_details_received_wizard,access_rights.group_ceo,1,1,1,1
+access_quotations_treatment_wizard_ceo,Access quotations treatment wizard for ceo,patients_list.model_quotations_treatment_wizard,access_rights.group_ceo,1,1,1,1
+access_quotations_prepare_wizard_ceo,Access quotations prepare wizard for ceo,patients_list.model_quotations_prepare_wizard,access_rights.group_ceo,1,1,1,1
+access_lost_reason_record_ceo,Access lost reason record for ceo,patients_list.model_lost_reason_record,access_rights.group_ceo,1,1,1,1
+access_lost_stage_wizard_ceo,Access lost stage wizard for ceo,patients_list.model_lost_stage_wizard,access_rights.group_ceo,1,1,1,1
+access_interest_record_ceo,Access interest record for ceo,patients_list.model_interest_record,access_rights.group_ceo,1,1,1,1
+access_prescription_line_ceo,Access prescription.line for ceo,patients_list.model_prescription_line,access_rights.group_ceo,1,1,1,1
+access_not_interested_reason_ceo,Access not interested reason for ceo,patients_list.model_not_interested_reason,access_rights.group_ceo,1,1,1,1
+access_price_category_ceo,Access price.category for ceo,finance_manage.model_price_category,access_rights.group_ceo,1,1,1,1
+access_pricing_list_ceo,Access pricing_list for ceo,finance_manage.model_pricing_list,access_rights.group_ceo,1,1,1,1
+access_expense_record_ceo,Access expense_record for ceo,finance_manage.model_expense_record,access_rights.group_ceo,1,1,1,1
+access_expense_type_record_ceo,Access expense_type_record for ceo,finance_manage.model_expense_type_record,access_rights.group_ceo,1,1,1,1
+access_purchase_order_record_ceo,Access purchase_order_record for ceo,finance_manage.model_purchase_order_record,access_rights.group_ceo,1,1,1,1
+access_purchase_order_line_ceo,Access purchase order line for ceo,finance_manage.model_purchase_order_line,access_rights.group_ceo,1,1,1,1
+access_supplier_record_ceo,Access supplier record for ceo,finance_manage.model_supplier_record,access_rights.group_ceo,1,1,1,1
+access_product_record_ceo,Access product_record for ceo,finance_manage.model_product_record,access_rights.group_ceo,1,1,1,1
+access_product_category_record_ceo,Access product category record for ceo,finance_manage.model_product_category_record,access_rights.group_ceo,1,1,1,1
+access_expense_refuse_wizard_ceo,Access expense refuse wizard for ceo,finance_manage.model_expense_refuse_wizard,access_rights.group_ceo,1,1,1,1
+access_purchase_receive_wizard_ceo,Access purchase_receive_wizard for ceo,finance_manage.model_purchase_receive_wizard,access_rights.group_ceo,1,1,1,1
+access_app_products_ceo,Access app products for ceo,finance_manage.model_app_products,access_rights.group_ceo,1,1,1,1
+access_material_inventory_ceo,Access material inventory for ceo,finance_manage.model_material_inventory,access_rights.group_ceo,1,1,1,1
+access_material_price_history_ceo,Access material price history for ceo,finance_manage.model_material_price_history,access_rights.group_ceo,1,1,1,1
+access_marketing_campaign_ceo,Access marketing campaign for ceo,marketing_campaigns.model_marketing_campaign,access_rights.group_ceo,1,1,1,1
+access_lead_source_ceo,Access lead source for ceo,marketing_campaigns.model_lead_source,access_rights.group_ceo,1,1,1,1
+access_ad_record_ceo,Access ad record for ceo,marketing_campaigns.model_ad_record,access_rights.group_ceo,1,1,1,1
+access_campaign_deposit_ceo,Access campaign deposit for ceo,marketing_campaigns.model_campaign_deposit,access_rights.group_ceo,1,1,1,1
+
+access_access_manage_doctor,Access access.manage for doctor,access_manage.model_access_manage,access_rights.group_doctor,1,0,0,0
+access_countries_doctor,Access countries for doctor,patients_list.model_country_records,access_rights.group_doctor,1,0,0,0
+access_patients_doctor,Access patients for doctor,patients_list.model_patients,access_rights.group_doctor,1,0,0,0
+access_cities_doctor,Access cities records for doctor,patients_list.model_cities_records,access_rights.group_doctor,1,0,0,0
+access_appointment_record_doctor,Access appointment record for doctor,patients_list.model_appointment_record,access_rights.group_doctor,1,0,0,0
+access_contact_record_doctor,Access contact record for doctor,patients_list.model_contact_record,access_rights.group_doctor,1,0,0,0
+access_medical_history_doctor,Access medical history for doctor,patients_list.model_medical_history,access_rights.group_doctor,1,0,0,0
+access_quotations_doctor,Access quotations for doctor,patients_list.model_quotations,access_rights.group_doctor,1,0,0,0
+access_quotations_treatment_doctor,Access quotations treatment for doctor,patients_list.model_quotations_treatment,access_rights.group_doctor,1,0,0,0
+access_treatments_doctor,Access treatments for doctor,patients_list.model_treatments,access_rights.group_doctor,1,0,0,0
+access_teeth_doctor,Access teeth for doctor,patients_list.model_teeth,access_rights.group_doctor,1,0,0,0
+access_treatment_plan_doctor,Access treatment plan for doctor,patients_list.model_treatment_plan,access_rights.group_doctor,1,0,0,0
+access_treatment_plan_lines_doctor,Access treatment plan lines for doctor,patients_list.model_treatment_plan_lines,access_rights.group_doctor,1,0,0,0
+access_patient_attachments_doctor,Access patient attachments for doctor,patients_list.model_patient_attachments,access_rights.group_doctor,1,0,0,0
+access_patient_payment_doctor,Access patient payment for doctor,patients_list.model_patient_payment,access_rights.group_doctor,1,0,0,0
+access_doctors_doctor,Access doctors for doctor,doctors_list.model_doctors,access_rights.group_doctor,1,0,0,0
+access_laboratory_list_doctor,Access laboratory list for doctor,doctors_list.model_laboratory_list,access_rights.group_doctor,1,0,0,0
+access_dental_lab_order_doctor,Access dental lab order for doctor,doctors_list.model_dental_lab_order,access_rights.group_doctor,1,0,0,0
+access_dental_lab_order_line_doctor,Access dental lab order line for doctor,doctors_list.model_dental_lab_order_line,access_rights.group_doctor,1,0,0,0
+access_laboratory_product_doctor,Access laboratory product for doctor,doctors_list.model_laboratory_product,access_rights.group_doctor,1,0,0,0
+access_doctor_speciality_doctor,Access doctor speciality for doctor,doctors_list.model_doctor_speciality,access_rights.group_doctor,1,0,0,0
+access_send_order_wizard_doctor,Access doctor send orde wizard doctor,doctors_list.model_send_order_wizard,access_rights.group_doctor,1,0,0,0
+access_adjustment_stage_wizard_doctor,Access adjustment stage wizard doctor,doctors_list.model_adjustment_stage_wizard,access_rights.group_doctor,1,0,0,0
+access_declare_payment_wizard_doctor,Access declare payment wizard doctor,doctors_list.model_declare_payment_wizard,access_rights.group_doctor,1,0,0,0
+access_create_lab_order_wizard_line_doctor,Access create lab order wizard.line doctor,doctors_list.model_create_lab_order_wizard_line,access_rights.group_doctor,1,0,0,0
+access_create_lab_order_wizard_doctor,Access create lab order wizard doctor,doctors_list.model_create_lab_order_wizard,access_rights.group_doctor,1,0,0,0
+access_medical_medicine_doctor,Access medical.medicine for doctor,patients_list.model_medical_medicine,access_rights.group_doctor,1,0,0,0
+access_patient_prescription_doctor,Access doctors for doctor,patients_list.model_patient_prescription,access_rights.group_doctor,1,0,0,0
+access_appointment_cancel_wizard_doctor,Access appointment cancel wizard for doctor,patients_list.model_appointment_cancel_wizard,access_rights.group_doctor,1,0,0,0
+access_contact_stage_wizard_doctor,Access contact stage wizard for doctor,patients_list.model_contact_stage_wizard,access_rights.group_doctor,1,0,0,0
+access_not_interested_wizard_doctor,Access not interested wizard for doctor,patients_list.model_not_interested_wizard,access_rights.group_doctor,1,0,0,0
+access_qualified_wizard_doctor,Access qualified wizard for doctor,patients_list.model_qualified_wizard,access_rights.group_doctor,1,0,0,0
+access_details_received_wizard_doctor,Access details received wizard for doctor,patients_list.model_details_received_wizard,access_rights.group_doctor,1,0,0,0
+access_quotations_treatment_wizard_doctor,Access quotations treatment wizard for doctor,patients_list.model_quotations_treatment_wizard,access_rights.group_doctor,1,0,0,0
+access_quotations_prepare_wizard_doctor,Access quotations prepare wizard for doctor,patients_list.model_quotations_prepare_wizard,access_rights.group_doctor,1,0,0,0
+access_lost_reason_record_doctor,Access lost reason record for doctor,patients_list.model_lost_reason_record,access_rights.group_doctor,1,0,0,0
+access_lost_stage_wizard_doctor,Access lost stage wizard for doctor,patients_list.model_lost_stage_wizard,access_rights.group_doctor,1,0,0,0
+access_interest_record_doctor,Access interest record for doctor,patients_list.model_interest_record,access_rights.group_doctor,1,0,0,0
+access_prescription_line_doctor,Access prescription.line for doctor,patients_list.model_prescription_line,access_rights.group_doctor,1,0,0,0
+access_not_interested_reason_doctor,Access not interested reason for doctor,patients_list.model_not_interested_reason,access_rights.group_doctor,1,0,0,0
+access_price_category_doctor,Access price.category for doctor,finance_manage.model_price_category,access_rights.group_doctor,1,0,0,0
+access_pricing_list_doctor,Access pricing_list for doctor,finance_manage.model_pricing_list,access_rights.group_doctor,1,0,0,0
+access_expense_record_doctor,Access expense_record for doctor,finance_manage.model_expense_record,access_rights.group_doctor,1,0,0,0
+access_expense_type_record_doctor,Access expense_type_record for doctor,finance_manage.model_expense_type_record,access_rights.group_doctor,1,0,0,0
+access_purchase_order_record_doctor,Access purchase_order_record for doctor,finance_manage.model_purchase_order_record,access_rights.group_doctor,1,0,0,0
+access_purchase_order_line_doctor,Access purchase order line for doctor,finance_manage.model_purchase_order_line,access_rights.group_doctor,1,0,0,0
+access_supplier_record_doctor,Access supplier record for doctor,finance_manage.model_supplier_record,access_rights.group_doctor,1,0,0,0
+access_product_record_doctor,Access product_record for doctor,finance_manage.model_product_record,access_rights.group_doctor,1,0,0,0
+access_product_category_record_doctor,Access product category record for doctor,finance_manage.model_product_category_record,access_rights.group_doctor,1,0,0,0
+access_expense_refuse_wizard_doctor,Access expense refuse wizard for doctor,finance_manage.model_expense_refuse_wizard,access_rights.group_doctor,1,0,0,0
+access_purchase_receive_wizard_doctor,Access purchase_receive_wizard for doctor,finance_manage.model_purchase_receive_wizard,access_rights.group_doctor,1,0,0,0
+access_app_products_doctor,Access app products for doctor,finance_manage.model_app_products,access_rights.group_doctor,1,0,0,0
+access_material_inventory_doctor,Access material inventory for doctor,finance_manage.model_material_inventory,access_rights.group_doctor,1,0,0,0
+access_material_price_history_doctor,Access material price history for doctor,finance_manage.model_material_price_history,access_rights.group_doctor,1,0,0,0
+access_marketing_campaign_doctor,Access marketing campaign for doctor,marketing_campaigns.model_marketing_campaign,access_rights.group_doctor,1,0,0,0
+access_lead_source_doctor,Access lead source for doctor,marketing_campaigns.model_lead_source,access_rights.group_doctor,1,0,0,0
+access_ad_record_doctor,Access ad record for doctor,marketing_campaigns.model_ad_record,access_rights.group_doctor,1,0,0,0
+access_campaign_deposit_doctor,Access campaign deposit for doctor,marketing_campaigns.model_campaign_deposit,access_rights.group_doctor,1,0,0,0
+
+access_access_manage_salesperson,Access access.manage for salesperson,access_manage.model_access_manage,access_rights.group_salesperson,1,0,0,0
+access_countries_salesperson,Access countries for salesperson,patients_list.model_country_records,access_rights.group_salesperson,1,0,0,0
+access_patients_salesperson,Access patients for salesperson,patients_list.model_patients,access_rights.group_salesperson,1,0,0,0
+access_cities_salesperson,Access cities records for salesperson,patients_list.model_cities_records,access_rights.group_salesperson,1,0,0,0
+access_appointment_record_salesperson,Access appointment record for salesperson,patients_list.model_appointment_record,access_rights.group_salesperson,1,0,0,0
+access_contact_record_salesperson,Access contact record for salesperson,patients_list.model_contact_record,access_rights.group_salesperson,1,0,0,0
+access_medical_history_salesperson,Access medical history for salesperson,patients_list.model_medical_history,access_rights.group_salesperson,1,0,0,0
+access_quotations_salesperson,Access quotations for salesperson,patients_list.model_quotations,access_rights.group_salesperson,1,0,0,0
+access_quotations_treatment_salesperson,Access quotations treatment for salesperson,patients_list.model_quotations_treatment,access_rights.group_salesperson,1,0,0,0
+access_treatments_salesperson,Access treatments for salesperson,patients_list.model_treatments,access_rights.group_salesperson,1,0,0,0
+access_teeth_salesperson,Access teeth for salesperson,patients_list.model_teeth,access_rights.group_salesperson,1,0,0,0
+access_treatment_plan_salesperson,Access treatment plan for salesperson,patients_list.model_treatment_plan,access_rights.group_salesperson,1,0,0,0
+access_treatment_plan_lines_salesperson,Access treatment plan lines for salesperson,patients_list.model_treatment_plan_lines,access_rights.group_salesperson,1,0,0,0
+access_patient_attachments_salesperson,Access patient attachments for salesperson,patients_list.model_patient_attachments,access_rights.group_salesperson,1,0,0,0
+access_patient_payment_salesperson,Access patient payment for salesperson,patients_list.model_patient_payment,access_rights.group_salesperson,1,0,0,0
+access_doctors_salesperson,Access doctors for salesperson,doctors_list.model_doctors,access_rights.group_salesperson,1,0,0,0
+access_laboratory_list_salesperson,Access laboratory list for salesperson,doctors_list.model_laboratory_list,access_rights.group_salesperson,1,0,0,0
+access_dental_lab_order_salesperson,Access dental lab order for salesperson,doctors_list.model_dental_lab_order,access_rights.group_salesperson,1,0,0,0
+access_dental_lab_order_line_salesperson,Access dental lab order line for salesperson,doctors_list.model_dental_lab_order_line,access_rights.group_salesperson,1,0,0,0
+access_laboratory_product_salesperson,Access laboratory product for salesperson,doctors_list.model_laboratory_product,access_rights.group_salesperson,1,0,0,0
+access_doctor_speciality_salesperson,Access doctor speciality for salesperson,doctors_list.model_doctor_speciality,access_rights.group_salesperson,1,0,0,0
+access_send_order_wizard_salesperson,Access doctor send orde wizard salesperson,doctors_list.model_send_order_wizard,access_rights.group_salesperson,1,0,0,0
+access_adjustment_stage_wizard_salesperson,Access adjustment stage wizard salesperson,doctors_list.model_adjustment_stage_wizard,access_rights.group_salesperson,1,0,0,0
+access_declare_payment_wizard_salesperson,Access declare payment wizard salesperson,doctors_list.model_declare_payment_wizard,access_rights.group_salesperson,1,0,0,0
+access_create_lab_order_wizard_line_salesperson,Access create lab order wizard.line salesperson,doctors_list.model_create_lab_order_wizard_line,access_rights.group_salesperson,1,0,0,0
+access_create_lab_order_wizard_salesperson,Access create lab order wizard salesperson,doctors_list.model_create_lab_order_wizard,access_rights.group_salesperson,1,0,0,0
+access_medical_medicine_salesperson,Access medical.medicine for salesperson,patients_list.model_medical_medicine,access_rights.group_salesperson,1,0,0,0
+access_patient_prescription_salesperson,Access doctors for salesperson,patients_list.model_patient_prescription,access_rights.group_salesperson,1,0,0,0
+access_appointment_cancel_wizard_salesperson,Access appointment cancel wizard for salesperson,patients_list.model_appointment_cancel_wizard,access_rights.group_salesperson,1,0,0,0
+access_contact_stage_wizard_salesperson,Access contact stage wizard for salesperson,patients_list.model_contact_stage_wizard,access_rights.group_salesperson,1,0,0,0
+access_not_interested_wizard_salesperson,Access not interested wizard for salesperson,patients_list.model_not_interested_wizard,access_rights.group_salesperson,1,0,0,0
+access_qualified_wizard_salesperson,Access qualified wizard for salesperson,patients_list.model_qualified_wizard,access_rights.group_salesperson,1,0,0,0
+access_details_received_wizard_salesperson,Access details received wizard for salesperson,patients_list.model_details_received_wizard,access_rights.group_salesperson,1,0,0,0
+access_quotations_treatment_wizard_salesperson,Access quotations treatment wizard for salesperson,patients_list.model_quotations_treatment_wizard,access_rights.group_salesperson,1,0,0,0
+access_quotations_prepare_wizard_salesperson,Access quotations prepare wizard for salesperson,patients_list.model_quotations_prepare_wizard,access_rights.group_salesperson,1,0,0,0
+access_lost_reason_record_salesperson,Access lost reason record for salesperson,patients_list.model_lost_reason_record,access_rights.group_salesperson,1,0,0,0
+access_lost_stage_wizard_salesperson,Access lost stage wizard for salesperson,patients_list.model_lost_stage_wizard,access_rights.group_salesperson,1,0,0,0
+access_interest_record_salesperson,Access interest record for salesperson,patients_list.model_interest_record,access_rights.group_salesperson,1,0,0,0
+access_prescription_line_salesperson,Access prescription.line for salesperson,patients_list.model_prescription_line,access_rights.group_salesperson,1,0,0,0
+access_not_interested_reason_salesperson,Access not interested reason for salesperson,patients_list.model_not_interested_reason,access_rights.group_salesperson,1,0,0,0
+access_price_category_salesperson,Access price.category for salesperson,finance_manage.model_price_category,access_rights.group_salesperson,1,0,0,0
+access_pricing_list_salesperson,Access pricing_list for salesperson,finance_manage.model_pricing_list,access_rights.group_salesperson,1,0,0,0
+access_expense_record_salesperson,Access expense_record for salesperson,finance_manage.model_expense_record,access_rights.group_salesperson,1,0,0,0
+access_expense_type_record_salesperson,Access expense_type_record for salesperson,finance_manage.model_expense_type_record,access_rights.group_salesperson,1,0,0,0
+access_purchase_order_record_salesperson,Access purchase_order_record for salesperson,finance_manage.model_purchase_order_record,access_rights.group_salesperson,1,0,0,0
+access_purchase_order_line_salesperson,Access purchase order line for salesperson,finance_manage.model_purchase_order_line,access_rights.group_salesperson,1,0,0,0
+access_supplier_record_salesperson,Access supplier record for salesperson,finance_manage.model_supplier_record,access_rights.group_salesperson,1,0,0,0
+access_product_record_salesperson,Access product_record for salesperson,finance_manage.model_product_record,access_rights.group_salesperson,1,0,0,0
+access_product_category_record_salesperson,Access product category record for salesperson,finance_manage.model_product_category_record,access_rights.group_salesperson,1,0,0,0
+access_expense_refuse_wizard_salesperson,Access expense refuse wizard for salesperson,finance_manage.model_expense_refuse_wizard,access_rights.group_salesperson,1,0,0,0
+access_purchase_receive_wizard_salesperson,Access purchase_receive_wizard for salesperson,finance_manage.model_purchase_receive_wizard,access_rights.group_salesperson,1,0,0,0
+access_app_products_salesperson,Access app products for salesperson,finance_manage.model_app_products,access_rights.group_salesperson,1,0,0,0
+access_material_inventory_salesperson,Access material inventory for salesperson,finance_manage.model_material_inventory,access_rights.group_salesperson,1,0,0,0
+access_material_price_history_salesperson,Access material price history for salesperson,finance_manage.model_material_price_history,access_rights.group_salesperson,1,0,0,0
+access_marketing_campaign_salesperson,Access marketing campaign for salesperson,marketing_campaigns.model_marketing_campaign,access_rights.group_salesperson,1,0,0,0
+access_lead_source_salesperson,Access lead source for salesperson,marketing_campaigns.model_lead_source,access_rights.group_salesperson,1,0,0,0
+access_ad_record_salesperson,Access ad record for salesperson,marketing_campaigns.model_ad_record,access_rights.group_salesperson,1,0,0,0
+access_campaign_deposit_salesperson,Access campaign deposit for salesperson,marketing_campaigns.model_campaign_deposit,access_rights.group_salesperson,1,0,0,0
