@@ -4,7 +4,7 @@
     'name' : 'Groups',
     'summary': 'Groups for access rights',
     'description': "Groups for access rights",
-    'depends': ['base', 'patients_list'],
+    'depends': ['base', 'patients_list', 'access_manage'],
     'data': [
         'security/access_groups.xml',
         'security/ir.model.access.csv',

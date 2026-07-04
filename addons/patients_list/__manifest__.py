@@ -35,6 +35,8 @@
         "wizards/lost_stage_wizard_view.xml",
         "report/report_prescription_action.xml",
         "report/report_prescription_template.xml",
+        "report/prescription_letterhead_template.xml",
+        "report/prescription_letterhead_report.xml",
     ],
     'assets': {
         'web.assets_backend': [

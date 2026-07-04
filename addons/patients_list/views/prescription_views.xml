@@ -42,14 +42,23 @@
                             class="btn-primary"
                             icon="fa-print"
                     />
+                    <button
+                            name="action_print_prescription_letterhead"
+                            string="🖨️ Imprimer (Entete Taiba)"
+                            type="object"
+                            class="btn-secondary"
+                            icon="fa-print"
+                    />
                 </header>
 
                 <sheet>
 
                     <group>
                         <field name="name" readonly="1"/>
+                        <field name="ordre_number" readonly="1"/>
                         <field name="patient_id"/>
                         <field name="appointment_id"/>
+                        <field name="doctor_name"/>
                         <field name="date"/>
                     </group>
 

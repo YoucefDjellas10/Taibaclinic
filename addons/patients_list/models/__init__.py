@@ -18,3 +18,4 @@ from . import medicine
 from . import not_interested_reason
 from . import interest_record
 from . import lost_reason
+from . import ir_actions_report
