@@ -9,7 +9,8 @@ class Patients(models.Model):
     name = fields.Char(string='Full name', compute='_compute_full_name', store=True)
     patient_type = fields.Selection([('door', 'Door'),
                                      ('lead', 'Lead'),
-                                     ('company', 'Company')], string='Patient Type')
+                                     ('company', 'Company')], string='Patient Type',
+                                     required=True, default='door')
     stage = fields.Selection([('new', 'New Lead'),
                               ('contacted', 'Contacted'),
                               ('not_interested', 'Not interested'),
@@ -243,6 +244,9 @@ class Patients(models.Model):
 
     def action_resend(self):
         self.stage = 'new'
+
+    def action_fix_missing_patient_type(self):
+        self.search([('patient_type', '=', False)]).write({'patient_type': 'door'})
 
 
 
