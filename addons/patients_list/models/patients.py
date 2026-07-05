@@ -245,8 +245,5 @@ class Patients(models.Model):
     def action_resend(self):
         self.stage = 'new'
 
-    def action_fix_missing_patient_type(self):
-        self.search([('patient_type', '=', False)]).write({'patient_type': 'door'})
-
 
 
