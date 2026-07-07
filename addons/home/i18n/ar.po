@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* home
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-07 06:04+0000\n"
+"PO-Revision-Date: 2026-07-07 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: home
+#: model:ir.actions.act_window,name:home.action_photo
+#: model:ir.actions.act_window,name:home.action_photo_
+#: model:ir.ui.menu,name:home.menu_photo_root
+#: model_terms:ir.ui.view,arch_db:home.view_form_photo
+msgid "Acceuil"
+msgstr "الرئيسية"
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__id
+msgid "ID"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__photo_field
+msgid "Photo"
+msgstr ""
+
+#. module: home
+#: model:ir.model,name:home.model_photo_model
+msgid "Photo Model"
+msgstr ""
+
+#. module: home
+#: model:ir.model.fields,field_description:home.field_photo_model__test
+msgid "test"
+msgstr ""

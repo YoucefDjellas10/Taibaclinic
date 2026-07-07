@@ -1,111 +1,1944 @@
-# Translation of patients_list to French
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* patients_list
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: odoo (patients_list)\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-01 00:00+0000\n"
-"PO-Revision-Date: 2026-01-01 00:00+0000\n"
+"POT-Creation-Date: 2026-07-07 05:29+0000\n"
+"PO-Revision-Date: 2026-07-07 00:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. module: patients_list
-msgid "Patient Search"
-msgstr "Recherche Patient"
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid ""
+"<span style=\"font-size: 10px; color: #94a3b8; margin-left: "
+"8px;\">Chirurgien Dentiste</span>"
+msgstr ""
 
 #. module: patients_list
-msgid "Search by first name, last name or full name"
-msgstr "Rechercher par prénom, nom ou nom complet"
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid ""
+"<span style=\"font-size: 20px; font-weight: 900; color: #0d9488; letter-"
+"spacing: 5px; text-transform: uppercase;\">O R D O N N A N C E</span>"
+msgstr ""
 
 #. module: patients_list
-msgid "Enter patient first name, last name or full name..."
-msgstr "Entrez le prénom, nom ou nom complet du patient..."
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "<strong>Age :</strong>"
+msgstr ""
 
 #. module: patients_list
-msgid "Search"
-msgstr "Rechercher"
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "<strong>Date:</strong>"
+msgstr ""
 
 #. module: patients_list
-msgid "Searching..."
-msgstr "Recherche en cours..."
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "<strong>Doctor:</strong>"
+msgstr ""
 
 #. module: patients_list
-msgid "New"
-msgstr "Nouveau"
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "<strong>Nom :</strong>"
+msgstr ""
 
 #. module: patients_list
-msgid "No results found"
-msgstr "Aucun résultat trouvé"
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "<strong>Patient:</strong>"
+msgstr ""
 
 #. module: patients_list
-msgid "No patient matches"
-msgstr "Aucun patient ne correspond à"
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "<strong>Prénom :</strong>"
+msgstr ""
 
 #. module: patients_list
-msgid "Check the spelling or try another term."
-msgstr "Vérifiez l'orthographe ou essayez un autre terme."
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations__stage__accepted
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations_prepare_wizard__stage__accepted
+#: model:ir.model.fields.selection,name:patients_list.selection__treatment_plan__status__accepted
+msgid "Accepted"
+msgstr "Accepté"
 
 #. module: patients_list
-msgid "Use the search bar above to find a patient."
-msgstr "Utilisez la barre de recherche ci-dessus pour trouver un patient."
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Add Appointment"
+msgstr "Ajouter un rendez-vous"
 
 #. module: patients_list
-msgid "result(s) for"
-msgstr "résultat(s) pour"
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Add Attachment"
+msgstr "Ajouter une pièce jointe"
 
 #. module: patients_list
-msgid "years"
-msgstr "ans"
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Add Contact"
+msgstr "Ajouter un contact"
 
 #. module: patients_list
-msgid "Taiba Dental Clinic"
-msgstr "Taiba Dental Clinic"
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Add Deal"
+msgstr "Ajouter une affaire"
 
 #. module: patients_list
-msgid "New Lead"
-msgstr "Nouveau Lead"
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Add Payment"
+msgstr "Ajouter un paiement"
 
 #. module: patients_list
-msgid "Contacted"
-msgstr "Contacté"
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Add Quotation"
+msgstr "Ajouter un devis"
 
 #. module: patients_list
-msgid "Qualified"
-msgstr "Qualifié"
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Add a description..."
+msgstr "Ajouter une description..."
 
 #. module: patients_list
-msgid "Consult Booked"
-msgstr "Consultation Réservée"
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__age
+#: model:ir.model.fields,field_description:patients_list.field_patients__age
+#: model:ir.model.fields,field_description:patients_list.field_quotations__age
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__age
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__age
+msgid "Age"
+msgstr "Âge"
 
 #. module: patients_list
-msgid "Consult Done"
-msgstr "Consultation Effectuée"
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Age :"
+msgstr ""
 
 #. module: patients_list
-msgid "Plan Sent"
-msgstr "Plan Envoyé"
+#: model:ir.model,name:patients_list.model_patient_attachments
+msgid "All attachments for patients"
+msgstr "Toutes les pièces jointes des patients"
 
 #. module: patients_list
-msgid "Pending"
-msgstr "En attente"
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__amount
+msgid "Amount"
+msgstr "Montant"
 
 #. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__appointment_id
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__appointment
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__appointment_id
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__appointment
+msgid "Appointment"
+msgstr "Rendez-vous"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.appointment_record_sub
+msgid "Appointment List"
+msgstr "Liste des rendez-vous"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__reason
+msgid "Appointment Reason"
+msgstr "Motif du rendez-vous"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_appointment_record
+msgid "Appointment for patients"
+msgstr "Rendez-vous des patients"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__appointment_ids
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Appointments"
+msgstr "Rendez-vous"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_calendar
+msgid "Appointments Calendar"
+msgstr "Calendrier des rendez-vous"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.appointment_record_action
+msgid "Appointments list"
+msgstr "Liste des rendez-vous"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
 msgid "Approved"
 msgstr "Approuvé"
 
 #. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__attachment_ids
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__attachment_ids
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Attachments"
+msgstr "Pièces jointes"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Aucun medicament prescrit"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "Aucun médicament prescrit"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__balance
+msgid "Balance"
+msgstr "Solde"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__balance_payments
+msgid "Balance Payments"
+msgstr "Solde des paiements"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__birthday
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__birthday
+msgid "Birthday"
+msgstr "Date de naissance"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Cabinet Dentaire Specialise"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Cachet &amp; Signature"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__call
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__call
+msgid "Call"
+msgstr "Appel"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_appointment_cancel_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_contact_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_details_received_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_lost_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_not_interested_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_qualified_wizard_form
+msgid "Cancel Appointment"
+msgstr "Annuler le rendez-vous"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__cancel_reason
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__cancel_reason
+msgid "Cancellation Reason"
+msgstr "Motif d'annulation"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__status__cancelled
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__cavity
+msgid "Cavity Treatment"
+msgstr "Traitement de carie"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Check the spelling or try another term."
+msgstr "Vérifiez l'orthographe ou essayez un autre terme."
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.cities_records_sub
+msgid "Cities"
+msgstr "Villes"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_cities_records
+msgid "Cities Records"
+msgstr "Fiches des villes"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.cities_records_action
+msgid "Cities list"
+msgstr "Liste des villes"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__city
+msgid "City"
+msgstr "Ville"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Closed"
+msgstr "Fermé"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__patient_type__company
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__status__completed
+msgid "Completed"
+msgstr "Terminé"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.configuration_list_main
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_details_received_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_lost_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_not_interested_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_qualified_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_appointment_cancel_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_contact_stage_wizard_form
+msgid "Confirm Cancellation"
+msgstr "Confirmer l'annulation"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__status__confirmed
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations__stage__confirmed
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations_prepare_wizard__stage__confirmed
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Consult Booked"
+msgstr "Consultation Réservée"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Consult Done"
+msgstr "Consultation Effectuée"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Contact"
+msgstr "Contact"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.contact_record_action
+#: model:ir.ui.menu,name:patients_list.contact_record_sub
+msgid "Contact list"
+msgstr "Liste des contacts"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__type
+msgid "Contact type"
+msgstr "Type de contact"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__contacted
+msgid "Contacted"
+msgstr "Contacté"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__contact_ids
+msgid "Contacts"
+msgstr "Contacts"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.country_records_sub
+msgid "Countries"
+msgstr "Pays"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.country_records_action
+msgid "Countries list"
+msgstr "Liste des pays"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__country
+#: model:ir.model.fields,field_description:patients_list.field_patients__country
+msgid "Country"
+msgstr "Pays"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_country_records
+msgid "Country Records"
+msgstr "Fiches des pays"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_country_records__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_patients__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_teeth__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__create_uid
+#: model:ir.model.fields,field_description:patients_list.field_treatments__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__create_date
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__create_date
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__create_date
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_country_records__create_date
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__create_date
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__create_date
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__create_date
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__create_date
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__create_date
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__create_date
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__create_date
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__create_date
+#: model:ir.model.fields,field_description:patients_list.field_patients__create_date
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__create_date
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations__create_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__create_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__create_date
+#: model:ir.model.fields,field_description:patients_list.field_teeth__create_date
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__create_date
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__create_date
+#: model:ir.model.fields,field_description:patients_list.field_treatments__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__currency
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__currency
+#: model:ir.model.fields,field_description:patients_list.field_patients__currency
+#: model:ir.model.fields,field_description:patients_list.field_quotations__currency
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__currency
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__currency
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__currency
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__currency
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__currency
+#: model:ir.model.fields,field_description:patients_list.field_treatments__currency
+msgid "Currency"
+msgstr "Devise"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.to_day_appointment_record_main
+msgid "Daily Appointment"
+msgstr "Rendez-vous du jour"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__date
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__date
+#: model:ir.model.fields,field_description:patients_list.field_quotations__quotation_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__quotation_date
+msgid "Date"
+msgstr "Date"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__appointment
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__plan
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+msgid "Deal"
+msgstr "Affaire"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__deal_closed
+msgid "Deal closed"
+msgstr "Affaire conclue"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__deal_ids
+#: model:ir.model.fields,field_description:patients_list.field_patients__deal_ids
+#: model:ir.ui.menu,name:patients_list.treatment_plan_list_main
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Deals"
+msgstr "Affaires"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__checkup
+msgid "Dental Check-up"
+msgstr "Contrôle dentaire"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__crown
+msgid "Dental Crown"
+msgstr "Couronne dentaire"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__implant
+msgid "Dental Implant"
+msgstr "Implant dentaire"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__prosthesis
+msgid "Dental Prosthesis"
+msgstr "Prothèse dentaire"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
 msgid "Deposit Paid"
 msgstr "Acompte Payé"
 
 #. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__description
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__description
+#: model:ir.model.fields,field_description:patients_list.field_quotations__description
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__description
+#: model:ir.model.fields,field_description:patients_list.field_teeth__description
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__description
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Description"
+msgstr "Description"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Details received"
+msgstr "Détails reçus"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_appointment_cancel_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_contact_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_details_received_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_lost_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_not_interested_wizard_form
+#: model_terms:ir.ui.view,arch_db:patients_list.view_qualified_wizard_form
+msgid "Discard"
+msgstr "Annuler"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__discount
+#: model:ir.model.fields,field_description:patients_list.field_quotations__discount
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__discount
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__discount
+msgid "Discount"
+msgstr "Remise"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__display_name
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__display_name
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__display_name
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_country_records__display_name
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__display_name
+#: model:ir.model.fields,field_description:patients_list.field_ir_actions_report__display_name
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__display_name
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__display_name
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__display_name
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__display_name
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__display_name
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__display_name
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__display_name
+#: model:ir.model.fields,field_description:patients_list.field_patients__display_name
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__display_name
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_quotations__display_name
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__display_name
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__display_name
+#: model:ir.model.fields,field_description:patients_list.field_teeth__display_name
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__display_name
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__display_name
+#: model:ir.model.fields,field_description:patients_list.field_treatments__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__doctor_name
+msgid "Doctor"
+msgstr "Médecin"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "Doctor Signature"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__patient_type__door
+msgid "Door"
+msgstr "Sur place"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__dosage
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "Dosage"
+msgstr "Posologie"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Dr."
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "Dr.BRAFTA F"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "Dr.Haddad I Ep LEKHCHINE"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations__stage__draft
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations_prepare_wizard__stage__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__duration
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "Duration"
+msgstr "Durée"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Duree :"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "El Eulma le :"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "El Eulma, le"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__email
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__email
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__email
+msgid "Email"
+msgstr "Email"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__emergency
+msgid "Emergency"
+msgstr "Urgence"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Enter patient first name, last name or full name..."
+msgstr "Entrez le prénom, nom ou nom complet du patient..."
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations__expiration_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__expiration_date
+msgid "Expiration date"
+msgstr "Date d'expiration"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__facebook_call
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__facebook_call
+msgid "Facebook Call"
+msgstr "Appel Facebook"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__facebook_message
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__facebook_message
+msgid "Facebook Message"
+msgstr "Message Facebook"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__deal_date
+msgid "First"
+msgstr "Premier"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__first_name
+msgid "First name"
+msgstr "Prénom"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__followup
+msgid "Follow-up"
+msgstr "Suivi"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Freq. :"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__frequency
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "Frequency"
+msgstr "Fréquence"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__name
+msgid "Full name"
+msgstr "Nom complet"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__gender
+#: model:ir.model.fields,field_description:patients_list.field_patients__gender
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__gender
+#: model:ir.model.fields,field_description:patients_list.field_quotations__gender
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__gender
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__gender
+msgid "Gender"
+msgstr "Sexe"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__consultation
+msgid "General Consultation"
+msgstr "Consultation générale"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__gross_total
+#: model:ir.model.fields,field_description:patients_list.field_quotations__gross_total
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__gross_total
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__gross_total
+msgid "Gross Total"
+msgstr "Total brut"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__id
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__name
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__id
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__id
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__name
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_country_records__id
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__id
+#: model:ir.model.fields,field_description:patients_list.field_ir_actions_report__id
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__id
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__id
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__id
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__id
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__id
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__id
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__name
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__id
+#: model:ir.model.fields,field_description:patients_list.field_patients__id
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__id
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_quotations__id
+#: model:ir.model.fields,field_description:patients_list.field_quotations__name
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__id
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__name
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__id
+#: model:ir.model.fields,field_description:patients_list.field_teeth__id
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__id
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__name
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__id
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__name
+#: model:ir.model.fields,field_description:patients_list.field_treatments__id
+msgid "ID"
+msgstr "ID"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__status__in_progress
+msgid "In Treatment"
+msgstr "En Traitement"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__instagram_call
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__instagram_call
+msgid "Instagram Call"
+msgstr "Appel Instagram"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__instagram_message
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__instagram_message
+msgid "Instagram Message"
+msgstr "Message Instagram"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__instructions
+msgid "Instructions"
+msgstr "Instructions"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__interested_id
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__interested_id
+msgid "Interest"
+msgstr "Intérêt"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.interest_record_action
+#: model:ir.ui.menu,name:patients_list.interest_record_sub
+msgid "Interest list"
+msgstr "Liste des intérêts"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_country_records__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_patients__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_teeth__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__write_uid
+#: model:ir.model.fields,field_description:patients_list.field_treatments__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_cancel_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__write_date
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__write_date
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__write_date
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_country_records__write_date
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__write_date
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__write_date
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__write_date
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__write_date
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__write_date
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__write_date
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__write_date
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__write_date
+#: model:ir.model.fields,field_description:patients_list.field_patients__write_date
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__write_date
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations__write_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__write_date
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__write_date
+#: model:ir.model.fields,field_description:patients_list.field_teeth__write_date
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__write_date
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__write_date
+#: model:ir.model.fields,field_description:patients_list.field_treatments__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__last_name
+msgid "Last name"
+msgstr "Nom"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__patient_type__lead
+msgid "Lead"
+msgstr "Prospect"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__lines_ids
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__lines_ids
+msgid "Lines"
+msgstr "Lignes"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Loading appointments..."
+msgstr "Chargement des rendez-vous..."
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__lost
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Lost"
+msgstr "Perdu"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.lost_reason_record_action
+#: model:ir.ui.menu,name:patients_list.lost_reason_record_sub
+msgid "Lost reasons"
+msgstr "Motifs de perte"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "MEDECIN DENTISTE"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Medecin Consultant :"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__medical_histiory
+#: model:ir.model.fields,field_description:patients_list.field_patients__medical_histiory
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__medical_histiory
+#: model:ir.model.fields,field_description:patients_list.field_quotations__medical_histiory
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__medical_histiory
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__medical_histiory
+#: model:ir.ui.menu,name:patients_list.medical_history_sub
+msgid "Medical history"
+msgstr "Antécédents médicaux"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.medical_history_action
+msgid "Medical history list"
+msgstr "Liste des antécédents médicaux"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_medical_history
+msgid "Medical history of patients"
+msgstr "Antécédents médicaux des patients"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Medicaments Prescrits"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__line_ids
+#: model_terms:ir.ui.view,arch_db:patients_list.view_prescription_form
+msgid "Medications"
+msgstr "Médicaments"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_medical_medicine
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__medication_id
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+msgid "Medicine"
+msgstr "Médicament"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_medical_medicine__name
+msgid "Medicine Name"
+msgstr "Nom du médicament"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.action_medicine
+#: model:ir.ui.menu,name:patients_list.menu_medicine
+msgid "Medicines"
+msgstr "Médicaments"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__mobile
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__gender__mr
+#: model:ir.model.fields.selection,name:patients_list.selection__qualified_wizard__gender__mr
+msgid "Mr"
+msgstr "M."
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__gender__ms
+#: model:ir.model.fields.selection,name:patients_list.selection__qualified_wizard__gender__ms
+msgid "Ms"
+msgstr "Mme"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_cities_records__name
+#: model:ir.model.fields,field_description:patients_list.field_country_records__name
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__name
+#: model:ir.model.fields,field_description:patients_list.field_interest_record__name
+#: model:ir.model.fields,field_description:patients_list.field_lost_reason_record__name
+#: model:ir.model.fields,field_description:patients_list.field_medical_history__name
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_reason__name
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__negotiation
+msgid "Negotiation"
+msgstr "Négociation"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__net_total
+#: model:ir.model.fields,field_description:patients_list.field_quotations__net_total
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__net_total
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__net_total
+msgid "Net Total"
+msgstr "Total net"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "New"
+msgstr "Nouveau"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "New Appointment"
+msgstr "Nouveau rendez-vous"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__new
+msgid "New Lead"
+msgstr "Nouveau Lead"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__new_beginning
+msgid "New beginning"
+msgstr "Nouveau départ"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Next"
+msgstr "Suivant"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Next day"
+msgstr "Jour suivant"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "No Appointments"
+msgstr "Aucun rendez-vous"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "No appointments scheduled for"
+msgstr "Aucun rendez-vous prévu pour"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "No patient matches"
+msgstr "Aucun patient ne correspond à"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "No results found"
+msgstr "Aucun résultat trouvé"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.not_interested_reason_view_form
+#: model_terms:ir.ui.view,arch_db:patients_list.not_interested_reason_view_list
+msgid "Nom"
+msgstr "Nom"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Nom du Malade :"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__not_interested
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Not interested"
+msgstr "Non intéressé"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.not_interested_reason_action
+#: model:ir.ui.menu,name:patients_list.not_interested_reason_menu_sub
+msgid "Not interested reason"
+msgstr "Motif de désintérêt"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__note
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__note
+#: model:ir.model.fields,field_description:patients_list.field_patients__note
+msgid "Note"
+msgstr "Note"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Note :"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__note
+#: model_terms:ir.ui.view,arch_db:patients_list.view_prescription_form
+msgid "Notes"
+msgstr "Notes"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Now"
+msgstr "Maintenant"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__ordre_number
+msgid "N° d'ordre"
+msgstr "N° d'ordre"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "N° d'ordre : 1163/19"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "N° d'ordre : 1389/19"
+msgstr ""
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Open patient file"
+msgstr "Ouvrir le dossier du patient"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__oral_surgery
+msgid "Oral Surgery"
+msgstr "Chirurgie buccale"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "Ordonnance"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.actions.report,name:patients_list.action_report_prescription_letterhead
+msgid "Ordonnance (Entete Taiba)"
+msgstr "Ordonnance (Entête Taiba)"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid ""
+"Ordonnance valable 3 mois a compter de la date d emission.<br/>\n"
+"                                            A delivrer en pharmacie sur presentation de ce document."
+msgstr ""
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__orthodontics
+msgid "Orthodontics"
+msgstr "Orthodontie"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__other
+msgid "Other"
+msgstr "Autre"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__patient
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__patient
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_details_received_wizard__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_patient_attachments__patient
+#: model:ir.model.fields,field_description:patients_list.field_patient_payment__patient
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_qualified_wizard__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_quotations__patient
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__patient
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__patient_id
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__patient
+msgid "Patient"
+msgstr "Patient"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Patient Information"
+msgstr "Informations du patient"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_patient_prescription
+msgid "Patient Prescription"
+msgstr "Ordonnance du patient"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Patient Search"
+msgstr "Recherche Patient"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__patient_type
+#: model:ir.model.fields,field_description:patients_list.field_patients__patient_type
+msgid "Patient Type"
+msgstr "Type de patient"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.patient_attachments_list_action
+msgid "Patient attachments"
+msgstr "Pièces jointes du patient"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.patient_list_action
+msgid "Patient list"
+msgstr "Liste des patients"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.patient_payment_list_action
+msgid "Patient payment"
+msgstr "Paiement du patient"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.patient_list_main
+#: model:ir.ui.menu,name:patients_list.patient_list_sub
+msgid "Patients"
+msgstr "Patients"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_patients
+msgid "Patients list"
+msgstr "Liste des patients"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.patient_payment_list_sub_menu
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__payment_ids
+#: model:ir.model.fields,field_description:patients_list.field_patients__payment_ids
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_patient_payment
+msgid "Payments for patients"
+msgstr "Paiements des patients"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__pediatric
+msgid "Pediatric Dentistry"
+msgstr "Dentisterie pédiatrique"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__treatment_plan__status__pending
+msgid "Pending"
+msgstr "En attente"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Plan Sent"
+msgstr "Plan Envoyé"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_contact_stage_wizard_form
+msgid "Please explain the discuss..."
+msgstr "Veuillez expliquer l'échange..."
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_appointment_cancel_wizard_form
+msgid "Please explain why this appointment is being cancelled..."
+msgstr "Veuillez expliquer pourquoi ce rendez-vous est annulé..."
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Prepare Quotation"
+msgstr "Préparer le devis"
+
+#. module: patients_list
+#: model:ir.actions.report,name:patients_list.action_prescription_report
+#: model:ir.actions.report,name:patients_list.action_report_prescription
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__prescription_id
+msgid "Prescription"
+msgstr "Ordonnance"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_prescription_line
+msgid "Prescription Line"
+msgstr "Ligne d'ordonnance"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.action_prescription
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__prescription_ids
+#: model:ir.ui.menu,name:patients_list.menu_prescription
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+msgid "Prescriptions"
+msgstr "Ordonnances"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Previous"
+msgstr "Précédent"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Previous day"
+msgstr "Jour précédent"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__price
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__price
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__price
+#: model:ir.model.fields,field_description:patients_list.field_treatments__price
+msgid "Price"
+msgstr "Prix"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__quantity
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__quantity
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__quantity
+msgid "Qte"
+msgstr "Qté"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__qualified
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Qualified"
+msgstr "Qualifié"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__quotation
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__quotation
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Quotation"
+msgstr "Devis"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Quotation Details"
+msgstr "Détails du devis"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__quotation_preparation
+msgid "Quotation preparation"
+msgstr "Préparation du devis"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__quotation_ids
+#: model:ir.ui.menu,name:patients_list.quotations_list_main
+#: model:ir.ui.menu,name:patients_list.quotations_list_sub
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Quotations"
+msgstr "Devis"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.quotations_list_action
+msgid "Quotations list"
+msgstr "Liste des devis"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.quotations_treatment_list_action
+msgid "Quotations treatment"
+msgstr "Traitements du devis"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_lost_stage_wizard__lost_reason_id
+#: model:ir.model.fields,field_description:patients_list.field_not_interested_wizard__not_interested_reason
+msgid "Reason"
+msgstr "Motif"
+
+#. module: patients_list
+#: model:ir.actions.client,name:patients_list.action_patient_search
+msgid "Recherche Patient"
+msgstr "Recherche Patient"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Recommandations"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patient_prescription__name
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Reference"
+msgstr "Référence"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Refresh"
+msgstr "Actualiser"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__treatment_plan__status__refused
+msgid "Refused"
+msgstr "Refusé"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations__stage__rejected
+#: model:ir.model.fields.selection,name:patients_list.selection__quotations_prepare_wizard__stage__rejected
+msgid "Rejected"
+msgstr "Rejeté"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__report
+#: model:ir.model.fields,field_description:patients_list.field_contact_stage_wizard__report
+msgid "Report"
+msgstr "Rapport"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_ir_actions_report
+msgid "Report Action"
+msgstr "Action de rapport"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.patients_form
+msgid "Resend"
+msgstr "Renvoyer"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+msgid "Reset to Scheduled"
+msgstr "Réinitialiser à Planifié"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__root_canal
+msgid "Root Canal"
+msgstr "Traitement de canal"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid ""
+"Rue Guerguite Mabrouk Goutali EL-EULMA<br/>\n"
+"                            05 61 75 23 09 / 05 50 49 42 98"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Rue Sakhri Ali - El Eulma 19600 - Tel. 0550 49 42 98"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__sms
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__sms
+msgid "SMS"
+msgstr "SMS"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__salesperson
+msgid "Salesperson"
+msgstr "Commercial"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__cleaning
+msgid "Scaling / Cleaning"
+msgstr "Détartrage / Nettoyage"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__status__scheduled
 msgid "Scheduled"
 msgstr "Planifié"
 
 #. module: patients_list
-msgid "In Treatment"
-msgstr "En Traitement"
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Search"
+msgstr "Rechercher"
 
-#.
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.menu_patient_search
+msgid "Search Patient"
+msgstr "Rechercher un patient"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Search by first name, last name or full name"
+msgstr "Rechercher par prénom, nom ou nom complet"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Searching..."
+msgstr "Recherche en cours..."
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Signature du Medecin"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "Signature du médecin"
+msgstr ""
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Soon"
+msgstr "Bientôt"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__stage
+#: model:ir.model.fields,field_description:patients_list.field_quotations__stage
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__stage
+msgid "Stage"
+msgstr "Étape"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+msgid "Start Treatment"
+msgstr "Démarrer le traitement"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__status
+#: model:ir.model.fields,field_description:patients_list.field_contact_record__type
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan__status
+msgid "Status"
+msgstr "Statut"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "TAIBA DENTAL CLINIC"
+msgstr ""
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "Taiba Dental Clinic"
+msgstr "Taiba Dental Clinic"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid ""
+"Taiba Dental Clinic - Rue Sakhri Ali, El Eulma 19600 - Tel. 0550 49 42 98"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__teeth
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__teeth
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__teeth
+#: model:ir.ui.menu,name:patients_list.teeth_list_sub
+msgid "Teeth"
+msgstr "Dents"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__whitening
+msgid "Teeth Whitening"
+msgstr "Blanchiment dentaire"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.teeth_list_action
+msgid "Teeth list"
+msgstr "Liste des dents"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__tiktok_call
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__tiktok_call
+msgid "TikTok Call"
+msgstr "Appel TikTok"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__tiktok_message
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__tiktok_message
+msgid "TikTok Message"
+msgstr "Message TikTok"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#. module: patients_list
+#: model:ir.actions.client,name:patients_list.action_today_appointments
+msgid "Today's Appointments"
+msgstr "Rendez-vous du jour"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__extraction
+msgid "Tooth Extraction"
+msgstr "Extraction dentaire"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__tooth_pain
+msgid "Tooth Pain"
+msgstr "Douleur dentaire"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__total
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__total
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__total
+msgid "Total"
+msgstr "Total"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__deal_total
+msgid "Total Deals"
+msgstr "Total des affaires"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_appointment_record__total_payments
+#: model:ir.model.fields,field_description:patients_list.field_patients__payment_total
+msgid "Total Payments"
+msgstr "Total des paiements"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__app_total
+msgid "Total appointments"
+msgstr "Total des rendez-vous"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment__treatment
+#: model:ir.model.fields,field_description:patients_list.field_quotations_treatment_wizard__treatment
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__treatment
+msgid "Treatment"
+msgstr "Traitement"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__treatment_plan
+msgid "Treatment Plan / Quote"
+msgstr "Plan de traitement / Devis"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_treatment_plan_lines__treatment_date
+msgid "Treatment date"
+msgstr "Date du traitement"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_treatments__name
+msgid "Treatment name"
+msgstr "Nom du traitement"
+
+#. module: patients_list
+#: model:ir.ui.menu,name:patients_list.treatment_plan_list_sub
+msgid "Treatment plan"
+msgstr "Plan de traitement"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.treatment_plan_lines_list_action
+msgid "Treatment plan lines"
+msgstr "Lignes du plan de traitement"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_quotations__quotation_treatment_ids
+#: model:ir.model.fields,field_description:patients_list.field_quotations_prepare_wizard__quotation_treatment_ids
+#: model:ir.ui.menu,name:patients_list.treatments_list_sub
+#: model_terms:ir.ui.view,arch_db:patients_list.appointment_record_form
+#: model_terms:ir.ui.view,arch_db:patients_list.quotations_prepare_wizard_view_form
+msgid "Treatments"
+msgstr "Traitements"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.treatments_list_action
+msgid "Treatments list"
+msgstr "Liste des traitements"
+
+#. module: patients_list
+#: model:ir.actions.act_window,name:patients_list.treatment_plan_list_action
+msgid "Treatments plan list"
+msgstr "Liste des plans de traitement"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "Upcoming"
+msgstr "À venir"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "Use the search bar above to find a patient."
+msgstr "Utilisez la barre de recherche ci-dessus pour trouver un patient."
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__veneer
+msgid "Veneers"
+msgstr "Facettes dentaires"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__patients__stage__waiting_details
+msgid "Waiting details"
+msgstr "En attente de détails"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__whatsapp_call
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__whatsapp_call
+msgid "Whatsapp call"
+msgstr "Appel WhatsApp"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_record__type__whatsapp_message
+#: model:ir.model.fields.selection,name:patients_list.selection__contact_stage_wizard__type__whatsapp_message
+msgid "Whatsapp message"
+msgstr "Message WhatsApp"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_appointment_cancel_wizard
+msgid "Wizard to cancel an appointment with a reason"
+msgstr "Assistant pour annuler un rendez-vous avec un motif"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_lost_stage_wizard
+msgid "Wizard to make stage lost"
+msgstr "Assistant pour passer à l'étape Perdu"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_not_interested_wizard
+msgid "Wizard to make stage not interested"
+msgstr "Assistant pour passer à l'étape Non intéressé"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_contact_stage_wizard
+msgid "Wizard to make stage on contacted"
+msgstr "Assistant pour passer à l'étape Contacté"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_qualified_wizard
+msgid "Wizard to make stage qualified"
+msgstr "Assistant pour passer à l'étape Qualifié"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_details_received_wizard
+msgid "Wizard to make stage quotation preparation"
+msgstr "Assistant pour passer à l'étape Préparation du devis"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: model:ir.model.fields.selection,name:patients_list.selection__appointment_record__reason__xray
+msgid "X-Ray / Scan"
+msgstr "Radiographie / Scanner"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.report_prescription_template
+msgid "ans"
+msgstr ""
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "appointments"
+msgstr "rendez-vous"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__attachment_ids
+msgid "attachments"
+msgstr "pièces jointes"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_interest_record
+msgid "interest list"
+msgstr "liste des intérêts"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_treatment_plan_lines
+msgid "lines plan of patients treatments"
+msgstr "lignes du plan de traitement des patients"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_contact_record
+msgid "list of contacts with patients"
+msgstr "liste des contacts avec les patients"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__lost_reason_id
+msgid "lost Reason"
+msgstr "Motif de perte"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_lost_reason_record
+msgid "lost reason record"
+msgstr "fiche de motif de perte"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_patients__not_interested_reason
+msgid "not interested Reason"
+msgstr "Motif de désintérêt"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_not_interested_reason
+#: model_terms:ir.ui.view,arch_db:patients_list.not_interested_reason_view_form
+#: model_terms:ir.ui.view,arch_db:patients_list.not_interested_reason_view_list
+msgid "not interested reason"
+msgstr "motif de désintérêt"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "pendant"
+msgstr ""
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_treatment_plan
+msgid "plan of patients treatments"
+msgstr "plan de traitement des patients"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_quotations_treatment
+msgid "quotations Treatment for patients"
+msgstr "traitement du devis pour les patients"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_quotations
+msgid "quotations for patients"
+msgstr "devis pour les patients"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+msgid "result(s) for"
+msgstr "résultat(s) pour"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_teeth
+msgid "teeth"
+msgstr "dents"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_teeth__name
+msgid "tooth number"
+msgstr "numéro de dent"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_treatments
+msgid "treatments"
+msgstr "traitements"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_quotations_treatment_wizard
+msgid "wizard quotations Treatment for patients"
+msgstr "assistant de traitement du devis pour les patients"
+
+#. module: patients_list
+#: model:ir.model,name:patients_list.model_quotations_prepare_wizard
+msgid "wizard quotations for patients"
+msgstr "assistant de devis pour les patients"
+
+#. module: patients_list
+#. odoo-javascript
+#: code:addons/patients_list/static/src/js/patient_search.js:0
+#: code:addons/patients_list/static/src/xml/today_appointments.xml:0
+msgid "years"
+msgstr "ans"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "العيادة الجماعية طبية لطب وجراحة الاسنان"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "تقويم و تبييض الأسنان"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "زراعة الأسنان"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.prescription_letterhead_template
+msgid "قلع الأسنان والقلع الجراحي"
+msgstr ""
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_prescription_form
+msgid "🖨️ Imprimer (Entete Taiba)"
+msgstr "🖨️ Imprimer (Entête Taiba)"
+
+#. module: patients_list
+#: model_terms:ir.ui.view,arch_db:patients_list.view_prescription_form
+msgid "🖨️ Imprimer l'ordonnance"
+msgstr "🖨️ Imprimer l'ordonnance"

@@ -1,0 +1,1517 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* doctors_list
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-07 05:50+0000\n"
+"PO-Revision-Date: 2026-07-07 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__nd_mobile
+msgid "2nd Mobile"
+msgstr "2ème Mobile"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"background: #0d9488; color: #fff; padding: 4px 14px; border-"
+"radius: 20px; font-size: 13px; font-weight: 800;\">PAID</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"background: #3b82f6; color: #fff; padding: 4px 14px; border-"
+"radius: 20px; font-size: 13px; font-weight: 800;\">TO PAY</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"background: #dc2626; color: #fff; padding: 4px 14px; border-"
+"radius: 20px; font-size: 13px; font-weight: 800;\">NOT BILLED</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"background: #dc2626; color: #fff; padding: 5px 14px; border-"
+"radius: 20px; font-size: 11px; font-weight: 800;\">!! VERY URGENT</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"background: #f59e0b; color: #fff; padding: 4px 14px; border-"
+"radius: 20px; font-size: 13px; font-weight: 800;\">PARTIAL</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"background: #f59e0b; color: #fff; padding: 5px 14px; border-"
+"radius: 20px; font-size: 11px; font-weight: 800;\">!! URGENT</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"<span style=\"font-size: 14px; font-weight: 800; color: #fff; text-"
+"transform: uppercase; letter-spacing: 1.2px;\">Billing</span>"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__a1
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__a1
+msgid "A1"
+msgstr "A1"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__a2
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__a2
+msgid "A2"
+msgstr "A2"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__a3
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__a3
+msgid "A3"
+msgstr "A3"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__a3_5
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__a3_5
+msgid "A3.5"
+msgstr "A3.5"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__a4
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__a4
+msgid "A4"
+msgstr "A4"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__account
+msgid "Account"
+msgstr "Compte"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__received_date
+msgid "Actual Reception Date"
+msgstr "Date de réception réelle"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Adjustment / Rework Reason"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_adjustment_stage_wizard
+msgid "Adjustment stage Wizard"
+msgstr "Assistant étape d'ajustement"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__age
+msgid "Age"
+msgstr "Âge"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__amount_already_paid
+msgid "Already Paid"
+msgstr "Déjà payé"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__amount_paid
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Amount Paid"
+msgstr "Montant payé"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__amount_to_pay
+msgid "Amount to Pay"
+msgstr "Montant à payer"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Annules"
+msgstr "Annulés"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__appointment_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__appointment
+#: model:ir.model.fields,field_description:doctors_list.field_patient_payment__appointment
+#: model:ir.model.fields,field_description:doctors_list.field_patient_prescription__appointment_id
+msgid "Appointment"
+msgstr "Rendez-vous"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_appointment_record
+msgid "Appointment for patients"
+msgstr "Rendez-vous des patients"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Are you sure you want to cancel this order?"
+msgstr "Êtes-vous sûr de vouloir annuler cette commande ?"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Attachments & Notes"
+msgstr "Pièces jointes et notes"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__attachment_ids
+msgid "Attachments (photos, X-rays, STL)"
+msgstr "Pièces jointes (photos, radios, STL)"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Aucun rendez-vous ce mois"
+msgstr "Aucun rendez-vous ce mois"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__b1
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__b1
+msgid "B1"
+msgstr "B1"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__b2
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__b2
+msgid "B2"
+msgstr "B2"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__b3
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__b3
+msgid "B3"
+msgstr "B3"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__b4
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__b4
+msgid "B4"
+msgstr "B4"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Billing"
+msgstr "Facturation"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__birthday
+msgid "Birthday"
+msgstr "Date de naissance"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__impression_type__both
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__impression_type__both
+msgid "Both"
+msgstr "Les deux"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__bridge
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__bridge
+msgid "Bridge"
+msgstr "Bridge"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__c1
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__c1
+msgid "C1"
+msgstr "C1"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__c2
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__c2
+msgid "C2"
+msgstr "C2"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__c3
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__c3
+msgid "C3"
+msgstr "C3"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__c4
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__c4
+msgid "C4"
+msgstr "C4"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "CA Brut"
+msgstr "CA Brut"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_adjustment_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_declare_payment_wizard_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_send_order_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__cancelled
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__category
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Chargement en cours..."
+msgstr "Chargement en cours..."
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Clinic Stamp"
+msgstr ""
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Clinique"
+msgstr "Clinique"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__removable_complete
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__removable_complete
+msgid "Complete Denture"
+msgstr "Prothèse complète"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_adjustment_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_send_order_wizard_form
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_declare_payment_wizard_form
+msgid "Confirm Payment"
+msgstr "Confirmer le paiement"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Cout Labo"
+msgstr "Coût labo"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "Create Lab Order"
+msgstr "Créer une commande labo"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_create_lab_order_wizard
+msgid "Create Lab Order from Appointment"
+msgstr "Créer une commande labo depuis le rendez-vous"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_dashboard__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__create_uid
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_dashboard__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__create_date
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__currency
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__currency_id
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__currency_id
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__currency_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__currency_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__currency_id
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__d2
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__d2
+msgid "D2"
+msgstr "D2"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__d3
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__d3
+msgid "D3"
+msgstr "D3"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__general_shade__d4
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__general_shade__d4
+msgid "D4"
+msgstr "D4"
+
+#. module: doctors_list
+#: model:ir.ui.menu,name:doctors_list.menu_doctor_dashboard
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#. module: doctors_list
+#: model:ir.actions.client,name:doctors_list.action_doctor_dashboard
+msgid "Dashboard Medecins"
+msgstr "Tableau de bord médecins"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Date:"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Dates"
+msgstr "Dates"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__appointment
+msgid "Deal"
+msgstr "Affaire"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_declare_payment_wizard_form
+msgid "Declare Payment"
+msgstr "Déclarer un paiement"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_declare_payment_wizard
+msgid "Declare Payment Wizard"
+msgstr "Assistant de déclaration de paiement"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__delivered
+msgid "Delivered"
+msgstr "Livré"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Dental Implants Provider"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_dental_lab_order
+msgid "Dental Lab Order"
+msgstr "Commande labo dentaire"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_dental_lab_order_line
+msgid "Dental Lab Order Line"
+msgstr "Ligne de commande labo dentaire"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_adjustment_stage_wizard_form
+msgid "Describe the adjustment needed…"
+msgstr "Décrivez l'ajustement nécessaire…"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__description
+msgid "Description"
+msgstr "Description"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Detail par Medecin"
+msgstr "Détail par médecin"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__impression_type__digital
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__impression_type__digital
+msgid "Digital Impression (STL)"
+msgstr "Empreinte numérique (STL)"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_dashboard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_patient_payment__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_patient_prescription__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_quotations__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_prepare_wizard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__display_name
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__doctor_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__doctor_id
+#: model:ir.model.fields,field_description:doctors_list.field_patient_payment__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_patient_prescription__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_quotations__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_prepare_wizard__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__doctor
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__doctor
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Doctor"
+msgstr "Médecin"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_doctor_dashboard
+msgid "Doctor Dashboard"
+msgstr "Tableau de bord médecin"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_doctor_speciality
+#: model:ir.ui.menu,name:doctors_list.doctor_speciality_sub
+msgid "Doctor Speciality"
+msgstr "Spécialité du médecin"
+
+#. module: doctors_list
+#: model:ir.actions.act_window,name:doctors_list.doctor_speciality_action
+msgid "Doctor speciality"
+msgstr "Spécialité du médecin"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Doctor's Signature"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.ui.menu,name:doctors_list.doctors_main
+msgid "Doctors"
+msgstr "Médecins"
+
+#. module: doctors_list
+#: model:ir.actions.act_window,name:doctors_list.doctors_action
+#: model:ir.model,name:doctors_list.model_doctors
+#: model:ir.ui.menu,name:doctors_list.doctors_list_sub
+msgid "Doctors list"
+msgstr "Liste des médecins"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Efficacite"
+msgstr "Efficacité"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "En cours"
+msgstr "En cours"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Expected Date"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__expected_date
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__expected_date
+msgid "Expected Reception Date"
+msgstr "Date de réception prévue"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Files (photos, X-rays, STL)"
+msgstr "Fichiers (photos, radios, STL)"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__first_name
+msgid "First name"
+msgstr "Prénom"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__fitting_date
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Fitting Date"
+msgstr "Date d'essayage"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__fitting
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Fitting Session"
+msgstr "Séance d'essayage"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__fitting_count
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Fitting Sessions"
+msgstr "Séances d'essayage"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__fixed
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__fixed
+msgid "Fixed Prosthesis"
+msgstr "Prothèse fixe"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__name
+msgid "Full name"
+msgstr "Nom complet"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__gender
+msgid "Gender"
+msgstr "Sexe"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "General Information"
+msgstr "Informations générales"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__general_shade
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__general_shade
+msgid "General Shade (Vita)"
+msgstr "Teinte générale (Vita)"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__id
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__id
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__id
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__id
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__id
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_dashboard__id
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__id
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__id
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__id
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__id
+#: model:ir.model.fields,field_description:doctors_list.field_patient_payment__id
+#: model:ir.model.fields,field_description:doctors_list.field_patient_prescription__id
+#: model:ir.model.fields,field_description:doctors_list.field_quotations__id
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_prepare_wizard__id
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__id
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__id
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__id
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__id
+msgid "ID"
+msgstr "ID"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__implant_abutment
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__implant_abutment
+msgid "Implant Abutment"
+msgstr "Pilier d'implant"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__implant
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__implant
+msgid "Implantology"
+msgstr "Implantologie"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Impression"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__impression_type
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__impression_type
+msgid "Impression Type"
+msgstr "Type d'empreinte"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__manufacturing
+msgid "In Manufacturing"
+msgstr "En fabrication"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__inlay
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__inlay
+msgid "Inlay"
+msgstr "Inlay"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "Instructions for the lab technician…"
+msgstr "Instructions pour le technicien de labo…"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Instructions or remarks for the lab technician…"
+msgstr "Instructions ou remarques pour le technicien de labo…"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__invoiced
+msgid "Invoiced"
+msgstr "Facturé"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "LAB ORDER"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.actions.report,name:doctors_list.action_report_dental_lab_order
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__order_id
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__order_id
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Lab Order"
+msgstr "Commande labo"
+
+#. module: doctors_list
+#: model:ir.actions.act_window,name:doctors_list.action_dental_lab_order
+#: model:ir.ui.menu,name:doctors_list.menu_dental_lab_main
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.laboratory_list_form
+msgid "Lab Orders"
+msgstr "Commandes labo"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__invoice_status
+msgid "Lab Payment Status"
+msgstr "Statut de paiement labo"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Lab Technician"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__Labo_ids
+msgid "Lab lines"
+msgstr "Lignes labo"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Labo :"
+msgstr "Labo :"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.appointment_record_form_inherit_labo_lines
+msgid "Laboratoire"
+msgstr "Laboratoire"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__lab_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__lab_id
+#: model:ir.ui.menu,name:doctors_list.menu_dental_labo_main
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: doctors_list
+#: model:ir.actions.act_window,name:doctors_list.laboratory_list_action
+#: model:ir.ui.menu,name:doctors_list.laboratory_list_list_sub
+msgid "Laboratory list"
+msgstr "Liste des laboratoires"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_dashboard__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__write_uid
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_dashboard__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__write_date
+#: model:ir.model.fields,field_description:doctors_list.field_send_order_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__last_name
+msgid "Last name"
+msgstr "Nom"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__emax
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__emax
+msgid "Lithium Disilicate (e.max)"
+msgstr "Disilicate de lithium (e.max)"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Mark as Delivered"
+msgstr "Marquer comme livré"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Mark as Placed"
+msgstr "Marquer comme commandé"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__material
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__material
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Material"
+msgstr "Matériau"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Medecin"
+msgstr "Médecin"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__full_metal
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__full_metal
+msgid "Metal"
+msgstr "Métal"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__mobile
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Mois actuel"
+msgstr "Mois actuel"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__doctors__gender__mr
+msgid "Mr"
+msgstr "M."
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__doctors__gender__ms
+msgid "Ms"
+msgstr "Mme"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__name
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_product__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.appointment_record_form_inherit_labo_lines
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "New Lab Order"
+msgstr "Nouvelle commande labo"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__guard
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__guard
+msgid "Night Guard / Splint"
+msgstr "Gouttière nocturne"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__priority__0
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__priority__0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__invoice_status__not_billed
+msgid "Not Billed"
+msgstr "Non facturé"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "Notes"
+msgstr "Notes"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Notes for Technician"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__notes
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__notes
+msgid "Notes for the Technician"
+msgstr "Notes pour le technicien"
+
+#. module: doctors_list
+#: model:ir.model.fields,help:doctors_list.field_dental_lab_order__fitting_count
+msgid "Number of fitting sessions performed"
+msgstr "Nombre de séances d'essayage effectuées"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__onlay
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__onlay
+msgid "Onlay"
+msgstr "Onlay"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__order_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__order_id
+msgid "Order"
+msgstr "Commande"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__order_date
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Order Date"
+msgstr "Date de commande"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__line_ids
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__line_ids
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "Order Lines"
+msgstr "Lignes de commande"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_declare_payment_wizard_form
+msgid "Order Summary"
+msgstr "Résumé de la commande"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__amount_total
+msgid "Order Total"
+msgstr "Total de la commande"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__order_ids
+msgid "Orders"
+msgstr "Commandes"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__ortho
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__ortho
+msgid "Orthodontics"
+msgstr "Orthodontie"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__other
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__other
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__other
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__other
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__other
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__other
+msgid "Other"
+msgstr "Autre"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__pmma
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__pmma
+msgid "PMMA"
+msgstr "PMMA"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__invoice_status__paid
+msgid "Paid"
+msgstr "Payé"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Part Clinique"
+msgstr "Part clinique"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Part Medecin ("
+msgstr "Part médecin ("
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Part Medecins"
+msgstr "Part médecins"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__removable_partial
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__removable_partial
+msgid "Partial Denture (Stellite)"
+msgstr "Prothèse partielle (Stellite)"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__invoice_status__partial
+msgid "Partially Paid"
+msgstr "Partiellement payé"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_patient_prescription
+msgid "Patient Prescription"
+msgstr "Ordonnance du patient"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_declare_payment_wizard_form
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_patient_payment
+msgid "Payments for patients"
+msgstr "Paiements des patients"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__percentage
+msgid "Percentage %"
+msgstr "Pourcentage %"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__impression_type__physical
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__impression_type__physical
+msgid "Physical Impression"
+msgstr "Empreinte physique"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__placed
+msgid "Placed"
+msgstr "Commandé"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__placement_date
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Placement Date"
+msgstr "Date de pose"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Planifies"
+msgstr "Planifiés"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__metal_ceramic
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__metal_ceramic
+msgid "Porcelain-Fused-to-Metal"
+msgstr "Céramo-métallique"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__crown_pfm
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__crown_pfm
+msgid "Porcelain-Fused-to-Metal Crown"
+msgstr "Couronne céramo-métallique"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__price
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__price
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__price
+msgid "Price"
+msgstr "Prix"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__price_total
+msgid "Price Total"
+msgstr "Prix total"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Print Lab Order"
+msgstr "Imprimer la commande labo"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__priority
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__priority
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__product_id
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__product_id
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Product"
+msgstr "Produit"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__prosthesis_type
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__prosthesis_type
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Prosthesis Type"
+msgstr "Type de prothèse"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__provisional
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__provisional
+msgid "Provisional"
+msgstr "Provisoire"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Qty"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__quantity
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__quantity
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__quotation
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__quotation
+msgid "Quotation"
+msgstr "Devis"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "RDV au total"
+msgstr "RDV au total"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_adjustment_stage_wizard_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_send_order_wizard_form
+msgid "Receive Order"
+msgstr "Réceptionner la commande"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Received"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Ref:"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__name
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_list
+msgid "Reference"
+msgstr "Référence"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_declare_payment_wizard__amount_remaining
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Remaining"
+msgstr "Restant"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__amount_remaining
+msgid "Remaining Amount"
+msgstr "Montant restant"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__work_type__removable
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__work_type__removable
+msgid "Removable Prosthesis"
+msgstr "Prothèse amovible"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Reset to Draft"
+msgstr "Réinitialiser en brouillon"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__resin
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__resin
+msgid "Resin"
+msgstr "Résine"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Return for Adjustment"
+msgstr "Retourner pour ajustement"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__rework
+msgid "Returned for Adjustment"
+msgstr "Retourné pour ajustement"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Revenu Net"
+msgstr "Revenu net"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_adjustment_stage_wizard__rework_reason
+msgid "Reword Reason"
+msgstr "Motif de reprise"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__rework_reason
+msgid "Rework Reason"
+msgstr "Motif de reprise"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Rue Sakhri Ali - El Eulma 19600 - Tel. 0550 49 42 98"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "STATUS :"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_send_order_wizard
+msgid "Send Lab Order Wizard"
+msgstr "Assistant d'envoi de la commande labo"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Send to Lab"
+msgstr "Envoyer au labo"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__sent
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Sent to Lab"
+msgstr "Envoyé au labo"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__sent_date
+msgid "Sent to Lab Date"
+msgstr "Date d'envoi au labo"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Shade (Vita)"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctor_speciality__name
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__speciality
+msgid "Speciality"
+msgstr "Spécialité"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Start Manufacturing"
+msgstr "Démarrer la fabrication"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__state
+msgid "Status"
+msgstr "Statut"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "TOTAL"
+msgstr ""
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Tableau de Bord Medecins"
+msgstr "Tableau de bord médecins"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Taiba Dental Clinic"
+msgstr "Taiba Dental Clinic"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid ""
+"Taiba Dental Clinic - Rue Sakhri Ali, El Eulma 19600 - Tel. 0550 49 42 98 - "
+"4.9 *"
+msgstr ""
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Teeth (FDI)"
+msgstr ""
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Termines"
+msgstr "Terminés"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__invoice_status__to_pay
+msgid "To Pay"
+msgstr "À payer"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__tooth_numbers
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__tooth_numbers
+msgid "Tooth Numbers (FDI)"
+msgstr "Numéros de dents (FDI)"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__amount_total
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__price_total
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+#: model_terms:ir.ui.view,arch_db:doctors_list.view_create_lab_order_wizard_form
+msgid "Total"
+msgstr "Total"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__total_paid
+msgid "Total Paid"
+msgstr "Total payé"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "Total RDV"
+msgstr "Total RDV"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__total_remaining
+msgid "Total Remaining"
+msgstr "Total restant"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__total_payments_labo
+msgid "Total labo"
+msgstr "Total labo"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_laboratory_list__total_orders
+msgid "Total orders"
+msgstr "Total des commandes"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Tracking #"
+msgstr ""
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__tracking_number
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__tracking_number
+msgid "Tracking / Delivery Note No."
+msgstr "N° de suivi / bon de livraison"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__treatment
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__treatment
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__treatment
+msgid "Treatment"
+msgstr "Traitement"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_doctors__treatments_lines
+msgid "Treatments"
+msgstr "Traitements"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__price_unit
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order_line__price_unit
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Unit Price"
+msgstr "Prix unitaire"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__priority__1
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__priority__1
+msgid "Urgent"
+msgstr "Urgent"
+
+#. module: doctors_list
+#: model_terms:ir.ui.view,arch_db:doctors_list.dental_lab_order_view_form
+msgid "Validate"
+msgstr "Valider"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__state__validated
+msgid "Validated"
+msgstr "Validé"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__veneer
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__veneer
+msgid "Veneer"
+msgstr "Facette"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard__priority__2
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order__priority__2
+msgid "Very Urgent"
+msgstr "Très urgent"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard_line__wizard_id
+msgid "Wizard"
+msgstr "Assistant"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_create_lab_order_wizard_line
+msgid "Wizard Lab Order Line"
+msgstr "Ligne de commande labo (assistant)"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_create_lab_order_wizard__work_type
+#: model:ir.model.fields,field_description:doctors_list.field_dental_lab_order__work_type
+#: model_terms:ir.ui.view,arch_db:doctors_list.report_dental_lab_order_document
+msgid "Work Type"
+msgstr "Type de travail"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__material__zirconia
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__material__zirconia
+msgid "Zirconia"
+msgstr "Zircone"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__crown_zirconia
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__crown_zirconia
+msgid "Zirconia Crown"
+msgstr "Couronne en zircone"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "apres cout labo"
+msgstr "après coût labo"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "benefice net"
+msgstr "bénéfice net"
+
+#. module: doctors_list
+#: model:ir.model.fields,field_description:doctors_list.field_appointment_record__category
+#: model:ir.model.fields,field_description:doctors_list.field_patient_payment__category
+#: model:ir.model.fields,field_description:doctors_list.field_quotations__category
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_prepare_wizard__category
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment__category
+#: model:ir.model.fields,field_description:doctors_list.field_quotations_treatment_wizard__category
+#: model:ir.model.fields,field_description:doctors_list.field_treatment_plan_lines__category
+msgid "category"
+msgstr "catégorie"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "ce mois"
+msgstr "ce mois"
+
+#. module: doctors_list
+#: model:ir.model.fields.selection,name:doctors_list.selection__create_lab_order_wizard_line__prosthesis_type__crown_emax
+#: model:ir.model.fields.selection,name:doctors_list.selection__dental_lab_order_line__prosthesis_type__crown_emax
+msgid "e.max Crown"
+msgstr "Couronne e.max"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_laboratory_list
+msgid "laboratory list"
+msgstr "liste des laboratoires"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_laboratory_product
+msgid "laboratory product list"
+msgstr "liste des produits de laboratoire"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_treatment_plan_lines
+msgid "lines plan of patients treatments"
+msgstr "lignes du plan de traitement des patients"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "medecin(s)"
+msgstr "médecin(s)"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "part clinique moy."
+msgstr "part clinique moy."
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_quotations_treatment
+msgid "quotations Treatment for patients"
+msgstr "traitement du devis pour les patients"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_quotations
+msgid "quotations for patients"
+msgstr "devis pour les patients"
+
+#. module: doctors_list
+#. odoo-javascript
+#: code:addons/doctors_list/static/src/xml/doctor_dashboard.xml:0
+msgid "total a payer"
+msgstr "total à payer"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_quotations_treatment_wizard
+msgid "wizard quotations Treatment for patients"
+msgstr "assistant de traitement du devis pour les patients"
+
+#. module: doctors_list
+#: model:ir.model,name:doctors_list.model_quotations_prepare_wizard
+msgid "wizard quotations for patients"
+msgstr "assistant de devis pour les patients"

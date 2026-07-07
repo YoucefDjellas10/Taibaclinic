@@ -1,0 +1,807 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* finance_manage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-07 05:57+0000\n"
+"PO-Revision-Date: 2026-07-07 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_expense_refuse_wizard_form
+msgid ""
+"<i class=\"fa fa-exclamation-triangle\"/>\n"
+"                    Please provide a reason for refusing this expense."
+msgstr ""
+"<i class=\"fa fa-exclamation-triangle\"/>\n"
+"                    يرجى تقديم سبب رفض هذه النفقة."
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_receive_wizard_form
+msgid ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                    Stock will be updated. The order will remain <b>Unpaid</b>."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                    سيتم تحديث المخزون. ستبقى الحالة <b>غير مدفوعة</b>."
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__amount
+msgid "Amount Paid"
+msgstr "المبلغ المدفوع"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Annuler"
+msgstr "إلغاء"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__appointment_id
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__appointment_ids
+msgid "Appointment"
+msgstr "الموعد"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_appointment_record
+msgid "Appointment for patients"
+msgstr "موعد المرضى"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.product_record_form
+msgid "Appointments"
+msgstr "المواعيد"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_app_products
+msgid "Appointments products lines"
+msgstr "بنود منتجات المواعيد"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__attachment_ids
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__availability
+msgid "Availability"
+msgstr "التوفر"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__product_record__availability__available
+msgid "Available"
+msgstr "متوفر"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_expense_refuse_wizard_form
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_receive_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__cancellation_date
+msgid "Cancellation date"
+msgstr "تاريخ الإلغاء"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__purchase_order_record__status__cancelled
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__cancelled_by
+msgid "Cancelled by"
+msgstr "ألغي بواسطة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__category
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__category_id
+msgid "Category"
+msgstr "الفئة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__name
+msgid "Category Name"
+msgstr "اسم الفئة"
+
+#. module: finance_manage
+#: model:ir.ui.menu,name:finance_manage.configuration_sub
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_receive_wizard_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_expense_refuse_wizard_form
+msgid "Confirm Refusal"
+msgstr "تأكيد الرفض"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__confirmation_date
+msgid "Confirmation date"
+msgstr "تاريخ التأكيد"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__purchase_order_record__status__confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__confirmed_by
+msgid "Confirmed by"
+msgstr "أكد بواسطة"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Confirmer"
+msgstr "تأكيد"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__create_uid
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__create_date
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__currency
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__currency
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__currency
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__currency_id
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__currency
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__currency_id
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__Date
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__default_price
+msgid "Default price"
+msgstr "السعر الافتراضي"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_material_inventory_form
+msgid "Description..."
+msgstr "الوصف..."
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_appointment_record__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__display_name
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__expense_record__status__draft
+#: model:ir.model.fields.selection,name:finance_manage.selection__purchase_order_record__status__draft
+#: model_terms:ir.ui.view,arch_db:finance_manage.expense_record_search
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_expense_refuse_wizard_form
+msgid "Enter the reason for refusal..."
+msgstr "أدخل سبب الرفض..."
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__material_inventory__category__equipment
+msgid "Equipment"
+msgstr "معدات"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__expected_date
+msgid "Expected Delivery Date"
+msgstr "تاريخ التسليم المتوقع"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.expense_record_action
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__expense_id
+#: model:ir.ui.menu,name:finance_manage.expense_record_sub
+msgid "Expense"
+msgstr "نفقة"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_expense_refuse_wizard
+msgid "Expense Refuse Reason Wizard"
+msgstr "معالج سبب رفض النفقة"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.expense_type_record_action
+#: model:ir.ui.menu,name:finance_manage.expense_type_record_sub
+msgid "Expense type"
+msgstr "نوع النفقة"
+
+#. module: finance_manage
+#: model:ir.ui.menu,name:finance_manage.finance_menu
+msgid "Finance"
+msgstr "المالية"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.supplier_record_form
+msgid "Financial Summary"
+msgstr "الملخص المالي"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.expense_record_form
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "History"
+msgstr "السجل"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__id
+#: model:ir.model.fields,field_description:finance_manage.field_appointment_record__id
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__id
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__id
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__id
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__id
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__id
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__id
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__id
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__id
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__id
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__id
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__id
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__id
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: finance_manage
+#: model:ir.ui.menu,name:finance_manage.inventory_main
+msgid "Inventory management"
+msgstr "إدارة المخزون"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__is_payment_only
+msgid "Is Payment Only"
+msgstr "دفع فقط"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__write_uid
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_product_category_record__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__write_date
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_appointment_record__product_ids
+msgid "Lines"
+msgstr "البنود"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__product_record__availability__low_stock
+msgid "Low Stock"
+msgstr "مخزون منخفض"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.appointment_record_form_inherit_products
+msgid "Mark as Completed"
+msgstr "تحديد كـ «مكتمل»"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__material_id
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_material_inventory_form
+msgid "Material"
+msgstr "المادة"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.action_material_inventory
+#: model:ir.model,name:finance_manage.model_material_inventory
+#: model:ir.ui.menu,name:finance_manage.menu_material_inventory_root
+msgid "Material Inventory"
+msgstr "مخزون المواد"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_material_price_history
+msgid "Material Price History"
+msgstr "سجل أسعار المواد"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_material_inventory_form
+msgid "Material name..."
+msgstr "اسم المادة..."
+
+#. module: finance_manage
+#: model:ir.ui.menu,name:finance_manage.menu_material_inventory_list
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_material_inventory_list
+msgid "Materials"
+msgstr "المواد"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__min_price
+msgid "Min price"
+msgstr "الحد الأدنى للسعر"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__min
+msgid "Minimum must be"
+msgstr "يجب أن يكون الحد الأدنى"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_type_record__name
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__name
+#: model:ir.model.fields,field_description:finance_manage.field_price_category__name
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__name
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__name
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__note
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__note
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__note
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.expense_record_form
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Notes..."
+msgstr "ملاحظات..."
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__order_id
+msgid "Order"
+msgstr "الطلب"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__order_date
+msgid "Order Date"
+msgstr "تاريخ الطلب"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__line_ids
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Order Lines"
+msgstr "بنود الطلب"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__material_inventory__category__other
+msgid "Other"
+msgstr "أخرى"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__product_record__availability__out_of_stock
+msgid "Out of Stock"
+msgstr "نفاد المخزون"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__purchase_order_record__payment_status__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_receive_wizard__is_paid
+msgid "Paid ?"
+msgstr "مدفوع؟"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__paid_amount
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__paid_by
+msgid "Paid By"
+msgstr "دفع بواسطة"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Payment"
+msgstr "الدفعة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__payment_date
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__payment_status
+msgid "Payment Status"
+msgstr "حالة الدفع"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_price_history__price
+msgid "Price"
+msgstr "السعر"
+
+#. module: finance_manage
+#: model:ir.ui.menu,name:finance_manage.price_category_action_sub
+msgid "Price Category"
+msgstr "فئة السعر"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__price_history_ids
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_material_inventory_form
+msgid "Price History"
+msgstr "سجل الأسعار"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.price_category_action
+#: model:ir.model,name:finance_manage.model_price_category
+msgid "Price category"
+msgstr "فئة السعر"
+
+#. module: finance_manage
+#: model:ir.ui.menu,name:finance_manage.pricing_main
+msgid "Pricing"
+msgstr "التسعير"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.pricing_list_action
+#: model:ir.ui.menu,name:finance_manage.pricing_list_sub
+msgid "Pricing list"
+msgstr "قائمة التسعير"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__product
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__product
+msgid "Product"
+msgstr "المنتج"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.product_category_action
+#: model:ir.ui.menu,name:finance_manage.product_category_menu
+msgid "Product Categories"
+msgstr "فئات المنتجات"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_product_category_record
+msgid "Product Category"
+msgstr "فئة المنتج"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.product_record_action
+#: model:ir.ui.menu,name:finance_manage.product_record_action_sub
+msgid "Product list"
+msgstr "قائمة المنتجات"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.appointment_record_form_inherit_products
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__purchase_ids
+msgid "Purchase"
+msgstr "الشراء"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_purchase_order_record
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__order_id
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.action_purchase_order_record
+#: model:ir.ui.menu,name:finance_manage.menu_purchase_order_list
+#: model_terms:ir.ui.view,arch_db:finance_manage.supplier_record_form
+msgid "Purchase Orders"
+msgstr "أوامر الشراء"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_purchase_receive_wizard
+msgid "Purchase Receive & Payment Wizard"
+msgstr "معالج استلام ودفع الشراء"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__purchase
+msgid "Purchase order"
+msgstr "أمر شراء"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__purchase_ids
+#: model_terms:ir.ui.view,arch_db:finance_manage.product_record_form
+msgid "Purchases"
+msgstr "المشتريات"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_app_products__quantity
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__material_inventory__category__raw
+msgid "Raw Material"
+msgstr "مادة خام"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_receive_wizard_form
+msgid "Receive Order"
+msgstr "استلام الطلب"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__purchase_order_record__status__received
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__received_by
+msgid "Received by"
+msgstr "استلم بواسطة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__reception_date
+msgid "Reception date"
+msgstr "تاريخ الاستلام"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_material_inventory__reference
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.expense_record_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_expense_refuse_wizard_form
+msgid "Refuse Expense"
+msgstr "رفض النفقة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__refuse_reason
+#: model:ir.model.fields,field_description:finance_manage.field_expense_refuse_wizard__refuse_reason
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__expense_record__status__refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__refused_by
+msgid "Refused By"
+msgstr "رفض بواسطة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__refused_date
+msgid "Refused On"
+msgstr "رفض في"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__remaining_amount
+msgid "Remaining Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_product_record__remaining_qt
+msgid "Remaining Qt"
+msgstr "الكمية المتبقية"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.view_purchase_order_form
+msgid "Réceptionner"
+msgstr "استلام"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_appointment_record__status
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__status
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__subtotal
+msgid "Subtotal"
+msgstr "المجموع الفرعي"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__supplier_id
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: finance_manage
+#: model:ir.actions.act_window,name:finance_manage.supplier_record_action
+#: model:ir.ui.menu,name:finance_manage.supplier_record_action_sub
+msgid "Supplier list"
+msgstr "قائمة الموردين"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.supplier_record_form
+msgid "Supplier name ...."
+msgstr "اسم المورد...."
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_record__total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__total_orders_amount
+msgid "Total Orders Amount"
+msgstr "إجمالي مبلغ الطلبات"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_supplier_record__total_paid_amount
+msgid "Total Paid Amount"
+msgstr "إجمالي المبلغ المدفوع"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_purchase_order_line__unit_price
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__purchase_order_record__payment_status__unpaid
+msgid "Unpaid"
+msgstr "غير مدفوع"
+
+#. module: finance_manage
+#: model_terms:ir.ui.view,arch_db:finance_manage.expense_record_form
+msgid "Validate"
+msgstr "تصديق"
+
+#. module: finance_manage
+#: model:ir.model.fields.selection,name:finance_manage.selection__expense_record__status__validated
+msgid "Validated"
+msgstr "تم التصديق"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__validated_by
+msgid "Validated By"
+msgstr "صدّق بواسطة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__validated_date
+msgid "Validated On"
+msgstr "صدّق في"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__category
+msgid "category"
+msgstr "الفئة"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_expense_record
+msgid "expense record list"
+msgstr "قائمة النفقات"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_expense_type_record
+msgid "expense type record"
+msgstr "نوع النفقة"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_expense_record__name
+msgid "id"
+msgstr "المعرف"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_pricing_list
+msgid "pricing list of all treatment"
+msgstr "قائمة تسعير جميع العلاجات"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_product_record
+msgid "product list"
+msgstr "قائمة المنتجات"
+
+#. module: finance_manage
+#: model:ir.model,name:finance_manage.model_supplier_record
+msgid "supplier list"
+msgstr "قائمة الموردين"
+
+#. module: finance_manage
+#: model:ir.model.fields,field_description:finance_manage.field_pricing_list__treatment
+msgid "treatments"
+msgstr "العلاجات"
