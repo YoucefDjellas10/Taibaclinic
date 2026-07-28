@@ -74,6 +74,18 @@ class Patients(models.Model):
                 total += payment.amount or 0.0
             rec.payment_total = total
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super().create(vals_list)
+        records._compute_full_name()
+        return records
+
+    def write(self, vals):
+        res = super().write(vals)
+        if any(f in vals for f in ('gender', 'first_name', 'last_name')):
+            self._compute_full_name()
+        return res
+
     @api.depends('birthday')
     def _compute_age(self):
         today = date.today()
