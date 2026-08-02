@@ -6,6 +6,7 @@
             <t t-foreach="docs" t-as="o">
                 <t t-set="base_url" t-value="env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
 
+                <style t-out="'@font-face { font-family: Pristina; src: url(%(b)s/patients_list/static/fonts/PRISTINA.TTF); } @font-face { font-family: Times New Roman; src: url(%(b)s/patients_list/static/fonts/times.ttf); }' % {'b': base_url}"/>
                 <div class="page" style="font-family: Arial, Helvetica, sans-serif; color:#1a1a1a; position:relative; padding-bottom:110px;">
 
                     <!-- EN-TETE : nom clinique centre (zone hors logo) + logo a droite -->
@@ -14,7 +15,9 @@
                              style="position:absolute; top:0; right:0; height:97pt;"/>
                         <div style="text-align:center; margin-right:120pt; padding-top:6pt;">
                             <div style="font-family:'Times New Roman', Georgia, serif; font-size:24pt; color:#000;">TAIBA DENTAL CLINIC</div>
-                            <div dir="rtl" style="font-family:'Times New Roman', 'Noto Naskh Arabic', serif; font-size:20pt; color:#17365d; line-height:1.1;">العيادة الجماعية طبية لطب وجراحة الاسنان</div>
+                            <div style="margin-top:2pt;">
+                                <img t-attf-src="#{base_url}/patients_list/static/src/img/subtitle_ar.png" style="height:26pt;"/>
+                            </div>
                         </div>
                         <div style="position:absolute; bottom:0; left:0; width:88%; border-bottom:1.2pt solid #4F81BD;"></div>
                     </div>
