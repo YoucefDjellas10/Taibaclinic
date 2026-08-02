@@ -55,12 +55,14 @@
     <!-- MENU -->
     <menuitem id="menu_access_manage_root"
               name="User Manage"
-              sequence="100"/>
+              sequence="100"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <menuitem id="menu_access_manage"
               name="User Manage"
               parent="menu_access_manage_root"
               action="action_access_manage"
-              sequence="10"/>
+              sequence="10"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 </odoo>

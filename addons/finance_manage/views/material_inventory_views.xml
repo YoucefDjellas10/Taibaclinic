@@ -71,6 +71,7 @@
         name="Materials"
         parent="inventory_main"
         action="action_material_inventory"
-        sequence="1"/>
+        sequence="1"
+        groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 </odoo>

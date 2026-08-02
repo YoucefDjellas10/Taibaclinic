@@ -92,5 +92,6 @@
               name="Expense"
               parent="finance_menu"
               action="expense_record_action"
-              sequence="11"/>
+              sequence="11"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

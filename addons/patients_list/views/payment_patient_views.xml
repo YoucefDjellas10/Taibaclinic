@@ -62,5 +62,6 @@
               name="Payment"
               parent="finance_manage.finance_menu"
               action="patient_payment_list_action"
-              sequence="250"/>
+              sequence="250"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

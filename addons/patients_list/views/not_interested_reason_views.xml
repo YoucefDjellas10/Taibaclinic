@@ -35,6 +35,7 @@
             name="Not interested reason"
             parent="configuration_list_main"
             action="not_interested_reason_action"
-            sequence="10"/>
+            sequence="10"
+            groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 </odoo>

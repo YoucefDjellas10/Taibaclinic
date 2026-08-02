@@ -204,7 +204,8 @@
               name="Appointment List"
               parent="patient_list_main"
               action="appointment_record_action"
-              sequence="1"/>
+              sequence="1"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <record id="action_today_appointments" model="ir.actions.client">
         <field name="name">Today's Appointments</field>

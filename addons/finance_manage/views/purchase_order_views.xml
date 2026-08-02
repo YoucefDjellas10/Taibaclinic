@@ -138,6 +138,7 @@
             name="Purchase Orders"
             parent="finance_menu"
             action="action_purchase_order_record"
-            sequence="1"/>
+            sequence="1"
+            groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 </odoo>

@@ -34,10 +34,13 @@
 
     <menuitem id="configuration_list_main"
               name="Configuration"
-              sequence="120"/>
+              sequence="120"
+              groups="access_rights.group_admin,access_rights.group_ceo"
+    />
     <menuitem id="treatments_list_sub"
               name="Treatments"
               parent="configuration_list_main"
               action="treatments_list_action"
-              sequence="70"/>
+              sequence="70"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

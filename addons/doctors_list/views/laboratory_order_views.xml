@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- Record rule: doctors only see lab orders assigned to them -->
+    <record id="dental_lab_order_rule_doctor_own" model="ir.rule">
+        <field name="name">Lab orders: doctor sees only own records</field>
+        <field name="model_id" ref="doctors_list.model_dental_lab_order"/>
+        <field name="domain_force">[('doctor_id.account', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('access_rights.group_doctor'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
     <record id="dental_lab_order_view_list" model="ir.ui.view">
         <field name="name">dental.lab.order.list</field>
         <field name="model">dental.lab.order</field>

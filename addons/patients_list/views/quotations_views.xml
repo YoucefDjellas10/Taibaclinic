@@ -96,13 +96,15 @@
 
     <menuitem id="quotations_list_main"
               name="Quotations"
-              sequence="50"/>
+              sequence="50"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <menuitem id="quotations_list_sub"
               name="Quotations"
               parent="quotations_list_main"
               action="quotations_list_action"
-              sequence="50"/>
+              sequence="50"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 
 </odoo>

@@ -56,15 +56,18 @@
 
     <menuitem id="pricing_main"
               name="Pricing"
-              sequence="100"/>
+              sequence="100"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <menuitem id="inventory_main"
               name="Inventory management"
-              sequence="100"/>
+              sequence="100"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <menuitem id="product_record_action_sub"
               name="Product list"
               parent="inventory_main"
               action="product_record_action"
-              sequence="0"/>
+              sequence="0"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

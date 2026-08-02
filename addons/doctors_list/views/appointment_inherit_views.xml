@@ -1,4 +1,16 @@
 <odoo>
+    <!-- Record rule: doctors only see appointments assigned to them -->
+    <record id="appointment_record_rule_doctor_own" model="ir.rule">
+        <field name="name">Appointments: doctor sees only own records</field>
+        <field name="model_id" ref="patients_list.model_appointment_record"/>
+        <field name="domain_force">[('doctor.account', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('access_rights.group_doctor'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
     <!-- Inherit Form View -->
     <record id="appointment_record_form_inherit_labo_lines" model="ir.ui.view">
         <field name="name">appointment.record.form.inherit.labo.lines</field>

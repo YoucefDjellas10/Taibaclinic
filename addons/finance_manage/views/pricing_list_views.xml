@@ -57,10 +57,12 @@
 
     <menuitem id="finance_menu"
               name="Finance"
-              sequence="100"/>
+              sequence="100"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
     <menuitem id="pricing_list_sub"
               name="Pricing list"
               parent="pricing_main"
               action="pricing_list_action"
-              sequence="0"/>
+              sequence="0"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

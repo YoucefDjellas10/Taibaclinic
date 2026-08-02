@@ -30,7 +30,8 @@
               name="Medical history"
               parent="configuration_list_main"
               action="medical_history_action"
-              sequence="200"/>
+              sequence="200"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 
 </odoo>

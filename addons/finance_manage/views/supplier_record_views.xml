@@ -62,5 +62,6 @@
               name="Supplier list"
               parent="finance_menu"
               action="supplier_record_action"
-              sequence="1000"/>
+              sequence="1000"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

@@ -30,7 +30,8 @@
               name="Lost reasons"
               parent="configuration_list_main"
               action="lost_reason_record_action"
-              sequence="90"/>
+              sequence="90"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 
 </odoo>

@@ -1,4 +1,16 @@
 <odoo>
+    <!-- Record rule: doctors only see their own doctor record -->
+    <record id="doctors_rule_doctor_own" model="ir.rule">
+        <field name="name">Doctors: doctor sees only own record</field>
+        <field name="model_id" ref="doctors_list.model_doctors"/>
+        <field name="domain_force">[('account', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('access_rights.group_doctor'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
     <record id="doctors_form" model="ir.ui.view">
         <field name="name">doctors.form</field>
         <field name="model">doctors</field>

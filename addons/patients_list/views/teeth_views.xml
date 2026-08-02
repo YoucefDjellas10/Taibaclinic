@@ -34,5 +34,6 @@
               name="Teeth"
               parent="configuration_list_main"
               action="teeth_list_action"
-              sequence="250"/>
+              sequence="250"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

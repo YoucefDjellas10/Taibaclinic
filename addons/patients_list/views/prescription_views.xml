@@ -11,7 +11,8 @@
     <menuitem id="menu_prescription"
               name="Prescriptions"
               parent="patient_list_main"
-              action="action_prescription"/>
+              action="action_prescription"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <!-- list -->
     <record id="view_prescription_list" model="ir.ui.view">

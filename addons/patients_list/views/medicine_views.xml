@@ -9,7 +9,8 @@
     <menuitem id="menu_medicine"
               name="Medicines"
               parent="configuration_list_main"
-              action="action_medicine"/>
+              action="action_medicine"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
     <record id="view_medicine_list" model="ir.ui.view">
         <field name="name">medical.medicine.list</field>

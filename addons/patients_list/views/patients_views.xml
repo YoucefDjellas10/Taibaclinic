@@ -237,12 +237,14 @@
 
     <menuitem id="patient_list_main"
               name="Patients"
-              sequence="10"/>
+              sequence="10"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
     <menuitem id="patient_list_sub"
               name="Patients"
               parent="patient_list_main"
               action="patient_list_action"
-              sequence="0"/>
+              sequence="0"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 
 </odoo>

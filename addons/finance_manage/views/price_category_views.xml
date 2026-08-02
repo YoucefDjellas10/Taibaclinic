@@ -32,5 +32,6 @@
               name="Price Category"
               parent="pricing_main"
               action="price_category_action"
-              sequence="10"/>
+              sequence="10"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

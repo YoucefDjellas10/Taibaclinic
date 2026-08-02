@@ -96,7 +96,9 @@
 
     <menuitem id="treatment_plan_list_main"
               name="Deals"
-              sequence="50"/>
+              sequence="50"
+              groups="access_rights.group_admin,access_rights.group_ceo"
+    />
     <menuitem id="treatment_plan_list_sub"
               name="Treatment plan"
               parent="treatment_plan_list_main"

@@ -37,7 +37,8 @@
               name="Contact list"
               parent="configuration_list_main"
               action="contact_record_action"
-              sequence="110"/>
+              sequence="110"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 
 </odoo>

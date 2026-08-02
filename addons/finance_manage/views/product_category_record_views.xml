@@ -33,5 +33,6 @@
               name="Product Categories"
               parent="inventory_main"
               action="product_category_action"
-              sequence="5"/>
+              sequence="5"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 </odoo>

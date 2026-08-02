@@ -18,7 +18,7 @@
 
                     </group>
                     <notebook>
-                        <page string="Lab Orders">
+                        <page string="Lab Orders" groups="access_rights.group_admin,access_rights.group_ceo">
                             <field name="order_ids"/>
                         </page>
                     </notebook>
@@ -46,6 +46,7 @@
               name="Laboratory list"
               action="laboratory_list_action"
               parent="menu_dental_labo_main"
-              sequence="100"/>
+              sequence="100"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 </odoo>

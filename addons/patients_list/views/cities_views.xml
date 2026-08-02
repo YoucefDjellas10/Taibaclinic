@@ -33,7 +33,8 @@
               name="Cities"
               parent="configuration_list_main"
               action="cities_records_action"
-              sequence="100"/>
+              sequence="100"
+              groups="access_rights.group_admin,access_rights.group_ceo"/>
 
 
 </odoo>
