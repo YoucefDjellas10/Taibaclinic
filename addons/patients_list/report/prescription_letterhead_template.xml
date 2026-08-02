@@ -8,85 +8,87 @@
 
                 <div class="page" style="font-family: Arial, Helvetica, sans-serif; color:#1a1a1a; position:relative; padding-bottom:110px;">
 
-                    <!-- EN-TETE : nom clinique + logo -->
-                    <table width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
-                            <td style="width:72%; vertical-align:middle;">
-                                <div style="font-size:22px; font-weight:bold; color:#1a2a4a;">TAIBA DENTAL CLINIC</div>
-                                <div dir="rtl" style="font-size:13px; color:#1a2a4a; margin-top:2px;">العيادة الجماعية طبية لطب وجراحة الاسنان</div>
-                            </td>
-                            <td style="width:28%; text-align:right; vertical-align:middle;">
-                                <img t-attf-src="#{base_url}/patients_list/static/src/img/logo.png" style="height:65px;"/>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <hr style="border:none; border-top:1px solid #999; margin:6px 0 10px 0;"/>
+                    <!-- EN-TETE : nom clinique centre (zone hors logo) + logo a droite -->
+                    <div style="position:relative; min-height:100pt;">
+                        <img t-attf-src="#{base_url}/patients_list/static/src/img/logo.png"
+                             style="position:absolute; top:0; right:0; height:97pt;"/>
+                        <div style="text-align:center; margin-right:120pt; padding-top:6pt;">
+                            <div style="font-family:'Times New Roman', Georgia, serif; font-size:24pt; color:#000;">TAIBA DENTAL CLINIC</div>
+                            <div dir="rtl" style="font-family:'Times New Roman', 'Noto Naskh Arabic', serif; font-size:20pt; color:#17365d; line-height:1.1;">العيادة الجماعية طبية لطب وجراحة الاسنان</div>
+                        </div>
+                        <div style="position:absolute; bottom:0; left:0; width:88%; border-bottom:1.2pt solid #4F81BD;"></div>
+                    </div>
 
                     <!-- MEDECINS AGREES -->
-                    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:12pt; margin-bottom:10pt;">
                         <tr>
-                            <td style="width:34%; vertical-align:top;">
-                                <div style="font-weight:bold; font-size:11px;">Dr.Haddad I Ep LEKHCHINE</div>
-                                <div style="font-size:10px;">MEDECIN DENTISTE</div>
-                                <div style="font-size:10px;">N&#176; d'ordre : 1163/19</div>
+                            <td style="width:34%; vertical-align:top; text-align:center; white-space:nowrap;">
+                                <div style="font-weight:bold; font-size:12pt;">Dr.Haddad I Ep LEKHCHINE</div>
+                                <div style="font-size:11.5pt;">MEDECIN DENTISTE</div>
+                                <div style="font-size:11.5pt;">N&#176; d'ordre : 1163/19</div>
                             </td>
-                            <td dir="rtl" style="width:32%; text-align:center; font-size:10px; vertical-align:top;">
-                                <div>قلع الأسنان والقلع الجراحي</div>
-                                <div>زراعة الأسنان</div>
-                                <div>تقويم و تبييض الأسنان</div>
+                            <td style="width:32%; text-align:center; vertical-align:top;">
+                                <img t-attf-src="#{base_url}/patients_list/static/src/img/specialites_ar.png" style="height:55pt;"/>
                             </td>
-                            <td style="width:34%; text-align:right; vertical-align:top;">
-                                <div style="font-weight:bold; font-size:11px;">Dr.BRAFTA F</div>
-                                <div style="font-size:10px;">MEDECIN DENTISTE</div>
-                                <div style="font-size:10px;">N&#176; d'ordre : 1389/19</div>
+                            <td style="width:34%; text-align:center; vertical-align:top; white-space:nowrap;">
+                                <div style="font-weight:bold; font-size:12pt;">Dr.BRAFTA F</div>
+                                <div style="font-size:11.5pt;">MEDECIN DENTISTE</div>
+                                <div style="font-size:11.5pt;">N&#176; d'ordre : 1389/19</div>
                             </td>
                         </tr>
                     </table>
 
                     <!-- DATE -->
-                    <p style="margin:14px 0 4px 0;">
+                    <p style="margin:14pt 0 4pt 10pt; font-size:16pt; font-family:Arial, Helvetica, sans-serif;">
                         El Eulma le :
-                        <span t-esc="o.date.strftime('%d/%m/%Y') if o.date else ''"/>
+                        <span style="padding:0 30pt 2pt 6pt; font-size:13pt;" t-esc="o.date.strftime('%d/%m/%Y') if o.date else ''"/>
                     </p>
 
                     <!-- PATIENT -->
-                    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;">
+                    <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:8pt;">
                         <tr>
-                            <td style="width:40%; border-bottom:1px dotted #999; padding-bottom:3px;">
-                                <strong>Nom :</strong> <span t-esc="o.patient_id.last_name"/>
+                            <td style="width:40%; padding-bottom:2pt;">
+                                <span style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:24pt;">Nom</span>
+                                <span style="font-size:11pt;"> : </span>
+                                <span style="font-size:13pt;" t-esc="o.patient_id.last_name"/>
                             </td>
-                            <td style="width:35%; border-bottom:1px dotted #999; padding-bottom:3px;">
-                                <strong>Pr&#233;nom :</strong> <span t-esc="o.patient_id.first_name"/>
+                            <td style="width:35%; padding-bottom:2pt;">
+                                <span style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:24pt;">Pr&#233;nom</span>
+                                <span style="font-size:11pt;"> : </span>
+                                <span style="font-size:13pt;" t-esc="o.patient_id.first_name"/>
                             </td>
-                            <td style="width:25%; border-bottom:1px dotted #999; padding-bottom:3px;">
-                                <strong>Age :</strong> <span t-esc="o.patient_id.age"/>
+                            <td style="width:25%; padding-bottom:2pt;">
+                                <span style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:22pt;">Age</span>
+                                <span style="font-size:11pt;"> : </span>
+                                <span style="font-size:13pt;" t-esc="o.patient_id.age"/>
                             </td>
                         </tr>
                     </table>
 
-                    <h2 style="font-family: Arial, Helvetica, sans-serif; font-size:20px; text-align:center; text-decoration:underline; margin:22px 0 22px 0;">Ordonnance</h2>
+                    <div style="text-align:center; margin:20pt 0 20pt 0;">
+                        <span style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:36pt; border-bottom:2.5pt solid #000; padding:0 4pt 0 4pt;">Ordonnance</span>
+                    </div>
 
                     <!-- MEDICAMENTS -->
                     <div style="padding:0 4px;">
                         <t t-foreach="o.line_ids" t-as="l">
                             <t t-set="lf" t-value="l.with_context(lang='fr_FR')"/>
                             <div style="margin-bottom:22px; border-bottom:1px dotted #ccc; padding-bottom:14px;">
-                                <div style="font-size:18px; line-height:1.3;">
-                                    <span style="font-weight:bold;"><t t-esc="l_index + 1"/>. </span>
-                                    <span style="font-weight:bold; font-size:22px;"><t t-esc="l.medication_id.name"/></span>
+                                <div style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:18pt; line-height:1.3;">
+                                    <span><t t-esc="l_index + 1"/>. </span>
+                                    <span style="font-size:22pt;"><t t-esc="l.medication_id.name"/></span>
                                     <t t-if="lf.dosage">
                                         <span> &#8212; <t t-esc="lf.dosage"/></span>
                                     </t>
                                 </div>
                                 <t t-if="lf.frequency or lf.duration">
-                                    <div style="font-size:15px; color:#333; margin:6px 0 0 22px; line-height:1.5;">
+                                    <div style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:16pt; color:#333; margin:4pt 0 0 20pt; line-height:1.4;">
                                         <t t-if="lf.frequency"><t t-esc="lf.frequency"/></t>
                                         <t t-if="lf.duration"><t t-if="lf.frequency"> &#8212; </t>pendant <t t-esc="lf.duration"/></t>
                                     </div>
                                 </t>
                                 <t t-if="lf.instructions">
-                                    <div style="font-size:13px; font-style:italic; color:#666; margin:3px 0 0 22px; line-height:1.4;">
+                                    <div style="font-family:'Pristina', 'Monotype Corsiva', cursive; font-size:14pt; color:#555; margin:2pt 0 0 20pt; line-height:1.4;">
                                         <t t-esc="lf.instructions"/>
                                     </div>
                                 </t>
@@ -110,9 +112,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="text-align:center; border-top:1px solid #999; padding-top:6px; margin-top:14px; font-size:10px;">
-                            Rue Guerguite Mabrouk Goutali EL-EULMA<br/>
-                            05 61 75 23 09 / 05 50 49 42 98
+                        <div style="text-align:center; border-top:1pt solid #7D60A0; padding-top:5pt; margin-top:12pt;">
+                            <div style="font-size:13pt; font-family:Arial, Helvetica, sans-serif;">Rue Guerguite Mabrouk Goutali EL-EULMA</div>
+                            <div style="font-family:'Times New Roman', Georgia, serif; font-size:14pt;">05 61 75 23 09 / 05 50 49 42 98</div>
                         </div>
                     </div>
 
