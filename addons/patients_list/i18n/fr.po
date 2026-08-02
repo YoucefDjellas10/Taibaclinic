@@ -646,6 +646,7 @@ msgstr "Brouillon"
 
 #. module: patients_list
 #: model:ir.model.fields,field_description:patients_list.field_prescription_line__duration
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__duration_qty
 #: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
 msgid "Duration"
 msgstr "Durée"
@@ -727,6 +728,7 @@ msgstr ""
 
 #. module: patients_list
 #: model:ir.model.fields,field_description:patients_list.field_prescription_line__frequency
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__freq
 #: model_terms:ir.ui.view,arch_db:patients_list.prescription_report_template
 msgid "Frequency"
 msgstr "Fréquence"
@@ -1942,3 +1944,293 @@ msgstr "🖨️ Imprimer (Entête Taiba)"
 #: model_terms:ir.ui.view,arch_db:patients_list.view_prescription_form
 msgid "🖨️ Imprimer l'ordonnance"
 msgstr "🖨️ Imprimer l'ordonnance"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__dose_qty
+msgid "Dose"
+msgstr "Dose"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__dose_unit
+msgid "Dose unit"
+msgstr "Unité de dose"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__moment
+msgid "Moment"
+msgstr "Moment"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__duration_unit
+msgid "Duration unit"
+msgstr "Unité de durée"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__route
+msgid "Route"
+msgstr "Voie"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__instruction
+msgid "Instruction"
+msgstr "Instruction"
+
+#. module: patients_list
+#: model:ir.model.fields,field_description:patients_list.field_prescription_line__extra_note
+msgid "Free note"
+msgstr "Note libre"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__comprime
+msgid "tablet(s)"
+msgstr "comprimé(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__gelule
+msgid "capsule(s)"
+msgstr "gélule(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__sachet
+msgid "sachet(s)"
+msgstr "sachet(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__goutte
+msgid "drop(s)"
+msgstr "goutte(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__cac
+msgid "teaspoon(s)"
+msgstr "cuillère(s) à café"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__cas
+msgid "tablespoon(s)"
+msgstr "cuillère(s) à soupe"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__application
+msgid "application(s)"
+msgstr "application(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__bain_bouche
+msgid "mouthwash"
+msgstr "bain de bouche"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__injection
+msgid "injection(s)"
+msgstr "injection(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__suppositoire
+msgid "suppository(ies)"
+msgstr "suppositoire(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__dose_unit__ui
+msgid "IU"
+msgstr "UI"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__1j
+msgid "once a day"
+msgstr "1 fois par jour"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__2j
+msgid "twice a day"
+msgstr "2 fois par jour"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__3j
+msgid "3 times a day"
+msgstr "3 fois par jour"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__4j
+msgid "4 times a day"
+msgstr "4 fois par jour"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__4h
+msgid "every 4 hours"
+msgstr "toutes les 4 heures"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__6h
+msgid "every 6 hours"
+msgstr "toutes les 6 heures"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__8h
+msgid "every 8 hours"
+msgstr "toutes les 8 heures"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__12h
+msgid "every 12 hours"
+msgstr "toutes les 12 heures"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__48h
+msgid "every 48 hours"
+msgstr "toutes les 48 heures"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__1s
+msgid "once a week"
+msgstr "1 fois par semaine"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__unique
+msgid "single dose"
+msgstr "dose unique"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__besoin
+msgid "as needed"
+msgstr "si besoin"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__freq__douleur
+msgid "in case of pain"
+msgstr "en cas de douleur"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__avant_repas
+msgid "before meals"
+msgstr "avant les repas"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__pendant_repas
+msgid "with meals"
+msgstr "pendant les repas"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__apres_repas
+msgid "after meals"
+msgstr "après les repas"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__matin
+msgid "in the morning"
+msgstr "le matin"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__midi
+msgid "at noon"
+msgstr "à midi"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__soir
+msgid "in the evening"
+msgstr "le soir"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__matin_soir
+msgid "morning and evening"
+msgstr "matin et soir"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__coucher
+msgid "at bedtime"
+msgstr "au coucher"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__moment__jeun
+msgid "on an empty stomach"
+msgstr "à jeun"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__duration_unit__jour
+msgid "day(s)"
+msgstr "jour(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__duration_unit__semaine
+msgid "week(s)"
+msgstr "semaine(s)"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__duration_unit__mois
+msgid "month(s)"
+msgstr "mois"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__route__orale
+msgid "oral route"
+msgstr "voie orale"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__route__locale
+msgid "local application"
+msgstr "application locale"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__route__bain_bouche
+msgid "as mouthwash"
+msgstr "en bain de bouche"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__route__sublinguale
+msgid "sublingual route"
+msgstr "voie sublinguale"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__route__im
+msgid "intramuscular injection"
+msgstr "injection intramusculaire"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__eau
+msgid "swallow with a large glass of water"
+msgstr "avaler avec un grand verre d'eau"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__pas_croquer
+msgid "do not chew or crush"
+msgstr "ne pas croquer ni écraser"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__recracher
+msgid "do not swallow, spit out after use"
+msgstr "ne pas avaler, recracher après usage"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__garder_bouche
+msgid "keep in mouth 1 minute before spitting out"
+msgstr "garder en bouche 1 minute avant de recracher"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__zone
+msgid "apply to the affected area"
+msgstr "appliquer sur la zone concernée"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__pas_alcool
+msgid "avoid alcohol during treatment"
+msgstr "éviter l'alcool pendant le traitement"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__pas_depasser
+msgid "do not exceed the prescribed dose"
+msgstr "ne pas dépasser la dose prescrite"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__espacer
+msgid "space doses at least 4 hours apart"
+msgstr "espacer les prises d'au moins 4 heures"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__jusqu_bout
+msgid "complete the full course of treatment"
+msgstr "poursuivre le traitement jusqu'au bout"
+
+#. module: patients_list
+#: model:ir.model.fields.selection,name:patients_list.selection__prescription_line__instruction__estomac_plein
+msgid "take with food (full stomach)"
+msgstr "prendre au cours d'un repas (estomac plein)"

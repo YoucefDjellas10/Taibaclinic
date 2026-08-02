@@ -70,19 +70,26 @@
                     <!-- MEDICAMENTS -->
                     <div style="padding:0 4px;">
                         <t t-foreach="o.line_ids" t-as="l">
+                            <t t-set="lf" t-value="l.with_context(lang='fr_FR')"/>
                             <div style="margin-bottom:22px; border-bottom:1px dotted #ccc; padding-bottom:14px;">
                                 <div style="font-size:18px; line-height:1.3;">
                                     <span style="font-weight:bold;"><t t-esc="l_index + 1"/>. </span>
                                     <span style="font-weight:bold; font-size:22px;"><t t-esc="l.medication_id.name"/></span>
-                                    <t t-if="l.dosage">
-                                        <span> - <t t-esc="l.dosage"/></span>
+                                    <t t-if="lf.dosage">
+                                        <span> &#8212; <t t-esc="lf.dosage"/></span>
                                     </t>
                                 </div>
-                                <div style="font-size:14px; color:#555; margin:5px 0 0 18px; line-height:1.4;">
-                                    <t t-if="l.frequency"><t t-esc="l.frequency"/></t>
-                                    <t t-if="l.duration"> pendant <t t-esc="l.duration"/></t>
-                                    <t t-if="l.instructions"> &#8211; <t t-esc="l.instructions"/></t>
-                                </div>
+                                <t t-if="lf.frequency or lf.duration">
+                                    <div style="font-size:15px; color:#333; margin:6px 0 0 22px; line-height:1.5;">
+                                        <t t-if="lf.frequency"><t t-esc="lf.frequency"/></t>
+                                        <t t-if="lf.duration"><t t-if="lf.frequency"> &#8212; </t>pendant <t t-esc="lf.duration"/></t>
+                                    </div>
+                                </t>
+                                <t t-if="lf.instructions">
+                                    <div style="font-size:13px; font-style:italic; color:#666; margin:3px 0 0 22px; line-height:1.4;">
+                                        <t t-esc="lf.instructions"/>
+                                    </div>
+                                </t>
                             </div>
                         </t>
                         <t t-if="not o.line_ids">

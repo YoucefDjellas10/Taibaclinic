@@ -69,10 +69,15 @@
                             <field name="line_ids">
                                 <list editable="bottom">
                                     <field name="medication_id"/>
-                                    <field name="dosage"/>
-                                    <field name="frequency"/>
-                                    <field name="duration"/>
-                                    <field name="instructions"/>
+                                    <field name="dose_qty"/>
+                                    <field name="dose_unit"/>
+                                    <field name="freq"/>
+                                    <field name="moment"/>
+                                    <field name="duration_qty"/>
+                                    <field name="duration_unit"/>
+                                    <field name="route" optional="show"/>
+                                    <field name="instruction" optional="show"/>
+                                    <field name="extra_note" optional="hide"/>
                                 </list>
                             </field>
                         </page>

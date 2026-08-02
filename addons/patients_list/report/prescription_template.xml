@@ -36,6 +36,7 @@
                         </tr>
 
                         <tr t-foreach="o.line_ids" t-as="l">
+                            <t t-set="l" t-value="l.with_context(lang='fr_FR')"/>
                             <td><span t-esc="l.medication_id.name"/></td>
                             <td><span t-esc="l.dosage"/></td>
                             <td><span t-esc="l.frequency"/></td>
