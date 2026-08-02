@@ -32,6 +32,7 @@
               name="Doctor Speciality"
               parent="doctors_main"
               action="doctor_speciality_action"
+              groups="access_rights.group_admin,access_rights.group_ceo"
               sequence="90"/>
 
 

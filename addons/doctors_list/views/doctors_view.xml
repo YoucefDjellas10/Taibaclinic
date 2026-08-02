@@ -65,6 +65,7 @@
               name="Doctors list"
               action="doctors_action"
               parent="doctors_main"
+              groups="access_rights.group_admin,access_rights.group_ceo"
               sequence="50"/>
 
 </odoo>
