@@ -6,7 +6,7 @@
             <t t-foreach="docs" t-as="o">
                 <t t-set="base_url" t-value="env['ir.config_parameter'].sudo().get_param('web.base.url')"/>
 
-                <style t-out="'@font-face { font-family: Pristina; src: url(%(b)s/patients_list/static/fonts/PRISTINA.TTF); } @font-face { font-family: Times New Roman; src: url(%(b)s/patients_list/static/fonts/times.ttf); }' % {'b': base_url}"/>
+                <style t-out="'@font-face { font-family: Pristina; src: url(' + base_url + '/patients_list/static/fonts/PRISTINA.TTF); } @font-face { font-family: Times New Roman; src: url(' + base_url + '/patients_list/static/fonts/times.ttf); }'"/>
                 <div class="page" style="font-family: Arial, Helvetica, sans-serif; color:#1a1a1a; position:relative; padding-bottom:110px;">
 
                     <!-- EN-TETE : nom clinique centre (zone hors logo) + logo a droite -->
