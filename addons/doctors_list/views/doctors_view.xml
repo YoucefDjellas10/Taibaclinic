@@ -59,6 +59,7 @@
 
     <menuitem id="doctors_main"
               name="Doctors"
+              groups="access_rights.group_admin,access_rights.group_ceo,access_rights.group_doctor"
               sequence="50"/>
     <menuitem id="doctors_list_sub"
               name="Doctors list"

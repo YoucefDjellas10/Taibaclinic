@@ -11,6 +11,7 @@
             name="Dashboard"
             action="action_doctor_dashboard"
             parent="doctors_main"
+            groups="access_rights.group_admin,access_rights.group_ceo,access_rights.group_doctor"
             sequence="100"/>
     </data>
 </odoo>
