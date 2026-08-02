@@ -232,12 +232,15 @@
 
     <menuitem id="menu_dental_labo_main"
               name="Laboratory"
-              sequence="50"/>
+              sequence="50"
+              groups="access_rights.group_admin,access_rights.group_ceo,access_rights.group_doctor"
+    />
 
     <menuitem id="menu_dental_lab_main"
               name="Lab Orders"
               action="action_dental_lab_order"
               parent="menu_dental_labo_main"
+              groups="access_rights.group_admin,access_rights.group_ceo,access_rights.group_doctor"
               sequence="90"/>
 
 </odoo>
