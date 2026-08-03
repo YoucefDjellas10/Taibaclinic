@@ -1,0 +1,243 @@
+.ts_page {
+    --ts-surface-0: #faf9f7;
+    --ts-surface-1: #f2f0eb;
+    --ts-surface-2: #ffffff;
+    --ts-text-primary: #0b0b0b;
+    --ts-text-secondary: #52514e;
+    --ts-text-muted: #898781;
+    --ts-border: rgba(11, 11, 11, 0.1);
+    --ts-border-strong: rgba(11, 11, 11, 0.18);
+    --ts-border-accent: #2a78d6;
+    --ts-radius: 8px;
+    background: var(--ts-surface-0);
+    color: var(--ts-text-primary);
+    height: 100%;
+    overflow: auto;
+    padding: 16px;
+}
+
+.ts_layout {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ts_nav {
+    width: 220px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: var(--ts-surface-2);
+    border: 1px solid var(--ts-border);
+    border-radius: 12px;
+    padding: 8px;
+    position: sticky;
+    top: 0;
+}
+
+.ts_navbtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    text-align: start;
+    padding: 9px 10px;
+    border: 1px solid transparent;
+    border-radius: var(--ts-radius);
+    background: transparent;
+    color: var(--ts-text-secondary);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.ts_navbtn:hover {
+    background: var(--ts-surface-1);
+    color: var(--ts-text-primary);
+}
+
+.ts_navbtn.active {
+    background: var(--ts-surface-1);
+    color: var(--ts-text-primary);
+    border-color: var(--ts-border-accent);
+    font-weight: 600;
+}
+
+.ts_navbtn .ts_dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--ts-border-accent);
+}
+
+.ts_main {
+    flex: 1;
+    min-width: 0;
+    background: var(--ts-surface-2);
+    border: 1px solid var(--ts-border);
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+
+.ts_title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.ts_filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 10px;
+    background: var(--ts-surface-1);
+    border-radius: var(--ts-radius);
+    padding: 10px 12px;
+    margin-bottom: 18px;
+}
+
+.ts_filter {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ts_filter label {
+    font-size: 11px;
+    color: var(--ts-text-secondary);
+    margin: 0;
+}
+
+.ts_filter input,
+.ts_filter select {
+    font-size: 12px;
+    padding: 4px 6px;
+    border: 1px solid var(--ts-border-strong);
+    border-radius: 6px;
+    background: var(--ts-surface-2);
+    color: var(--ts-text-primary);
+    min-width: 130px;
+    max-width: 200px;
+}
+
+.ts_kpirow {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.ts_kpi {
+    background: var(--ts-surface-1);
+    border-radius: var(--ts-radius);
+    padding: 0.75rem;
+}
+
+.ts_kpi p.l {
+    font-size: 11px;
+    color: var(--ts-text-secondary);
+    margin: 0 0 4px;
+}
+
+.ts_kpi p.v {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ts-text-primary);
+}
+
+.ts_chartgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.ts_chartgrid .ts_span2 {
+    grid-column: 1 / -1;
+}
+
+.ts_charttitle {
+    font-size: 12px;
+    color: var(--ts-text-secondary);
+    margin: 0 0 6px;
+}
+
+.ts_canvasbox {
+    position: relative;
+}
+
+.ts_legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--ts-text-secondary);
+    margin-top: 6px;
+}
+
+.ts_legend span.sw {
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-inline-end: 4px;
+}
+
+.ts_tablewrap {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table.ts_tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+table.ts_tbl th {
+    text-align: start;
+    color: var(--ts-text-secondary);
+    font-weight: 600;
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--ts-border-strong);
+    white-space: nowrap;
+}
+
+table.ts_tbl td {
+    padding: 6px 8px;
+    border-bottom: 1px solid var(--ts-border);
+    color: var(--ts-text-primary);
+    white-space: nowrap;
+}
+
+.ts_loading,
+.ts_nodata {
+    color: var(--ts-text-muted);
+    font-size: 13px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.ts_error {
+    color: #d03b3b;
+    font-size: 13px;
+    padding: 12px 0;
+}
+
+@media (max-width: 900px) {
+    .ts_layout {
+        flex-direction: column;
+    }
+    .ts_nav {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: static;
+    }
+    .ts_chartgrid {
+        grid-template-columns: 1fr;
+    }
+}

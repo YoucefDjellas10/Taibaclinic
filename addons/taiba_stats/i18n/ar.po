@@ -1,0 +1,950 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Language: ar_001\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: taiba_stats
+#: model:ir.actions.client,name:taiba_stats.action_taiba_stats model:ir.ui.menu,name:taiba_stats.menu_taiba_stats_root
+msgid "Statistics"
+msgstr "الإحصائيات"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "You are not allowed to access the statistics dashboard."
+msgstr "غير مسموح لك بالوصول إلى لوحة الإحصائيات."
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Revenue by Doctor"
+msgstr "الإيرادات حسب الطبيب"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Dental Laboratory"
+msgstr "مخبر الأسنان"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Patients Pipeline (CRM)"
+msgstr "مسار المرضى (CRM)"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments"
+msgstr "المواعيد"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Finance / Treasury"
+msgstr "المالية / الخزينة"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Purchases & Suppliers"
+msgstr "المشتريات والموردون"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Stock & Inventory"
+msgstr "المخزون والجرد"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses"
+msgstr "المصاريف"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Doctor"
+msgstr "الطبيب"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Appointment Type"
+msgstr "نوع الموعد"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Laboratory"
+msgstr "المخبر"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patient Type"
+msgstr "نوع المريض"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Product"
+msgstr "المنتج"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Category"
+msgstr "الفئة"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Availability"
+msgstr "التوفر"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expense Type"
+msgstr "نوع المصروف"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Status"
+msgstr "الحالة"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "From"
+msgstr "من"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "To"
+msgstr "إلى"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patient"
+msgstr "المريض"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "All"
+msgstr "الكل"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "Apply"
+msgstr "تطبيق"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "Loading..."
+msgstr "جارٍ التحميل..."
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "No data"
+msgstr "لا توجد بيانات"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "No doctor"
+msgstr "بدون طبيب"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Gross Revenue"
+msgstr "الإيراد الإجمالي"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Clinic Share"
+msgstr "حصة العيادة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Doctors Share"
+msgstr "حصة الأطباء"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net revenue by doctor (DA)"
+msgstr "الإيراد الصافي حسب الطبيب (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Revenue split"
+msgstr "توزيع الإيراد"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Monthly net revenue (DA)"
+msgstr "الإيراد الصافي الشهري (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lab Cost"
+msgstr "تكلفة المخبر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net Revenue"
+msgstr "الإيراد الصافي"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Doctor Earnings"
+msgstr "أرباح الطبيب"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Clinic Earnings"
+msgstr "أرباح العيادة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Open Orders"
+msgstr "طلبات جارية"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Urgent"
+msgstr "مستعجلة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Avg Turnaround (days)"
+msgstr "متوسط المدة (أيام)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lab Unpaid"
+msgstr "مستحقات المخبر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orders by status"
+msgstr "الطلبات حسب الحالة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Share by laboratory"
+msgstr "التوزيع حسب المخبر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orders by work type"
+msgstr "الطلبات حسب نوع العمل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Work Type"
+msgstr "نوع العمل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Total"
+msgstr "المجموع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expected Date"
+msgstr "التاريخ المتوقع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New Patients"
+msgstr "مرضى جدد"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Door Patients"
+msgstr "مرضى مباشرون (Door)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Leads"
+msgstr "عملاء محتملون"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Conversion Rate"
+msgstr "معدل التحويل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patients by stage"
+msgstr "المرضى حسب المرحلة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patients by type"
+msgstr "المرضى حسب النوع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New patients per month"
+msgstr "مرضى جدد شهرياً"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Door"
+msgstr "مباشر (Door)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Salesperson"
+msgstr "البائع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Completed"
+msgstr "منجز"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Cancellation Rate"
+msgstr "معدل الإلغاء"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Attendance Rate"
+msgstr "معدل الحضور"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments by reason"
+msgstr "المواعيد حسب السبب"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments by status"
+msgstr "المواعيد حسب الحالة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments per day"
+msgstr "المواعيد يومياً"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments per month"
+msgstr "المواعيد شهرياً"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Reason"
+msgstr "السبب"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net Total"
+msgstr "الصافي"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Collected"
+msgstr "المقبوضات"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Invoiced"
+msgstr "مفوتر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net Balance"
+msgstr "الرصيد الصافي"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Average Basket"
+msgstr "متوسط السلة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patient Unpaid"
+msgstr "مستحقات على المرضى"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Collected vs expenses (DA)"
+msgstr "المقبوضات مقابل المصاريف (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Payment status"
+msgstr "حالة الدفع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses by type (DA)"
+msgstr "المصاريف حسب النوع (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Partial"
+msgstr "جزئي"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Unpaid"
+msgstr "غير مدفوع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Balance Due"
+msgstr "الرصيد المستحق"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Uncategorized"
+msgstr "بدون فئة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orders"
+msgstr "الطلبات"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Total Purchases"
+msgstr "إجمالي المشتريات"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Late"
+msgstr "متأخرة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Spending by supplier (DA)"
+msgstr "الإنفاق حسب المورد (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Monthly purchases (DA)"
+msgstr "المشتريات الشهرية (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Payment"
+msgstr "الدفع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "References"
+msgstr "المراجع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Available"
+msgstr "متوفر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Low Stock"
+msgstr "مخزون منخفض"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Out of Stock"
+msgstr "نفد المخزون"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quantity by product (top 10)"
+msgstr "الكمية حسب المنتج (أعلى 10)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quantity by category"
+msgstr "الكمية حسب الفئة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Minimum"
+msgstr "الحد الأدنى"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Validated Total"
+msgstr "إجمالي المصادق عليه"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Validated"
+msgstr "مصادق عليه"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses by type"
+msgstr "المصاريف حسب النوع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Monthly expenses (DA)"
+msgstr "المصاريف الشهرية (دج)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses by status"
+msgstr "المصاريف حسب الحالة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "General Consultation"
+msgstr "استشارة عامة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Check-up"
+msgstr "فحص الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Scaling / Cleaning"
+msgstr "تنظيف / إزالة الجير"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Teeth Whitening"
+msgstr "تبييض الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Cavity Treatment"
+msgstr "علاج التسوس"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Tooth Extraction"
+msgstr "قلع الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Implant"
+msgstr "زرع الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Prosthesis"
+msgstr "طقم أسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Crown"
+msgstr "تاج الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Veneers"
+msgstr "عدسات الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orthodontics"
+msgstr "تقويم الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Root Canal"
+msgstr "علاج العصب"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Emergency"
+msgstr "حالة طارئة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Oral Surgery"
+msgstr "جراحة الفم"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Tooth Pain"
+msgstr "ألم الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Pediatric Dentistry"
+msgstr "طب أسنان الأطفال"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "X-Ray / Scan"
+msgstr "أشعة / تصوير"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Treatment Plan / Quote"
+msgstr "خطة علاج / عرض سعر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Follow-up"
+msgstr "متابعة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Other"
+msgstr "أخرى"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Scheduled"
+msgstr "مبرمج"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "In Treatment"
+msgstr "قيد العلاج"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Sent to Lab"
+msgstr "أرسل إلى المخبر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "In Manufacturing"
+msgstr "قيد التصنيع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Fitting Session"
+msgstr "جلسة تجربة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Returned for Adjustment"
+msgstr "أعيد للتعديل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Placed"
+msgstr "تم التركيب"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Fixed Prosthesis"
+msgstr "تركيبة ثابتة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Removable Prosthesis"
+msgstr "تركيبة متحركة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Implantology"
+msgstr "زراعة الأسنان"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Night Guard / Splint"
+msgstr "واقي ليلي / جبيرة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Provisional"
+msgstr "مؤقت"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New Lead"
+msgstr "عميل محتمل جديد"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Contacted"
+msgstr "تم الاتصال"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Not interested"
+msgstr "غير مهتم"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Qualified"
+msgstr "مؤهل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Waiting details"
+msgstr "في انتظار التفاصيل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quotation preparation"
+msgstr "تحضير عرض السعر"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Negotiation"
+msgstr "تفاوض"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lost"
+msgstr "ضائع"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Deal closed"
+msgstr "صفقة مغلقة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New beginning"
+msgstr "بداية جديدة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lead"
+msgstr "عميل محتمل"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Company"
+msgstr "شركة"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Received"
+msgstr "تم الاستلام"

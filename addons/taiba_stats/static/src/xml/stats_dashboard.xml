@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+<t t-name="taiba_stats.StatsDashboard">
+    <div class="ts_page">
+        <div class="ts_layout">
+            <nav class="ts_nav">
+                <t t-foreach="dashboards" t-as="d" t-key="d.id">
+                    <button class="ts_navbtn" t-att-class="{ active: state.active === d.id }"
+                            t-on-click="() => this.selectDash(d.id)">
+                        <span class="ts_dot"/>
+                        <t t-esc="d.label"/>
+                    </button>
+                </t>
+            </nav>
+
+            <main class="ts_main">
+                <p class="ts_title" t-esc="activeDash.label"/>
+
+                <div class="ts_filters">
+                    <t t-if="hasFilter('date')">
+                        <div class="ts_filter">
+                            <label>From</label>
+                            <input type="date" t-model="state.filters.date_from"/>
+                        </div>
+                        <div class="ts_filter">
+                            <label>To</label>
+                            <input type="date" t-model="state.filters.date_to"/>
+                        </div>
+                    </t>
+                    <t t-foreach="activeSelectFilters" t-as="sf" t-key="sf.key">
+                        <div class="ts_filter">
+                            <label t-esc="sf.label"/>
+                            <select t-model="state.filters[sf.key]">
+                                <option value="">All</option>
+                                <t t-if="state.options">
+                                    <t t-foreach="state.options[sf.optionsKey] || []" t-as="o" t-key="o.id">
+                                        <option t-att-value="o.id" t-esc="o.name"/>
+                                    </t>
+                                </t>
+                            </select>
+                        </div>
+                    </t>
+                    <t t-if="hasFilter('patient')">
+                        <div class="ts_filter">
+                            <label>Patient</label>
+                            <input type="text" list="ts_patients_list" t-model="state.filters.patient_name"/>
+                            <datalist id="ts_patients_list">
+                                <t t-if="state.options">
+                                    <t t-foreach="state.options.patients || []" t-as="p" t-key="p.id">
+                                        <option t-att-value="p.name"/>
+                                    </t>
+                                </t>
+                            </datalist>
+                        </div>
+                    </t>
+                    <button class="btn btn-primary btn-sm ts_apply" t-on-click="applyFilters">Apply</button>
+                    <button class="btn btn-secondary btn-sm" t-on-click="resetFilters">Reset</button>
+                </div>
+
+                <t t-if="state.loading">
+                    <div class="ts_loading">Loading...</div>
+                </t>
+                <t t-elif="state.error">
+                    <div class="ts_error" t-esc="state.error"/>
+                </t>
+                <t t-elif="state.data">
+                    <div class="ts_kpirow">
+                        <t t-foreach="state.data.kpis" t-as="k" t-key="k_index">
+                            <div class="ts_kpi">
+                                <p class="l" t-esc="k[0]"/>
+                                <p class="v" t-esc="k[1]"/>
+                            </div>
+                        </t>
+                    </div>
+
+                    <div class="ts_chartgrid">
+                        <t t-foreach="state.data.charts" t-as="c" t-key="c_index">
+                            <div t-att-class="c_index === 2 ? 'ts_span2' : ''">
+                                <p class="ts_charttitle" t-esc="c.title"/>
+                                <div class="ts_canvasbox" t-att-style="c_index === 2 ? 'height:200px;' : 'height:180px;'">
+                                    <canvas t-ref="chart{{c_index}}"/>
+                                </div>
+                                <div class="ts_legend">
+                                    <t t-foreach="legendFor(c)" t-as="lg" t-key="lg_index">
+                                        <span>
+                                            <span class="sw" t-att-style="'background:' + lg.color"/>
+                                            <t t-esc="lg.label"/>
+                                        </span>
+                                    </t>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+
+                    <div class="ts_tablewrap">
+                        <table class="ts_tbl">
+                            <thead>
+                                <tr>
+                                    <t t-foreach="state.data.table.cols" t-as="col" t-key="col_index">
+                                        <th t-esc="col"/>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="state.data.table.rows" t-as="row" t-key="row_index">
+                                    <tr>
+                                        <t t-foreach="row" t-as="cell" t-key="cell_index">
+                                            <td t-esc="cell"/>
+                                        </t>
+                                    </tr>
+                                </t>
+                                <t t-if="!state.data.table.rows.length">
+                                    <tr><td t-att-colspan="state.data.table.cols.length" class="ts_nodata">No data</td></tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </main>
+        </div>
+    </div>
+</t>
+
+</templates>

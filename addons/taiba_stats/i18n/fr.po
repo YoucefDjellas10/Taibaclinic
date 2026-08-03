@@ -1,0 +1,950 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: taiba_stats
+#: model:ir.actions.client,name:taiba_stats.action_taiba_stats model:ir.ui.menu,name:taiba_stats.menu_taiba_stats_root
+msgid "Statistics"
+msgstr "Statistiques"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "You are not allowed to access the statistics dashboard."
+msgstr "Vous n'êtes pas autorisé à accéder au tableau de bord des statistiques."
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Revenue by Doctor"
+msgstr "Revenus par médecin"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Dental Laboratory"
+msgstr "Laboratoire dentaire"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Patients Pipeline (CRM)"
+msgstr "Pipeline patients (CRM)"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments"
+msgstr "Rendez-vous"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Finance / Treasury"
+msgstr "Finance / Trésorerie"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Purchases & Suppliers"
+msgstr "Achats & fournisseurs"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Stock & Inventory"
+msgstr "Stock & inventaire"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses"
+msgstr "Dépenses"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Doctor"
+msgstr "Médecin"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0
+msgid "Appointment Type"
+msgstr "Type de rendez-vous"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Laboratory"
+msgstr "Laboratoire"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patient Type"
+msgstr "Type de patient"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Supplier"
+msgstr "Fournisseur"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Product"
+msgstr "Produit"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Availability"
+msgstr "Disponibilité"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expense Type"
+msgstr "Type de dépense"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/js/stats_dashboard.js:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Status"
+msgstr "Statut"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "From"
+msgstr "Du"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "To"
+msgstr "Au"
+
+#. module: taiba_stats
+#. odoo-python
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0 code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patient"
+msgstr "Patient"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "All"
+msgstr "Tous"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "Apply"
+msgstr "Appliquer"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "Reset"
+msgstr "Réinitialiser"
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "Loading..."
+msgstr "Chargement..."
+
+#. module: taiba_stats
+#. odoo-javascript
+#: code:addons/taiba_stats/static/src/xml/stats_dashboard.xml:0
+msgid "No data"
+msgstr "Aucune donnée"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "No doctor"
+msgstr "Sans médecin"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Gross Revenue"
+msgstr "CA brut"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Clinic Share"
+msgstr "Part clinique"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Doctors Share"
+msgstr "Part médecins"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net revenue by doctor (DA)"
+msgstr "Revenu net par médecin (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Revenue split"
+msgstr "Répartition du revenu"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Monthly net revenue (DA)"
+msgstr "Revenu net mensuel (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lab Cost"
+msgstr "Coût labo"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net Revenue"
+msgstr "Revenu net"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Doctor Earnings"
+msgstr "Gains médecin"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Clinic Earnings"
+msgstr "Gains clinique"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Open Orders"
+msgstr "Commandes en cours"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Urgent"
+msgstr "Urgentes"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Avg Turnaround (days)"
+msgstr "Délai moyen (jours)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lab Unpaid"
+msgstr "Impayé labo"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orders by status"
+msgstr "Commandes par statut"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Share by laboratory"
+msgstr "Répartition par laboratoire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orders by work type"
+msgstr "Commandes par type de travail"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Reference"
+msgstr "Référence"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Work Type"
+msgstr "Type de travail"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Total"
+msgstr "Total"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expected Date"
+msgstr "Date prévue"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New Patients"
+msgstr "Nouveaux patients"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Door Patients"
+msgstr "Patients Door"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Leads"
+msgstr "Leads"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Conversion Rate"
+msgstr "Taux de conversion"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patients by stage"
+msgstr "Patients par étape"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patients by type"
+msgstr "Patients par type"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New patients per month"
+msgstr "Nouveaux patients par mois"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Door"
+msgstr "Door"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Stage"
+msgstr "Étape"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Salesperson"
+msgstr "Vendeur"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Date"
+msgstr "Date"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Completed"
+msgstr "Terminé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Cancellation Rate"
+msgstr "Taux d'annulation"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Attendance Rate"
+msgstr "Taux de présence"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments by reason"
+msgstr "RDV par motif"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments by status"
+msgstr "RDV par statut"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments per day"
+msgstr "RDV par jour"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Appointments per month"
+msgstr "RDV par mois"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Reason"
+msgstr "Motif"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net Total"
+msgstr "Total net"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Collected"
+msgstr "Encaissements"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Invoiced"
+msgstr "Facturé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Net Balance"
+msgstr "Solde net"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Average Basket"
+msgstr "Panier moyen"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Patient Unpaid"
+msgstr "Impayés patients"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Collected vs expenses (DA)"
+msgstr "Encaissements vs dépenses (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Payment status"
+msgstr "Statut des paiements"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses by type (DA)"
+msgstr "Dépenses par type (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Paid"
+msgstr "Payé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Partial"
+msgstr "Partiel"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Unpaid"
+msgstr "Impayé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Balance Due"
+msgstr "Solde dû"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Uncategorized"
+msgstr "Sans catégorie"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orders"
+msgstr "Commandes"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Total Purchases"
+msgstr "Total achats"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "In Progress"
+msgstr "En cours"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Late"
+msgstr "En retard"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Spending by supplier (DA)"
+msgstr "Dépenses par fournisseur (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Monthly purchases (DA)"
+msgstr "Achats mensuels (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Payment"
+msgstr "Paiement"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "References"
+msgstr "Références"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Available"
+msgstr "Disponible"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Low Stock"
+msgstr "Stock faible"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Out of Stock"
+msgstr "Rupture de stock"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quantity by product (top 10)"
+msgstr "Quantité par produit (top 10)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quantity by category"
+msgstr "Quantité par catégorie"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Minimum"
+msgstr "Minimum"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Validated Total"
+msgstr "Total validé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Validated"
+msgstr "Validé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Pending"
+msgstr "En attente"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Refused"
+msgstr "Refusé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses by type"
+msgstr "Dépenses par type"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Monthly expenses (DA)"
+msgstr "Dépenses mensuelles (DA)"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Expenses by status"
+msgstr "Dépenses par statut"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "General Consultation"
+msgstr "Consultation générale"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Check-up"
+msgstr "Contrôle dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Scaling / Cleaning"
+msgstr "Détartrage / Nettoyage"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Teeth Whitening"
+msgstr "Blanchiment dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Cavity Treatment"
+msgstr "Traitement de carie"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Tooth Extraction"
+msgstr "Extraction dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Implant"
+msgstr "Implant dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Prosthesis"
+msgstr "Prothèse dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Dental Crown"
+msgstr "Couronne dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Veneers"
+msgstr "Facettes"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Orthodontics"
+msgstr "Orthodontie"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Root Canal"
+msgstr "Traitement de canal"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Emergency"
+msgstr "Urgence"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Oral Surgery"
+msgstr "Chirurgie orale"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Tooth Pain"
+msgstr "Douleur dentaire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Pediatric Dentistry"
+msgstr "Dentisterie pédiatrique"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "X-Ray / Scan"
+msgstr "Radio / Scanner"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Treatment Plan / Quote"
+msgstr "Plan de traitement / Devis"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Follow-up"
+msgstr "Suivi"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Other"
+msgstr "Autre"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Scheduled"
+msgstr "Planifié"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "In Treatment"
+msgstr "En traitement"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Sent to Lab"
+msgstr "Envoyé au labo"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "In Manufacturing"
+msgstr "En fabrication"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Fitting Session"
+msgstr "Séance d'essayage"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Returned for Adjustment"
+msgstr "Retourné pour ajustement"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Delivered"
+msgstr "Livré"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Placed"
+msgstr "Posé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Fixed Prosthesis"
+msgstr "Prothèse fixe"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Removable Prosthesis"
+msgstr "Prothèse amovible"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Implantology"
+msgstr "Implantologie"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Night Guard / Splint"
+msgstr "Gouttière"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Provisional"
+msgstr "Provisoire"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New Lead"
+msgstr "Nouveau lead"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Contacted"
+msgstr "Contacté"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Not interested"
+msgstr "Pas intéressé"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Qualified"
+msgstr "Qualifié"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Waiting details"
+msgstr "En attente de détails"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Quotation preparation"
+msgstr "Préparation du devis"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Negotiation"
+msgstr "Négociation"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lost"
+msgstr "Perdu"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Deal closed"
+msgstr "Affaire conclue"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "New beginning"
+msgstr "Nouveau départ"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Lead"
+msgstr "Lead"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Company"
+msgstr "Entreprise"
+
+#. module: taiba_stats
+#. odoo-python
+#: code:addons/taiba_stats/models/stats_dashboard.py:0
+msgid "Received"
+msgstr "Reçu"
